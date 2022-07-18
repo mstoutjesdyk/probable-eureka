@@ -1,6 +1,6 @@
 site_name: AUC University
 site_author: Marielle Stoutjesdyk
-repo_url: https://github.com/mstoutjesdyk/probable-eureka
+repo_url: https://github.com/mstoutjesdyk/probable-eureka.git
 
 nav:
     - Home: index.md
