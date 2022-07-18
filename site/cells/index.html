@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Cells - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../rotors/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../suitable-systems/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/cells.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#cell-components" class="nav-link">Cell Components</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#centerpieces" class="nav-link">Centerpieces</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#windows" class="nav-link">Windows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#cell-housings" class="nav-link">Cell Housings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#cell-assembly" class="nav-link">Cell Assembly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#cleaning" class="nav-link">Cleaning</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#cell-leakage" class="nav-link">Cell Leakage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#counterbalances" class="nav-link">Counterbalances</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><br></p>
+<details class="warning">
+<summary>VIDEO ON CELL PREPERATION</summary>
+<div class="admonition warning">
+<p><figure class = "video_container">
+<iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="415" width="460" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://www.jove.com/embed/player?id=1530&t=1&s=1&fpv=1" ><p><a title="Assembly, Loading, and Alignment of an Analytical Ultracentrifuge Sample Cell" href="https://www.jove.com/v/1530/assembly-loading-alignment-an-analytical-ultracentrifuge-sample">Assembly, Loading, and Alignment of an Analytical Ultracentrifuge Sample Cell</a></p></iframe>
+</figure></p>
+</div>
+</details>
+<p><br></p>
+<div class="admonition warning">
+<p class="admonition-title">AUC Cell Criteria</p>
+<ol>
+<li>
+<p>Cells should not leak or distort, even when subjected to high centrifugal forces. These forces can create hydrostatic pressures up to 250 bar at the bottom of the solution column.</p>
+</li>
+<li>
+<p>Cells should allow for the passage of light through the cell, via quartz or sapphire windows, while the rotor is spinning.</p>
+</li>
+</ol>
+</div>
+<h2 id="cell-components">Cell Components</h2>
+<p>Each analytical cell that is used in the An-60 Ti and An-50 Ti rotors consist of a centerpiece, two 
+window assemblies, and a cell housing. For cells with a 3-mm centerpiece, two spacers are required. 
+Each component is designed with a special key on the housing, and a key-way on the other parts, which 
+will all fit together to provide accurate alignment.</p>
+<h4 id="centerpieces">Centerpieces</h4>
+<p><img align="right" alt="" src="/img/doublesector.png" width="400" />
+The sector-shaped sample compartments that are used are esential in velocity experiments as the sedimenting particles will move along radial lines. If the components had parallel walls, the molecules would collide with the walls as they sedimented. </p>
+<p>DOUBLE SECTOR: the sample solution can be placed in one sector, with the second sector for reference material (this sector is filled slightly more than the sample, so that the reference meniscus does not obscure profiles).</p>
+<p>SIX-CHANNEL EQUILIBIRUM</p>
+<p>BOUNDARY FORMING: these cells allow the solvent to be layed over a sample while the cell is spinning at a moderately slow speed. These cells can prepare artifical sharp boundaries for measuring doundary spreaduring in measurements of diffusion coefficients, and for examining sedimentation velocity of small molecules (where the rate of sedimentation cannot create a sharp boundary to clear the meniscus).</p>
+<p>SIX-CHANNEL EQUILIBIURM (EXTERNAL FILL) </p>
+<p>BAND FORMING: these cells allow for the layering of a small volume of solution on the top of a supporting density gradient. (Cohen and Mire, 1971; Kemper and Everse, 1973)</p>
+<h4 id="windows">Windows</h4>
+<p>Both quartz and sapphire windows can be used in the analytical cells. Sapphire windows are 
+specifically recommended to use with the interference optical system, as they allow for good fringe 
+patterns at speeds above 30,000 rpm because they produce less light refraction. However, they can 
+block the transmission of light below ~240 nm.</p>
+<p>The window assembly components are compatible with both window types. Handle the windows with care. Do not scratch them; this immediately discommmision them. </p>
+<p>The sapphire windows are heavier and harder than the quartz windows, and thus expected to have a longer life. They may have an "x" etched on the side to differentiate them. If not, use their weights to determine their type.</p>
+<p>It is very important for the quartz windows to have an absorbance of less than 0.1 AU in the 190 to 800 nm range. Check the absorbance yearly by: 1) cleaning the window and checking that it is clear and not damaged, and; 2) using a spectrophotometer to check the window absorbance. This is done by running a background wavelength scan fro 190 nm to 800 nm with nothing in the light's path. Now, place the window in the path of the light and scan the same wavelength range.</p>
+<h4 id="cell-housings">Cell Housings</h4>
+<p>Lorem Ipsum</p>
+<h2 id="cell-assembly">Cell Assembly</h2>
+<p>Before assembling your analytical cells:</p>
+<ul>
+<li>
+<p>Wash and dry new components.</p>
+</li>
+<li>
+<p>Insepct all componets. Replece any if they show signs of damage or wear.</p>
+</li>
+<li>
+<p>Check that the scew-ring threads are clean and free of burs. The scew-ring washers should be clear, and not deformed.</p>
+</li>
+<li>
+<p>Check the window holders. They should not be distored. The window gaskets should be clean, and the window liners should not be frayed at the edges.
+The window gasket should be checked and changed when it becomes transparent, indicating 
+compression. The window liner is placed so that the open end is opposite of the alignment mark and
+the window inserted with the arrow lined up with the key-way. The window should fit snugly. If it
+does not, the liner should be changed.</p>
+</li>
+<li>
+<p>Check the windows for any scratches or cracks. If necessary and the scratches/cracks are in areas that do not cover the sector, the windows can be used.</p>
+</li>
+<li>
+<p>Check that the windows are clean. There should not be any fingerprints, smudges, dust, or lint. Once they are clean, handle them with a lintless tisure, holding them by the edges only.</p>
+</li>
+<li>
+<p>The centerpices should have un-damanged faces and septum walls.</p>
+</li>
+<li>
+<p>Check that the cell-housing threads are clean, the housing key-way is not nicked, the filling holes are clean, and the housing itself is not defromed.</p>
+</li>
+<li>
+<p>When using more than 1 analytical cells, ensure that opposing cells contain the same type of centerpiece and are within 0.5 grams of each other.</p>
+</li>
+</ul>
+<p>Once these inspections and checks are completed, the cell assembly can begin.</p>
+<p>STEP 1: ASSEMBLE WINDOWS </p>
+<p>Insert a window gasket into the window holder. Place the liner in the holder, over the gasket. The gap in the liner should be opposite from the key-way. Think of the direction of force and how the liner cushions the window.
+  Carefull insert the clean window into the holder. Repeat as necessary.</p>
+<p><img align="right" alt="" src="/img/window.png" width="400" /></p>
+<p>STEP 2: STACK CENTERPIECE AND WINDOW ASSEMBLIES</p>
+<p>The bottom window assembly is pushed down to the bottom of the housing, window side up, aligning the key-way with they key,the centerpiece inserted part number right side up, and the top window assembly inserted.</p>
+<p>Stack the centerpeice and the final window assembly (window down), and push them down. </p>
+<p>For 3-mm centerpieces, a space must be inserted before the bottom window assembly. The second spacer is placed above the top window.</p>
+<p>Do not force any of the components down into the housing. If they do not slide down easily, 
+  check for anything that is hindering their movement.</p>
+<p><img _align="left" alt="" src="/img/12mm-assembly.png" width="300" />
+<img _align="right" alt="" src="/img/3mm-assembly.png" width="300" /></p>
+<p>STEP 3: INSERT SCREW RING INTO HOUSING AND TIGHTEN </p>
+<p><img align="right" alt="" src="/img/housing-ring.png" width="250" /></p>
+<p>Place the screw ring gasket and screw ring into the top. The side inscribed "OUT" should be facing up. The screw ring can be manually turned, and then finished using a cell assembly tool. </p>
+<p>Remember that the screw has a buttress thread, and forcing the ring to screw in the wrong direction will strip the threads.</p>
+<p>Place the analytical cell into the cell torque collet.
+  Torque to 125 pound inches. Do not over-torque, as this may lead to warping of the cell or crushing of the windows. 
+  Remove the torque from the collet and remove the cell from the vise only touching the housing.</p>
+<p>STEP 4: FILL CENTERPIECES, AND SEAL</p>
+<p>Cells can be loaded using either a pipette or a syringe and tubing. Pipetting involves stacking a round, gel-loading tip into a 1000 ul tip to load the 450 ul of sample.</p>
+<ul>
+<li>
+<p>Standard Double-Sector: Each sector can hold 0.46 mL. Hold the cell horizontly with the 
+     screw ring end facing you and the filling holes up. The reference sector is on the left; the right sector is for the sample-solvent mixture in Absorbance experiments. You can add a greater volume to the reference sector so that the meniscus is easily recognized.</p>
+</li>
+<li>
+<p>Six-Channel Equilibirum (External Fill):</p>
+</li>
+<li>
+<p>Synthetic Boundary (capillary-type):</p>
+</li>
+<li>
+<p>Band Forming:</p>
+</li>
+</ul>
+<p><img align="right" alt="" src="/img/loading.png" width="300" /></p>
+<p>Once the samples are loaded, a small gasket must be placed over the hole and a small brass 
+  screw is placed overin the hole and tightened. The centrifugal force will push the gaskets into the fill holes to seal them.</p>
+<p>Over-tightening of the screw can cause warping 
+  to the cell housing and make it difficult to push into the rotor hole. </p>
+<p>General advice: air must be allowed to escape the chambers as fluid is pushed into the centerpiece; otherwise, fluid will spill out. Concentrated samples and those containing detergents may be difficult to load. Be continual and slow with your injection.</p>
+<p>STEP $: WEIGH ASSEMBLED CELLS AND PREPARE COUNTERBALANCE</p>
+<p><img align="right" alt="" src="/img/counterbalance-weight.png" width="200" /></p>
+<p>Weigh your assembled cells. Opposing cells should weigh within 0.5 grams of each other.</p>
+<p>Match the weight of the cell that will be opposite to the counterbalance to the weight of the counterbalance. You can use weights to match.
+  This is done by screwing the weight into the weight attachement hole at the top of the counterbalance. For a 0.5 gram weight, it can be screwed into the weight attachement hole at the bottom of the counterbalance.</p>
+<p>Do not have any weights protruding out of the top or bottom of the counterbalance. They should be flush; protruding weights can get sheared off during centrifugation.</p>
+<p>STEP 6: LOAD ROTOR</p>
+<p>Place the counterbalance in its cell hole (cell 4 for An-60 Ti, cell 8 for An-50 Ti). The arrow on the counterbalance should be pointing away from the center of rotation.
+   If the counterbalance is loose, use a small allen wrench to tighten the setscrew.</p>
+<p>Install each assembled cell into their respective holes with the screw ring up, and the housing filling holes toward the center of the rotor. Match the scribe line on each cell with the scribe line on the rotor hole. Make sure the cell fits snuggly into the cell hole.</p>
+<p>Finally, the rotor assembly can be placed on the spindle inside the chamber of the AUC, the proper optics installed, and placing the lid. With the last sliding door closed, the vacuum can be turned on.</p>
+<p>Once a run has been complete, the cell disassembly process can begin. If you have a machine capable 
+of cleaning the cells without disassembly, it is not necessary to take them apart.</p>
+<p>Otherwise the procedure is such:</p>
+<ol>
+<li>
+<p>Unscrew and remove the housing gaskets.</p>
+</li>
+<li>
+<p>Remove the plug gaskets with forcepts and discard them. Do not scratch the centerpiece.</p>
+</li>
+<li>
+<p>If necessary, cells with external filling holes can be emptied after the removal of the plug screws and 
+gaskets, but before disassembling the entire cell. Generally, stable cells can be removed this way, 
+making AUC a non-destructive analysis method.</p>
+</li>
+<li>
+<p>Loosen the screw-ring using the cell torque wrench. Remove the ring and washer.</p>
+</li>
+<li>
+<p>Place the cell threaded-end down. Push the components out by pressing them down with your finger, while lifting the housing up.</p>
+</li>
+<li>
+<p>Push the windows out of hte holders, and thoroughly wash and dry all components.</p>
+</li>
+<li>
+<p>Clean and dry the centerpeices.</p>
+</li>
+<li>
+<p>Store all components in a dust-free environment.</p>
+</li>
+</ol>
+<h2 id="cleaning">Cleaning</h2>
+<p>Cell windows and centerpieces should be cleaned after every run.</p>
+<p>MACHINE WASHING: lorem ipsum.</p>
+<p>HAND WASHING: Wipe the cell windows with a lintless tissue. Wash the centerpeices by soaking them in warm distilled water. </p>
+<p>If cell leakage has occured (see below), make sure to disassembly the entire cell and clean all components in a mild detergent solution. Rinse the cleaned components and dry them thoroghly to prevent corrosion.</p>
+<h2 id="cell-leakage">Cell Leakage</h2>
+<p>Cell leakage is a possible issue that may occur when running an AUC experiment. Massive leaks where the sample leaves the cell will cause a temporarty loss in chamber vacuum. This will be reported as a diagnostic message on the display screen of the instrument. This is one indication of cell leakage. Another is from observing incoming data scans; the menisucs will shift/disappear toward the cell bottom as sample leaves.</p>
+<p>FILLING HOLE LEAKS: These leaks result from the fill hole gaskets not completely sealing the holes.</p>
+<p>LEAKS ACROSS THE FACE OF THE CENTERPIECE: These leaks are a result of scatches on the centerpiece or windows, or from inadquate tightening of the cell housing/screw ring.</p>
+<p>SECTOR TO SECTOR LEAKS: These leaks occur only when the fill levels differ by more than 5 ul. This is indicated by meniscus shifting or disappearing. Keep in mind that similar fill volumes reduces the stress of the wall between the sectors, minimizing damage and leaking.</p>
+<p>In the six-channel centerpeices, leaking can occur between channels in the direction of the centrigual force. This is identified by a change in the position of the meniscus.</p>
+<p>If leakage is due to a damaged centerpeice, replace the centerpeice and discard the damaged piece.</p>
+<h2 id="counterbalances">Counterbalances</h2>
+<p><img alt="" src="/img/counterbalance.png" width="800" /></p>
+<p>The counterbalance is typically coloured anodized red, and must be positioned in hole 4 for the 
+An-60 Ti rotor, and hole 8 for the An-50 Ti rotor.
+They must be in those positions because it is at those positions where the machine calibrates its radial distances.</p>
+<p>To balance the opposing cell, the counterbalance will come with weights. Ensure that the weight is within 0.5 grams. </p>
+<p>A small setscrew in the top of the counterbalance can be used to secure the counterbalance in the rotor. Align the counterbalance using the tick marks on the rotor and the counterbalance housing and then tighten the screw to hold it in position.
+For the counterbalance calibration, see something else?</p>
+<hr />
+<hr />
+<p>Sources of Information:</p>
+<ul>
+<li>
+<dl>
+<dt><a href="/pdffiles/Beckman_cell_assembly">Beckman LXL/A-TB-003F June 2001 Document</a></dt>
+<dd>"An-50 Ti and An-60 Ti Analytical Rotor, Cells, and Counterbalance"</dd>
+</dl>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,4 @@
+
+<figure class="video_container">
+<iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="415" width="460" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://www.jove.com/embed/player?id=52404&t=1&s=1&fpv=1" ><p><a title="Sedimentation Equilibrium of a Small Oligomer-forming Membrane Protein: Effect of Histidine Protonation on Pentameric Stability" href="https://www.jove.com/v/52404/sedimentation-equilibrium-small-oligomer-forming-membrane-protein">Sedimentation Equilibrium of a Small Oligomer-forming Membrane Protein: Effect of Histidine Protonation on Pentameric Stability</a></p></iframe>
+</figure>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>GMP and AUC - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../mwlspec/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../openAUC/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/gmp-auc.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#what-is-good-manufacturing-practices" class="nav-link">What is Good Manufacturing Practices?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="what-is-good-manufacturing-practices">What is Good Manufacturing Practices?</h1>
+<div class="admonition danger">
+<p>This page is mainly based on the research presented in:</p>
+<p><div class="csl-entry">Savelyev, A., Gorbet, G. E., Henrickson, A., &#38; Demeler, B. (2020). Moving analytical ultracentrifugation software to a good manufacturing practices (GMP) environment. <i>PLOS Computational Biology</i>, <i>16</i>(6), e1007942. https://doi.org/10.1371/journal.pcbi.1007942</div></p>
+<p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div></p>
+<p><div class="csl-entry">Zhao, H., Ghirlando, R., Alfonso, C., Arisaka, F., Attali, I., Bain, D. L., Bakhtina, M. M., Becker, D. F., Bedwell, G. J., Bekdemir, A., Besong, T. M. D., Birck, C., Brautigam, C. A., Brennerman, W., Byron, O., Bzowska, A., Chaires, J. B., Chaton, C. T., Cölfen, H., Schuck, P. (2015). A multilaboratory comparison of calibration accuracy and the performance of external references in analytical ultracentrifugation. <i>PLoS ONE</i>. https://doi.org/10.1371/journal.pone.0126420</div></p>
+</div>
+<p>Good Manufacturing Practices (GMP) are a set of operating and instrument standards which dictate a processes control requirements and documentation. GMP environments provide assurances to the consumer and any regulatory agencies that:</p>
+<p>a. best practices were followed;</p>
+<p>b. results are validated, and can be audited;</p>
+<p>c. quality standards are observed, and;</p>
+<p>d. any risks are minimized throughout the procedure.</p>
+<p><span style="font-size: 20px";>GMP Obstacles in AUC</span></p>
+<p>Within the AUC lab, there are several issues that can be determined which affect the authenticity of data analysis procedures.</p>
+<ol>
+<li>
+<p>Human error can be found in the form of the manual process of sample handling and AUC cell loading. 
+There is a certain dexterity that is required to achieve reproducible loading volumes, as well as proper alignment of cells in the rotor.</p>
+</li>
+<li>
+<p>While the AUC is a highly sophisticated instrument, it comes with a large number of operational variable, which would need individual validation, before their effect on results can be minimized.</p>
+</li>
+<li>
+<p>There is weakness in the chain of data custody. 
+This impairs the audit trail, and can allow for potential manipulation/falsification of primary research data. 
+For example, the traditional data acquisition software is disconnected from the analysis process,
+and thus requires manual data transfer between multiple computers.</p>
+</li>
+<li>
+<p>Traditional data acquisition is performed on undocumented software.
+This software is often closed-source freeware, preventing any source code auditing, 
+leaving no assurances for the users that the software follows any stringent GMP documentation requirements.</p>
+</li>
+<li>
+<p>Important parameters are not routinely checked for consistency. 
+Resolution information content is affected by: number of scans in the experiment, duration of experiment, loading volume, and column length. 
+Loading concentration can affect the mass action of reversible systems and non-ideality parameters.
+Chromatic aberration can cause incorrect radial reporting when recording wavelengths. </p>
+</li>
+<li>
+<p>Data quality is not checked for consistency. 
+Data editing, analysis algorithms, and analysis parameters can be left up to an user to change at will. 
+Data interpretation is affected by analysis parameters (grid size, grid resolution, edited data ranges, buffer corrections)
+and hardware parameters (rotor stretch corrections).</p>
+</li>
+<li>
+<p>Reporting is not an automated process. The processing of data is manual and based on a subjective interpretation of results. 
+That interpretation does not necessarily include standard metrics for comparison
+that can be automated and applied without user bias.</p>
+</li>
+</ol>
+<p><span style="font-size: 20px";>Hardware Effects</span></p>
+<p>A recent multi-labratory study demonstrated the importance of accurate reference materials to provide improved validation for the AUC.<sup id="fnref:Zhao2015"><a class="footnote-ref" href="#fn:Zhao2015">1</a></sup> Accurate reference materials are also useful in that they will complement the resolution gains offered by modern analysis software. The following hardware components of the AUC instrument have been found to affect analysis results.</p>
+<p><span class="arithmatex">\(\textbf{Rotor Speed}\)</span></p>
+<p><span class="arithmatex">\(\textbf{Recorded Time and Centrifugal Force Integrals}\)</span></p>
+<p><span class="arithmatex">\(\textbf{Radial Calibrations}\)</span></p>
+<p><span class="arithmatex">\(\textbf{Temperature}\)</span></p>
+<p><span class="arithmatex">\(\textbf{Optical Systems: Light Intensity, Alignment, and Focus}\)</span></p>
+<p><span class="arithmatex">\(\textbf{Chromatic Aberration}\)</span></p>
+<p>While investigating the accuracy of radial recordings made on the Optima AUC, it was noted that there was the presence of wavelength dependence on the radial positions collected as a result of chromatic aberration, a phenomenon related to the variability of refraction at different wavelengths.</p>
+<p><span class="arithmatex">\(\textbf{Stretching or Contracting of the Rotor in Response to Speed Changes}\)</span> </p>
+<p>What is rotor stretching and how do we know it is occuring? We noticed that the Lamm Equation was being solved with incorrect boundary conditions. Typically, we expect the bottom of the cell to be routinely held constant at the known position at rest. However, the absolute radial position of the sample cell was shifting. Finite element solutions of the Lamm Equation require accurate knowledge of the boundary consitions, which include the radial positions of the meniscus and bottom location ofthe sample cell. Any error in these boundary conditions, or the absolute radial positionscollected will affect the fitte values of the sedimentation and diffusion coefficients. This error propogates to the calculations of biomolecular attributes. Stretching or contracting of the rotor changes these boundary conditions, and thus must be known. Specifically, the titanium rotors, when spun at very high speeds, were stretching a finite amount, changing the boundary conditions of the experiment compared to those at rest or a different speed. </p>
+<p><img alt="Adiabatic Temperature Graph" src="/img/temp-adiabatic.png" style="float: right;margin-right: 20px;margin-top: 10px;" width="450" /></p>
+<p>Consider the figure to the right: this is a temperture-time graph for a rotor spinning from rest to 60,000 RPM, resting for 15 mins, and then decelerating back down to rest.
+Notice how there is a temperature decrease intially as the rotor accelerates; the acceleration period takes ~5 minutes. As the speed increases the rotor needs energy to stretch out and so it takes it from its environment. The chamber will notice this change and correct the temperature to the stated temperature. This correction occurs while to rotor spins at 60,000 RPM for 15 minutes. After this time has elapsed, the rotor spins down to rest and no longer needs the heat energy it took from the environment and so it releases it, causing an increases in temperature. Again, the chamber will correct for this change. The valley and peak have approximately the same area, and this change in temperature is adiabatic.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Zhao2015">
+<p><div class="csl-entry">Zhao, H., Ghirlando, R., Alfonso, C., Arisaka, F., Attali, I., Bain, D. L., Bakhtina, M. M., Becker, D. F., Bedwell, G. J., Bekdemir, A., Besong, T. M. D., Birck, C., Brautigam, C. A., Brennerman, W., Byron, O., Bzowska, A., Chaires, J. B., Chaton, C. T., Cölfen, H., Schuck, P. (2015). A multilaboratory comparison of calibration accuracy and the performance of external references in analytical ultracentrifugation. <i>PLoS ONE</i>. https://doi.org/10.1371/journal.pone.0126420</div>&#160;<a class="footnote-backref" href="#fnref:Zhao2015" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

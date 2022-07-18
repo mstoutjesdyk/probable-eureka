@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Centrifugation - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../hydro-parameters/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../lamm/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/centri.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#analytical-ultracentrifugation" class="nav-link">Analytical Ultracentrifugation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This page is still under construction.</p>
+<p>https://www.mcgill.ca/biochemistry/files/biochemistry/404_silvius_15.pdf</p>
+<p>https://www.biophysics.org/Portals/0/BPSAssets/Articles/vbloomfield.pdf
+<script type="math/tex; mode=display">
+s_{20,w} = s\left(\frac{\eta}{\eta_{20,w}}\right)\left(\frac{1-\bar\nu\rho_{20,w}}{1-\bar\nu\rho}\right)
+</script>
+</p>
+<h2 id="analytical-ultracentrifugation">Analytical Ultracentrifugation</h2>
+<p>Analytical ultracentrifugation is technique that can seperate macrmolecule that are suspended in solution in a centrifugal force field. 
+An analytical ultracentrifuge can 'watch' molecules while they are seperating and indentify and differentiate them by their hydrodynamic properties and partial concentration. AUC works by applying a centrifugal force, causing molecules to become seperated based on their bouyant mass and their frictional properties. The molecules can be observed using different optical systems that detect the different properites of the molecules.
+Virtually any molecule, colloid, or particle that can be dissolved in a liquid can be measured by AUC, as long as it does not sediment by gravity alone. The molecule or particle can be as small as a salt ion, or as large as an entire virus particle.</p>
+<p><br></p>
+<details class="danger">
+<summary><span style="color: #d9534f;">EXAMPLE: Determine Sedimentation Coefficient</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">Consider an initially homogenous solution. It is centrifugated at 70,000 rpm. The absorbance profile at 230 nm    is measured over time, writen as [time(hr), A<span class="arithmatex">\(_{plataeu}\)</span>]: <br><br>[0,2.04], [1,1.84], [2,1.66], [3,1.50], [5,1.22], [8,0.90], [12,0.60]. <br><br>What is the sedimenation coefficient of the particle?</p>
+<p>SOLUTION: Lorem Ipsum</p>
+</div>
+</details>
+<p><br> </p>
+<p><br></p>
+<details class="danger">
+<summary><span style="color: #d9534f;">EXAMPLE: Determining a Protein's Molecular Weight</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">Consider a protein that is ran in a rotor at a speed of 12,000 rpm at 4-degrees C. It is in a dilute aqueous buffer whose density is that of water. When the absorbance profile is measured, it produces the following data: <br> <br>If the proteins partial specific volume is 0.740 cm<span class="arithmatex">\(^{3}\)</span>/g, what is its molecular weight?</p>
+<p>Solution: M = 57,800 Da</p>
+</div>
+</details>
+<p><br></p>
+<p>When a solute is suspended in a solent, it is subject to several different forces. </p>
+<p>First, we have the sedimenting/graviational force. This force is proportional to the mass of the particle and the acceleration is it experiencing. When considering a spinning rotor, this is the centrifugal force:</p>
+<div class="arithmatex">\[
+ F_{c} = \frac{mv_{tang}^{2}}{r} = m r \omega^{2}.
+ \]</div>
+<p>Here, <span class="arithmatex">\(r\)</span> is the distance from the axis of rotation (cm), <span class="arithmatex">\(v_{tang}\)</span> is the linear velocity perpendicular to the radial axis (m/s<span class="arithmatex">\(^{2}\)</span>), and <span class="arithmatex">\(\omega\)</span> is the angular velocity (radians/second).</p>
+<div class="arithmatex">\[\bf{Remember:~~~ 1 ~RPM = \frac{2\pi}{60} ~rad/sec.}\]</div>
+<p>We can write it in terms of molar weight, <span class="arithmatex">\(M\)</span> (g/mol), and Avogadro's number, <span class="arithmatex">\(N\)</span>.</p>
+<div class="arithmatex">\[
+ F_{c} = \frac{M}{N}\omega^{2}r.
+ \]</div>
+<p>DIFFERENCE BETWEEN CENTRIFUGAL AND CENTRIPETAL:
+Centrifugal: in the rotating reference frame of the rotor.</p>
+<p>Centripetal: in the labratory reference frame.</p>
+<p><img alt="" src="/img/centrifugal-force.png" width="800" /></p>
+<p>We can compare this force to the graviational force that is felt on the earth's surface. Let the radius of the earth be <span class="arithmatex">\(r_{e} = 6.30 \times 10^{8} cm\)</span>, the mass of the earth be <span class="arithmatex">\(m_{e} = 5.976 \times 10^{27}\)</span> g. Then,</p>
+<p>
+<script type="math/tex; mode=display">
+F_{g} = \frac{G m_e m}{r_{e}^{2}},
+</script>
+with <span class="arithmatex">\(G = 6.67 \times 10^{-8}\)</span> cm<span class="arithmatex">\(^{3}\)</span>/sec<span class="arithmatex">\(^{2}\)</span> is the universal gravitational constant.</p>
+<p><br></p>
+<details class="danger">
+<summary>&lt;span style="color: #d9534f;"EXAMPLE: Determine Centrifugal Force at Radius, r</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">Consider a rotor spinning at 45,000 rpm. What is its centrifugal force at a radius of 5 cm? Write as a multiple of the gravitational force.</p>
+<p>Solution:</p>
+</div>
+</details>
+<p><br></p>
+<p>The second force acting on the solute is the buoyant force, <span class="arithmatex">\(F_{b}\)</span>:</p>
+<div class="arithmatex">\[
+F_{b}= -m\bar\nu\rho_{0}\omega^{2}r = \frac{M}{N} \bar\nu \rho \omega^{2} r
+\]</div>
+<p>where we have <span class="arithmatex">\(\bar\nu\)</span> to be the partial specific volume (or the inverse of the solute's effective density), and <span class="arithmatex">\(\rho\)</span> is the density of the solute. Sedimentation occurs when the density of the particle is greater than that of the solvent. As the solute moves towards the bottom of the cell, it will expereince an increase in velocity, due to the increasing radial distance (the force is proportional to radius).</p>
+<p>As it moves through the fluid, the solute will experience a frictional drag proportional to its velocity. The frictional force is:</p>
+<div class="arithmatex">\[
+F_{f} = -f v
+\]</div>
+<p>where <span class="arithmatex">\(f\)</span> is the frictional coefficent. This coefficent is dependent on the shape and size of the solute: bulky or elongated particles will experience a greater fricitonal drag compared to the drag expereinced by compact, smooth spherical particles.</p>
+<p>The negative sign in the equations for buoyancy and frictional drag indicate that these forces are acting opposite to the sedimentation force.</p>
+<p>As the rotor is spun up, the forces aboce will come into balance:</p>
+<div class="arithmatex">\[
+\sum F = F_{c} + F_{b} + F_{f} = 0,
+\]</div>
+<div class="arithmatex">\[
+\frac{M}{N}\omega^{2} - \frac{M}{N} \bar\nu\rho\omega^{2}r - f v = 0,
+\]</div>
+<div class="arithmatex">\[
+\frac{M}{N}(1-\bar\nu\rho)\omega^{2}r - fu = 0.
+\]</div>
+<p>Let us now create the term <span class="arithmatex">\(v/\omega^{2}r\)</span> to represent the sedimentation coefficient, or the velocity of a particle per unit of gravitational acceleration.</p>
+<div class="arithmatex">\[
+\frac{M(1-\bar\nu\rho)}{Nf} = \frac{v}{\omega^{2}r} \equiv s.
+\]</div>
+<p>Note how this coefficient is proportional to the buoyant effective molar weight and is inversely proportional to the frictional coefficient. The sedimentation coefficent has dimensions of seconds, <span class="arithmatex">\(s\)</span>, and the Svedberg unit, <span class="arithmatex">\(S\)</span>, is defined at 10<span class="arithmatex">\(^{-13}\)</span> seconds. </p>
+<p>As sedimentation piles the solutes at the bottom of the cell, the concentration at that point will increase, and the process of diffusion will oppose further sedimentation. After an appropriate amount of time, diffusion and sedimentation will approach an equilibrium point and the concentration of the solute will have an exponential increase towards the bottom of the cell. The concentration distribution from the top of the cell to the bottom will no longer change over time and is now a function of molecular weight.</p>
+<p>Recall that sedimentation depends on the effective molar weight, corrected for buoyancy. Consider the following cases:</p>
+<p><span class="arithmatex">\(\rightarrow\)</span> If the density of the solute is <span class="arithmatex">\(\textbf{greater}\)</span> than that of the solvent, the solute will sediment. </p>
+<p><span class="arithmatex">\(\rightarrow\)</span> If the density of the solute is <span class="arithmatex">\(\textbf{less}\)</span> than that of the solvent, the solute will float.</p>
+<p><span class="arithmatex">\(\rightarrow\)</span> If the density of the solute is <span class="arithmatex">\(\textbf{equal}\)</span> to that of the solvent, the solute will not move. Here, we can use this situation to determine the density of a macromolecule in a desnity gradient sedimentation experiemnt. </p>
+<p>The frictional coefficient, <span class="arithmatex">\(f\)</span>, depends on the shape and size of the moving particle. When considering the simple case of a spherical particle, we assume the Stokes-Einstein,</p>
+<div class="arithmatex">\[
+f = \frac{kT}{D} = \frac{RT}{ND},
+\]</div>
+<p>and the Stokes equation to hold,</p>
+<div class="arithmatex">\[
+ f = 3 \pi \eta d,
+\]</div>
+<p>where <span class="arithmatex">\(k\)</span> is the Boltzmann number, <span class="arithmatex">\(R\)</span> is the universal gas constant, and <span class="arithmatex">\(d\)</span> is the diameter of a spherical particle.</p>
+<p>Using the formulas above, we can derive the famous Svedberg equation for determining <span class="arithmatex">\(M\)</span> if <span class="arithmatex">\(s\)</span>, <span class="arithmatex">\(D\)</span>, and <span class="arithmatex">\(\bar\nu\)</span> are knonw:</p>
+<div class="arithmatex">\[
+M = \frac{sRT}{D(1-\bar\nu\rho)}.
+\]</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

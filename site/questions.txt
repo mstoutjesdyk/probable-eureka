@@ -1,0 +1,264 @@
+
+
+<br>
+??? danger "<span style="color: #d9534f;">EXAMPLE: Experimental Techniques for Determining Parameters</span>"
+
+    !!! danger "List at least one experimental technique that can provide each observable listed below. Comment on their accuracy. "
+    
+    Translational Frictional Coefficient, $f_t$ (comp.): Since f is proportional to the diffusion
+    coefficient, D, one needs to first find the diffusion coefficient. ZENO can compute this
+    observable.
+
+    Rotational Frictional Coefficient, $f_r (x, y, z)$ (comp.): Sedimentation velocity experi-
+    ments.
+
+    Frictional ratio, $f /f_0$ (comp.): Sedimentation velocity experiments.
+
+    Hydrodynamic/ Stokes Radius, $R_H$ (obs.): Sedimentation velocity experiments.
+
+    Radius of Gyration, $R_G$ (obs.): Computational models can be useful in determining
+    the radius of gyration. One can develop a potential, likely Lennard-Jones and Coulomb
+    potentials for linear polymers. A Monte-Carlo algorithm can then extract the radius.
+    This is a simulation so there will be limitations due to computing powers. One would
+    have consider, for example, constant and variable charge distributions. Data obtained
+    from the model could be compared to experimental data to ensure optimal accuracy.
+
+    Translational Diffusion, $D_t$ (obs.): Diffusion is only dependent on one variable, f , so
+    it tends to be more reliable. A calculation of the diffusion can be done using cen-
+    trifugation, particularly with sedimentation velocity experiments. Diffusion can be
+    underestimated due to attempts to account for hydration, in the case of some compu-
+    tation models. Dynamic light scattering can measure translational diffusion through Brownian motion.
+
+    Rotational Diffusion, $D_r (x, y, z)$ (obs.): Since rotational diffusion deals with molecular
+    orientations, any experimental process that measure it must be highly sensitive to rota-
+    tional movement on a short time scale. NMR relaxation experiments and fluorescence
+    correlation spectroscopy may be sensitive enough for this, although with fluorescence
+    there is a condition that the rotational diffusion occurs faster than the fluorescence
+    decay time.
+
+    Intrinsic Viscosity, $\eta$ (obs.): Viscosity can be measured by calculating the viscosity
+    number of the particular solution at various concentrations. A Ubbelohde viscometer
+    does this. There can be surface tension effects but it is not extensive.
+
+    Sedimentation Coefficient, $s$ (obs.): We must be aware that there will be propagation of
+    error effecting s, since s is related to the translational friction, partial specific volume,
+    and the mass. Sedimentation can be underestimated since one needs to account for
+    hydration, which can lead to an excessive expansion of the surface. Poor knowledge or
+    estimation of the partial specific volume can effect the accuracy of the sedimentation
+    coefficient.
+
+    Relaxation Time, $\tau$ (obs.): NMR relaxation experiments can be used to measure this
+    variable.
+
+    Partial Specific Volume, $\bar\nu$(obs.): The computation of ν for some macro-molecules can
+    be unreliable, since the number and type of the constituent residues may not be known.
+
+    Mass, M (obs.): Osmometry (number-average molar mass), light scattering (mass-
+    averaged molar mass).
+
+    Solvent Viscosity, $\eta_0$ (obs.): Density of viscosity affect the sedimentation and diffusion
+    coefficients, so corrections must be made to standard conditions.
+
+    Solvent Density, $\rho$ (obs.): To measure density, one only needs to know the solvent’s
+    mass and volume, since ρ = M/V .
+
+    Sedimentation velocity experiments can be used to measure: sedimentation coefficients, trans-
+    lational diffusion coefficients, molecular mass (given partial specific volume), frictional coeffi-
+    cient, frictional ratio (given partial specific volume or molecular weight), and Stoke’s radius.
+    Also note that ZENO can compute, among other properties, the intrinsic viscosity, hydro-
+    dynamic/ Stokes radius, translational diffusion coefficient, translational friction coefficient,
+    radius of gyration, and the structure factor for arbitrary shaped complexes.
+
+<br>
+
+
+<br>
+??? danger "<span style="color: #d9534f;">EXAMPLE: Calculating Parameters</span>"
+
+    !!! danger "A. Given the molecular weights and diffusion coefficines, calulcate the sedimentation coefficient; fictional ratio, the Stokes radius, and the minimal radius for the given macromolecules: bovine serum albumin, ribonuclease, myosin, and 208 dp double-stranded DNA fragment.<br><br>B. Which of these molecules is most non-globular? <br><br>C. Calulate the amount of water from each protien that would have to be bound to account for the Stokes radius of a molecule in terms of grams of water:grams of protein. Is that reasonable?"
+ 
+        a. Bovine Serum Albumin 
+  
+        $\bar\nu$ = 0.732 ml/g <br>
+        $D$ = 0.603 $\times 10^{6}$ cm$^{2}$/sec    
+        MW = 66,500 Da = 66.5 kg/mol <br>
+    
+        b. Ribonuclease 
+  
+        $\bar\nu$ = 0.708 ml/g <br>
+        $D$ = $1.068 \times 10^{6}$ cm$^2$/sec    
+        MW = 13,683 Da = 13.683 kg/mol <br>
+  
+        c. Myosin 
+  
+        $\bar\nu$ = 0.731 ml/g       
+        $D$ = $0.105 \times 10^{6}$ cm$^2$/sec     
+        MW = 440,000 Da = 440 kg/mol <br>
+
+        d. 208 bp double-stranded DNA fragment 
+      
+        $\bar\nu$ = 0.550 ml/g   
+        $D$ = $0.190 \times 10^{6}$ cm$^2$/sec     
+        MW = 131,000 Da = 131 kg/mol <br>
+
+    
+        PART A: Follow these steps.
+    
+        Step 1: We will start with calculating the frictional ratio, f, using:
+    
+        $$
+        f = \frac{RT}{ND} = \frac{k_B T}{D}
+        $$
+    
+        where $R$ is the ideal gas constant, $T$ is the absolute temperature, $N$ is Avogadro's constant, $D$ is the diffusion           coefficent, and $k_B$ is the Boltzmann constant.
+    
+        Step 2: We can find the sedimentation coefficient with:
+    
+        $$
+        s = \frac{M(1 - \bar\nu\rho)}{nF}
+        $$
+    
+        where $M$ is the molecular weight, $\bar\nu$ is the partial specific volume, and $\rho$ is the density of the buffer.
+    
+        Step 3: We can use the volume equation to find the minimal radius:
+    
+        $$
+        V = \frac{M \bar\nu}{N}
+        $$
+
+        $$
+        r_0 = \left(\frac{3V}{4\pi}\right)^{1/3}
+        $$
+    
+        Step 4: The hypothetical frictional ratio is related to the minimial radius by:
+    
+        $$
+        f_0 = 6 \pi \eta r_0
+        $$
+    
+        which allows us to find the frictional ratio, $f/f_0$, where $f_0$ is the frictional coefficient of a hypothetical              molecule of similar size and density, using the frictional ratio value that was calculated in Step 1.
+    
+        Step 5: The Stokes radius equation is:
+    
+        $$
+        R_H = \frac{k_B T}{6\pi\eta D}
+        $$
+    
+         where $\eta$ is the viscosity of the buffer.
+    
+        Our constants in these equations are:
+    
+        - $\rho$ = 0.9982 g/mol;
+      
+        - $\eta$ = 0.01 g/cm s (water at 20-degrees C);
+      
+        - $T$ = 293.15 k, and;
+      
+        - $R$ = 8.3145$\times10^7$ erg.
+      
+        All requested values have now been calculated.
+    
+        PART B: The frictional ratio, $f/f_0$, is a measure of the globularity of the molecule.
+        We are able to say that the molecule that is the most non-globular will have a frictional ratio much greater than 2.5.
+    
+        Myosin is the most non-globular; $f/f_0$ = 4.06
+    
+        Ribonuclease is the most sphereical; $R_H$ = 2.01 nm and $r_0$ = 1.57 nm.
+    
+        PART C: We have the following equations:
+    
+        $$
+        \left(\frac{f}{f_0} \right )^3 = \left(\frac{R_H}{r_0} \right )^3 = \frac{\bar\nu_2 - \delta\bar\nu_1}{\bar\nu_2}
+        $$
+    
+        $$
+        \delta = \frac{1}{\bar\nu_1}\left(\left(\frac{f}{f_0} \right )^3 \bar\nu_2 - \bar\nu_2 \right )
+        $$
+    
+        and we can take $\bar\nu_1$ = 1.0 cm/g for water. These equations will allow us to determine the amount of water for             each molecule that would have to be bounded to account for the calculated Stokes' radius.
+<br>
+
+
+<br>
+??? danger "<span style="color: #d9534f;">EXAMPLE: Sedimentation and Diffusion Effects</span>"
+
+    !!! danger "Indicate if s and D increase, decrease or stay the same when the following events occur, and justify your answer. <br><br>A: an anisotropic (asymmetric) monomeric protein aggregates into a large globular blob;<br>    B: a monomeric protein unit elongates through head-to-tail association, forming a fibril shape;<br>C: a DNA molecule is dialyzed from a 500 mM NaCl solution into a 5 mM NaCl solution;<br> D: a globular, well-folded protein unfolds into a denatured state;<br>E: a monomeric, globular protein associates to form a globular hexamer."
+
+        First, let us establish that the sedimentation coefficient, $s$, can be expressed as being proportional to $M/f$, and can also be proportional to $MD$ since the diffusion coefficient, $D$, is inversely proportional to the frictional coefficient, $f$. That is,
+    
+        $$
+        s \propto \frac{M^{2/3}}{f/f_0}~~\text{and}~~ D \propto \frac{1}{r_0(f/f_0)}
+        $$
+    
+        PART A: An anisotropic monomeric protein implies a large $f/f_0$. However, as the protein aggregates into a globular blob, it will cause the frictional ratio to approach 1. That means that $s \propto M^{2/3}$ and $D \propto \frac{1}{r_0}$. 
+    
+        PART B: In this case, a monomeric protein unit ($f/f_0 \approx$ 1) evolves into a fibril shape ($f/f_0 > 2.5$). For our expressions, an increase of the frictional ratio will result in a decrease in both the sedimentation and diffusion coefficients. 
+        (If A = B/C, and C $\uparrow$, A will respond by $\downarrow$.)
+    
+        PART C:
+    
+        PART D:
+    
+        PART E:
+<br>    
+    
+<br>
+??? danger "<span style="color: #d9534f;">EXAMPLE: Hydration Shells</span>"
+
+    !!! danger " The anhydrous density of a protein is 1.43 g/ml. When measured in the ultracentrifuge, the
+    partial specific volume was determined to be 0.742 ml/g. How many microliters of water are
+    bound to 1 ml of solvated protein? Assume a water density of 1 g/ml."
+
+        Solution: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultricies justo, sed maximus metus. Aliquam ac nisl elementum, commodo arcu eleifend, dapibus turpis. Mauris euismod semper rhoncus. Sed dignissim, mauris quis tempus molestie, quam felis consequat metus, sit amet elementum ex sapien in quam. Praesent non enim eleifend, aliquet justo sit amet, sollicitudin diam. Nunc auctor nunc sollicitudin nisi aliquet, ac sollicitudin libero venenatis. Aliquam ornare rutrum quam, eget finibus turpis vulputate sit amet. Pellentesque feugiat felis et sodales dignissim. Duis in elit nunc. Etiam ullamcorper neque a mi consequat, non sollicitudin est ultrices. Mauris sed turpis metus. Aenean dictum sem nec augue ullamcorper egestas
+
+![](/img/gs-distri.png){width="500"align=right}
+
+<br>
+??? danger "<span style="color: #d9534f;">EXAMPLE: Interpretting Results</span>"
+
+    !!! danger "A researcher has created a 2,500 basepair DNA molecule with 12 nucleosome binding sites and reconstitutes the DNA with histone proteins to create an artificial chromatin molecule. He wants to find out what the effect of adding magnesium is on the reconstituted molecule,and performs velocity experiments in 0, 0.5 and 2 mM MgCl2. He observes a heterogeneous s-value distribution as shown in Figure 2. To his surprise, an equilibrium experiment when analyzed with an ln C vs. r 2 − r 0 2 plot revealed a good fit to a straight line. The slope of the linear fit for all salt concentrations was identical and gave a value of 2.092. (assume 20C, 3000 rpm, a viscosity of 0.01poise, a density of 1.0 g/ccm for all salt concentrations, v of 0.65 g/ccm).<br>A: What do you conclude from the velocity results? Explain the different distributions observed and what they indicate. Suggest at least two sample characteristics that could account for the observed velocity distributions.<br> B: What do you conclude from the equilibrium results? Explain.<br> C: How can you reconcile the equilibrium results with the velocity results? Explain. Calculate the molecular weight suggested by the slope. What does it say about the chromatin molecule (hint: a histone octamer is about 111.5 kDa, the average DNA molecular weight is 660 Da/bp.) <br>     D: Suggest what may have happen to the chromatin molecule as magnesium chloride is added to the buffer. Suggest a model that will account for these results.<br> E: Calculate the frictional ratio for the 27 S and the fastest moving species in each salt concentration."
+
+        PART A: Lorem Ipsum
+    
+        PART B: Lorem Ipsum
+    
+        PART C: Let us calculate the molecular weight that is suggested from the slope in the plot. We are given:
+    
+        $$
+        C = C_0 ~\text{exp}\left[\frac{M(1-\bar\nu\rho)}{2RT}\omega^2(r^2-r_0^2) \right ]
+         $$
+    
+        which can be also expressed in the form:
+    
+        $$
+         \text{ln}~C =\text{ln}~C_0 +\frac{M(1-\bar\nu\rho)}{2RT}\omega^2(r^2-r_0^2) 
+        $$
+    
+         such that a ln $C$ vs. $r^2 - r_0^2$ plot will produce a straight line with the y-intercept at ln $C$. We are give the slope of such a plot to be 2.092. If we are then to determine the molecular weight, we have:
+    
+        $$
+        \frac{M(1-\bar\nu\rho)}{2RT}\omega_2 = 2.092 
+        $$
+    
+        $$
+        M = 2.092 \frac{2RT}{\omega^2(1-\bar\nu\rho)}
+        $$
+    
+        where $T$ = 293.15 k, $\bar\nu$ = 0.65 g/cm, and $\rho$ = 1.0 g/cm. We also know that $\omega = (\pi/30)$RPM, and if the rotor is set to spin at 3,000 rpm, the angular velocity will be: $\omega = \pi \times 10^2$.
+    
+        $$
+        MV_{\text{total}} = MV_{\text{histone octomer}} + MW_{\text{2,500 bpDNA}} + MW_{\text{chromatin}}
+        $$
+    
+    
+        PART D: Lorem Ipsum
+    
+        PART E: Using the fundamental equations from previous questions, we can condense them into an expression for the frictional ratio as a functino of the sedimentation coefficient:
+    
+        $$
+        \frac{f}{f_0}(s) = \frac{M(1-\bar\nu\rho)}{Ns}\frac{1}{6\pi\nu}\left(\frac{4\pi}{3}\frac{N}{M\bar\nu} \right )^1/3   
+        $$
+    
+        This will allow us to find the frictional ratio for each of the listed species.
+        
+<br>

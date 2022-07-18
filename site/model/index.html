@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Data Modeling and Fitting - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sv-flow/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../noise/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/model.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#model-building" class="nav-link">Model Building</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#data-fitting" class="nav-link">Data Fitting</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#method-of-least-squares" class="nav-link">Method of Least-Squares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#linear-models" class="nav-link">Linear Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#non-linear-regression" class="nav-link">Non-Linear Regression</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#experimental-uncertainties-error-surfaces-and-fit-quality" class="nav-link">Experimental Uncertainties, Error Surfaces, and Fit Quality</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#optimization-methods" class="nav-link">Optimization Methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="model-building">Model Building</h1>
+<p>To build a model, one needs to understand the physical properties of the obersved process. Many processes can be described using differential equations. When solved, these equations can describe a linear or non-linear model.</p>
+<div class="admonition note">
+<p class="admonition-title">TL;DR: How to Build Models </p>
+<p>Modeling involves the description of some observable data using a mathematical equation that describes the underlying physical properties of the experiment.</p>
+<p>Our process is as such:</p>
+<ol>
+<li>
+<p>We need to identify a general, mathematical model that can represent the observed data. The parameters of the model describe the specifics of the data.</p>
+</li>
+<li>
+<p>We need to determine the values of the parameters in the model that best fit our data. This is accomplished by a fitting algorithm that minimizes the differences between the data and the model. Generally, an initial estimate is required that is then improved. </p>
+</li>
+<li>
+<p>We need to estimate the error in the parameters we determined in the fitting process to obtain the confidence intervals</p>
+</li>
+</ol>
+</div>
+<details class="danger">
+<summary><span style= "color: #d9534f;">EXAMPLE: Radioactive Decay Model Building</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">   </p>
+<p>Hypothesis: The rate of decay is proportional to the number of nuclei present</p>
+<p>Mathematical Model:</p>
+<div class="arithmatex">\[
+\frac{\partial N}{\partial t} = -a N
+\]</div>
+<p>Solve:</p>
+<div class="arithmatex">\[
+N = N_{0} e^{-a(t+t_{s})}+ b
+\]</div>
+</div>
+</details>
+<p><br>
+MODELS FOR REACTING SYSTEMS:
+The magnitude of the measureable off-rate depends on the rotor speed and sedimentation coefficient.</p>
+<p>For faster rotor speeds, higher molecular weight and globular shape will favour the measurement of faster rate constants. </p>
+<h1 id="data-fitting">Data Fitting</h1>
+<p>Any observable process that influences the measurement needs to be acccounted for in order for models to yeld any meaningful result. 
+The object is then to minimize the residuals between the model and the data.</p>
+<p>Iverse preoblem: extracting parameters from a simulated solution by fitting the model to experimental data.</p>
+<p>A non-parametric fit is used to smooth data for display, where the instrinsic model is of little intrest, and hence the parameters are not needed.</p>
+<h2 id="method-of-least-squares">Method of Least-Squares</h2>
+<p>When useing the Method of Least Squares, we make the following assumptions:</p>
+<ul>
+<li>
+<p>The model is a truthful representation of reality.</p>
+</li>
+<li>
+<p>All error is ssociated with a dependent variable. </p>
+</li>
+<li>
+<p>All experimental noise is considered to be of Gaussian distribution.</p>
+</li>
+</ul>
+<p>The minimum in the differences occur when the derivative of our objective function with respect to the parameters is zero, so we need to differentiate it with respect to the parameters of interest, a and b.
+This will lead to a system of linear equations.</p>
+<p>Any observable process that influences the measurement needs to be accounted for in order for the model to yield meaningful results. Our objective is then to minimize the residuals between the model and the data:</p>
+<div class="arithmatex">\[
+MIN \sum_{i=1}^{n} \left( \frac{Data_{i} - Model _{i}}{uncertainty_{i}}\right)^{2} = MIN \chi^{2}.
+\]</div>
+<p>Extracting parameters from the simulated solution by fitting the model to experimetal data is called an <span class="arithmatex">\(\bf{\text{Inverse Problem}}\)</span>.</p>
+<p>LEAST-SQUARES EQUATION FOR STRAIGHT LINES:
+The equation for a straight line is a linear equation: y = mx +b. Remember our least squares equation above; for a straight line, it changes to:</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} \left( \frac{D_{i} -(a+bx_{i})}{\sigma_{i}}\right)^{2} =  \chi^{2}(a,b).
+\]</div>
+<p>The distances from the experimental data and the linear fit are measured to be perpendicular to the data (see figure), and the objective of this method is to find the equation of a straight line that minimizes the distance between the data and the fit.</p>
+<p><img align="right" alt="" src="\img\linear-fit.png" width="300" /><br></p>
+<p>SOLVING THE LEAST SQUARES EQUATION (LINEAR LINE):
+The minimum in the differences between our data and our fit occurs when the derivative of our function (with respect to the parameters) is zero. Therefore, we must take our least squares equation and  differentiate it:</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} \left( \frac{D_{i} -(\bf{a} +\bf{b}x_{i})}{\sigma_{i}}\right)^{2} =  \chi^{2}(\bf{a,b}).
+\]</div>
+<p>With respect to parameter <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\partial \chi^{2}(\bf{a,b}) }{\partial \bf{a}} = 0 = -2 \sum_{i=1}^{n}\left( \frac{D_{i} - \bf{a} - b x_{i}}{\sigma_{i}^{2}}\right).
+\]</div>
+<p>With respect to parameter <span class="arithmatex">\(b\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\partial \chi^{2}(\bf{a,b})}{\partial \bf{b}} = 0 = -2 \sum_{i=1}^{n}\left( \frac{x_{i}(D_{i} - a - \bf{b} x_{i})}{\sigma_{i}^{2}}\right).
+\]</div>
+<p>This will lead to a system of linear equations:</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} \frac{\bf{a}}{\sigma_{i}^{2}} + \sum_{i=1}^{2} \frac{\bf{b}x_{i}}{\sigma_{i}^{2}} = \sum_{i=1}^{2} \frac{D_{i}}{\sigma_{i}^{2}};
+\]</div>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} \frac{\bf{a}x_{i}}{\sigma_{i}^{2}} + \sum_{i=1}^{2} \frac{\bf{b}x_{i}^{2}}{\sigma_{i}^{2}} = \sum_{i=1}^{2} \frac{D_{i}x_{i}}{\sigma_{i}^{2}}.
+\]</div>
+<p>When in matrix form, this system of equations can be solved by using Cramer's rule, such that:</p>
+<div class="arithmatex">\[
+x_{1} = \frac{b_{1}a_{22}-b_{2}a_{12}}{a_{11}a_{22}-a_{12}a_{21}}, ~~ x_{2} = \frac{b_{2}a_{11}-b_{1}a_{21}}{a_{11}a_{22}-a_{12}a_{21}}.
+\]</div>
+<h2 id="linear-models">Linear Models</h2>
+<p>As discussed above, we know that the equation for a linear equation is <span class="arithmatex">\(y = a + bx\)</span>, and we know that the equation is linear in the coefficients that are fitted. In fact, the equation doesnt have to be that of a straight line to be considered linear. Rather, we can express it with a polynomial:</p>
+<div class="arithmatex">\[
+y = c_{0} + c_{1}x^{1} + c_{2}x^{2} + ... + c_{n}x^{n}.
+\]</div>
+<p>Then, as long as the coefficients are linear, the equation will be considered a linear fitting equation. It does not matter how wildly non-linear the terms of the independent variable are. For example, our variables can be exponentials, or trignometric functions (all of which are not linear):</p>
+<div class="arithmatex">\[
+y = c_{0} + (x-\sin(x^{3})c_{1} + \exp^{-(4-3x)}c_{2} + \ln(3x^{4})c_{3} + ... + c_{n}X_{n},
+\]</div>
+<p>with <span class="arithmatex">\(X_{n}\)</span> being any non-linear term. That being said, sometimes we may want to constrain the value of a paramater. For example, suppose we do not want the amplitude of an exponential term to turn negative during the fitting process. We can prevent this by fitting the log of a number, such that the fitted value will never be negative.</p>
+<div class="arithmatex">\[
+y = \bf{a} e^{bx} + c \rightarrow e^{\ln(\bf{a}) + bx} + c; ~~ e^{ln(a)} = a.
+\]</div>
+<details class="danger">
+<summary><span style ="color: #d9534f;"> EXAMPLE: Linearization</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">Linearization of a Non-Linear Equation</p>
+<p>Suppose we have an exponential equation of the form:</p>
+<div class="arithmatex">\[
+y = c_{1}e^{c_{2}x}.
+\]</div>
+<p>To linearize it, we take the natural logarithm on both side. </p>
+<div class="arithmatex">\[
+\ln(y) = \ln(c_{1}\cdot e^{c_{2}x}) = \ln(c_{1}) + c_{2}x.
+\]</div>
+</div>
+</details>
+<p><br> </p>
+<h2 id="non-linear-regression">Non-Linear Regression</h2>
+<p>What is the importance of an equation being linear or non-linear? It turns out that non-linear functions require fitting using iterative approaches, while linear functions can be fitted using a single interation.
+Consider the Jacobian matrix for non-linear systems:</p>
+<div class="arithmatex">\[
+\bf{J} = \frac{d \bf{f}}{d \bf{x}} =  \frac{\partial \bf{f}}{\partial x_{1}} \cdots \frac{\partial \bf{f}}{\partial x_{n}}=
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} &amp; \cdots &amp;
+\frac{\partial f_1}{\partial x_n} \\
+\vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial f_m}{\partial x_1} &amp; \cdots &amp;
+\frac{\partial f_m}{\partial x_n}
+\end{bmatrix}
+\]</div>
+<p>We are hoping to iteratively improve the parameter estimates by following along the gradient of the error functino in the direction of maximum imporovement. This requires knowledge of the partial derivatives of each parameters at each point in the experiment. Let us therefore take:</p>
+<div class="arithmatex">\[
+\bf{J} (a-g) = \Delta y,
+\]</div>
+<p>where <span class="arithmatex">\(\bf{J}\)</span> is the Jacobian matrix, shown above, <span class="arithmatex">\(g\)</span> is the current parameter estimate, <span class="arithmatex">\(a\)</span> is the adjustment made to the parameter estimate in the current iternation, and <span class="arithmatex">\(\Delta y\)</span> is the difference between the experimental data and the model. To solve for the value of <span class="arithmatex">\(a\)</span>:</p>
+<p>
+<script type="math/tex; mode=display">
+\bf{J}^{T}J (a-g) = \bf{J}^{T}\Delta y.
+</script>
+Once here, we have two options. Option 1:</p>
+<div class="arithmatex">\[
+(\bf{J}^{T}\bf{J}^{-1})\bf{J}^{T}(a-g) = (\bf{J}^{T}\bf{J})^{-1}\bf{J}^{T} \Delta y.
+\]</div>
+<p>Option 2 is when <span class="arithmatex">\(\bf{J}^{T}\bf{J}\)</span> is positive, so that we can use the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Cholesky decomposition</a> (<span class="arithmatex">\(\bf{J}^{T}\bf{J} = \bf{LL}^{T}\)</span>). </p>
+<p>We then iterate until the function converges.</p>
+<details class="danger">
+<summary><span style="color:#d9534f;">EXAMPLE: Appropriateness of Fitting Approaches</span></summary>
+<div class="admonition danger">
+<p class="admonition-title">For each of the following situations, what is the fitting approach. Is it non-parametric, gradient descent, grid method, or stochastic? Is it linear or non-linear in its fitting parameters? If the appraoch is non-parametric, propose a function for it.</p>
+<p>A. Smoothing a set of noisy data with a recognizable wave pattern</p>
+<p>B. Fitting parameters <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> from function:</p>
+<div class="arithmatex">\[
+F(x) = a_{0} + a_{1}\log(ax) + a_{2}\sin(b-x^{2}) + c
+\]</div>
+<p>C. Fitting paramaters <span class="arithmatex">\(a_{i}\)</span> from function:</p>
+<div class="arithmatex">\[
+F(x) = \sum_{i=0}^{100}a_{i}e^{b_{i}(x^{2}-c^{2})},~~\text{where}~ b_{i} = \frac{1}{100}.
+\]</div>
+<p>D. Fitting paramaters <span class="arithmatex">\(a_{j}\)</span> from function:</p>
+<div class="arithmatex">\[
+F(x) = a_{0} + a_{1}\log(bx) + a_{2}\sin(a_{3}-x^{2}) + c
+\]</div>
+<p>E. Fitting parameters <span class="arithmatex">\(a, b\)</span>, and <span class="arithmatex">\(c\)</span> from function:</p>
+<div class="arithmatex">\[
+F(x) = \log(ax) + \sin(bx^{2}) + c
+\]</div>
+<p>F: Fitting parameters <span class="arithmatex">\(a_{1}\)</span> to <span class="arithmatex">\(a_{8}\)</span>:</p>
+<div class="arithmatex">\[
+F(x) = a_{1}\log(a_{2x}) + \frac{a_{3}\sin(\sqrt{2}a_{4}x^{2})}{a_{7}x^{3}} + a_{5}e^{a_{6}x^{2}/2} + a_{8}
+\]</div>
+</div>
+</details>
+<p><br></p>
+<h1 id="experimental-uncertainties-error-surfaces-and-fit-quality">Experimental Uncertainties, Error Surfaces, and Fit Quality</h1>
+<p><img align="right" alt="" src="\img\uncertainty.png" width="300" /></p>
+<p>EXPERIMENTAL UNCERTAINTIES: The uncertainty of an measurement can be determined by repeating the expriment several times. Each time, a slightly different value is obtained for the experimental observation. If we assume a Gaussian distribution of errors in the measurement, we can determine the standard deviation, <span class="arithmatex">\(\sigma\)</span>, of the distribution of measured parametes. Then we can use <span class="arithmatex">\(\sigma\)</span> to set the error bars on the measurement and to scale the contribution of a datapoint to the sum of residuals.</p>
+<p>To calculate the standard deviataion, use the following equation:</p>
+<div class="arithmatex">\[
+\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_{i} - \bar x)^{2}},
+\]</div>
+<p>where <span class="arithmatex">\(\bar x\)</span> is the average of all measurements.</p>
+<p><img align="right" alt="" src="\img\error-surface.png" width="300" /></p>
+<p>ERROR SURFACES: Each parameter combination a, b results in a unique error when fitted to the experimental data. The optimal solution occurs where the error is the smallest. Ideally, the error surface is continuously differentiable. </p>
+<p>GOODNESS OF FIT:
+The quality of the fit is determined by the randomness of the residuals, and the root mean square deviatio (RMSD). The randomness of the residuals can be measured by determining the runs. Runs (R) are the number of consecutive positive (p) or negative (n) residuals from the mean.</p>
+<div class="arithmatex">\[
+R_{T} = \frac{R-\bar R}{\sigma_{R}}
+\]</div>
+<p>where <span class="arithmatex">\(R_{T}\)</span> is the measure of randomness, and:</p>
+<div class="arithmatex">\[
+\bar R = \frac{2np}{n + p} + 1
+\]</div>
+<div class="arithmatex">\[
+\sigma_{R}^{2} = \frac{2np(2np-n-p)}{n+p)^{2}(n+p-1)}.
+\]</div>
+<h1 id="optimization-methods">Optimization Methods</h1>
+<p>For linear fits, our options for optimizing methods include straight line fits, generalized inear least squares, non-negative constrained least squares, multi-dimensional spectrum analyses, and non-parametric fits. Examples of non-parametric fits are B-splines and polynomial smoothing.</p>
+<p>For non-linear optimizatin using gradient descent methods for functions of type, <span class="arithmatex">\(y = F(a_{i},x_{i})\)</span>, we can use Levenberg-Marquardt, Gauss-Newton, Quasi-Netwon, conjugate gradients, tangent approximation, or neural networks. A problem with non-linear least squares optimization is that for multi-component systems, the algorithm gets easily stuck in local minima and the solution will depend on the starting points. This problem gets worse when there are more parameters.</p>
+<details class="note">
+<summary><span style="color: #1f9bcf;">TL;DR: Optimization Methods</span></summary>
+<div class="admonition note">
+<p class="admonition-title"> These will be discussed in more detail on their own pages.</p>
+<p>2DSA: Provides degenerate, linear fits to experimental data over a finite domain, identifying regions with signal in the mass/shape domain, used to remove systematic noise contributions</p>
+<p>GA: provides parsimonious regularization of 2DSA spectrums, statisfies Occam's razor. Also used for fitting of discrete, non-linear models (reversible associations, non-ideality, co-sedimenting solutes)</p>
+<p>MC: used to measure the effect of noise on fitted parameters, yields parameter distribution statistics</p>
+<p>PCSA: used to regularize 2DSA, enforces a unique mapping of one molar mass/sedimentation coefficient per frictional ratio.</p>
+</div>
+</details>
+<p><br>
+There are also stochastic (Monte Carlo, simulated annealing, random walk, and genetic algorithms) and deterministic fitting methods.</p>
+<p>For comparrison:</p>
+<p>STOCHASTIC:</p>
+<ul>
+<li>
+<p>large search space possible</p>
+</li>
+<li>
+<p>generally slow converging</p>
+</li>
+<li>
+<p>excellent convergence properties with enough time</p>
+</li>
+<li>
+<p>computer-intensive</p>
+</li>
+<li>
+<p>suitiable for many parameters</p>
+</li>
+<li>
+<p>good for ill-conditioned error surfaces</p>
+</li>
+<li>
+<p>derivates not needed</p>
+</li>
+</ul>
+<p>DETERMINISTIC:</p>
+<ul>
+<li>
+<p>small search space</p>
+</li>
+<li>
+<p>suitable for a few parameters only</p>
+</li>
+<li>
+<p>well-conditioned error surface</p>
+</li>
+<li>
+<p>very fast convergence</p>
+</li>
+<li>
+<p>requires derivatives</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

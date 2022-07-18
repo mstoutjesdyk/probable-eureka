@@ -1,0 +1,173 @@
+site_name: AUC University
+site_author: Marielle Stoutjesdyk
+repo_url: https://github.com/mstoutjesdyk/probable-eureka
+
+nav:
+    - Home: index.md
+    - General:
+      - Literature: lit.md
+      - Documentation: documents.md
+      - Networking/Contacts: contact.md
+      - Appendix: appendix.md
+      - Webmaster: webmaster.md
+    - Biophysics: 
+      - Introduction: intro.md   
+      - Macromolecular Interactions: macro.md
+      - Transport Processes: transport.md
+      - Hydrodynamic Parameters: hydro-parameters.md
+      - Non-Ideality: non-ideal.md
+      - Centrifugation: centri.md
+      - Lamm Equation: lamm.md
+      - Determining Parameters: parameters.md
+    - The AUC Lab: 
+      - Instrumentation: instru.md
+      - Optical Systems: 
+        - Absorbance: optics.md
+        - Interference: interference.md
+        - Fluorescence: fluorescence.md
+        - Multiwavelength: tech-mwl.md
+      - Rotors: rotors.md
+      - Cells: cells.md
+      - Suitable Systems: suitable-systems.md
+      - Optimal Sample Preperation: samp-prep.md
+      - Lab Resources: resources.md
+    - Experimental Techniques:
+      - Sedimentation Velocity: sed-veloc.md
+      - Multi-Speed Sedimentation Velocity: multispeed-sedveloc.md
+      - Sedimentation Equilibrium: sed-equil.md
+      - Analytical Buoyant Density Equilibrium: abde.md
+      - Density Matching: density.md
+    - Analysis Flowcharts:
+      - Sed. Velocity: sv-flow.md
+      - Sed. Equilibirum: se-flow.md
+      - Multi-Wavelength: mw-flow.md
+    - Data Theory:
+      - Data Modeling and Fitting: model.md
+      - Noise Considerations: noise.md
+      - 2-D Spectrum Analysis: 2dsa.md
+      - Genetic Algorithms: ga.md
+      - Monte-Carlo: monte.md
+      - Parametrically Constrained Spectrum Analysis: pcsa.md
+      - Van Holde-Weischet: vhw.md
+      - MWL Spectral Deconvolution: mwlspec.md
+    - Good Manufacturing Practices:
+      - GMP and AUC: gmp-auc.md
+      - OpenAUC Standards: openAUC.md
+      - Calibration Hardware: cal-hard.md
+      - Calibration Methods:
+        - Optical Systems: maint.md
+        - Standards: auc-standards.md
+        - Rotor Stretch: rotorstretch.md
+        - Chromatic Aberration: chromab.md
+        - Solute Compression: compression.md
+    - Software:
+      - UltraScan: ultrascan.md
+      - SedFit: sedfit.md
+      - SedAnal, DCDT: sedanal.md
+      - Sednterp: sednterp.md
+    - Navigating UltraScan:
+      - Overview: us-overview.md
+      - Edit: us-edit.md
+      - Velocity:
+        - Enhanced van Holde-Weischet: velocity-evhw.md
+        - Custom 2-D Grid Control: velocity-grid.md
+        - 2-D Spectrum Analysis: velocity-2dsa.md
+        - Paramertically Constrained Spectrum Analysis: velocity-pcsa.md
+        - Initialize Genetic Algorithm: velocity-initializega.md
+        - Initialize Discrete Model Genetic Algorithm: velocity-initializedmga.md
+        - Second Moment: velocity-2moment.md
+        - Time Derivative: velocity-timederiv.md
+        - FE Model Viewer and Statistics: velocity-femodel.md
+        - View Pseudo 3-D Distributions: velocity-pseudo3d.md
+        - Speed Ramp Analysis: velocity-speedramp.md
+      - Utilities:
+        - Data Aquisition: utilities-data.md
+        - Import Experimental Data: utilities-import.md
+        - Export openAUC Data: utilities-export.md
+        - FDS File Manager: utilities-fds.md
+        - Fit Meniscus: utilities-fitm.md
+        - Spectral Analysis: utilities-spectralanal.md
+        - Color Gradient Generator: utilities-color.md
+        - Report Generator: utilities-report.md
+        - Rotor Calibration: utilities-rotor.md
+        - License Manager: utilities-license.md
+        - Combine Distribution Plots (vHW): utilities-cddvhw.md
+        - Combine Discrete Distributions: utilities-dd.md
+        - Combine Integral Distributions: utilities-id.md
+        - Create Global Model: utilities-globalmodel.md
+        - View Raw CFA Data: utilities-viewcfa.md
+        - View Raw Optima Data: utilities-veiwoptima.md
+        - View Time State: utilities-viewtime.md
+        - Density Matching: utilities-densitymatch.md
+        - Pseudo-Absorbance: utilities-pseudoabs.md
+      - Multiwavelength:
+        - View Multiwavelength Data: mwl-view.md
+        - View MWL Spectral: mwl-spectral.md
+        - MWL Species Fit: mwl-species.md
+        - Optima MWL Fit Simulation: mwl-simulation.md
+      - Simulation:
+        - Finite Element Simulation (ASTFEM): sim-finiteelement.md
+        - Estimate Equilibirum Times: sim-estequil.md
+        - Self-Association Equilibirum: sim-selfass.md
+        - Model s, D, and f from MW for 4 Basic Shapes: sim-modelsdf.md
+        - Predict f and Axial Ratios for 4 Basic Shapes: sim-predict.md
+        - SOMO Bead Modeling and Configuration: sim-somo.md
+      - Database:
+        - Manage Investigator Data: database-invest.md
+        - Manage Buffer Data: database-buffer.md
+        - Manage Analytes: database-analytes.md
+        - Manage Models: database-model.md
+        - Manage Data: database-data.md
+        - Manage Solutions: database-solutions.md
+        - Manage Projects: database-project.md
+        - Manage Rotors: database-rotors.md
+      - Common Dialogs: us-dialogs.md
+    - Navigating US-GMP: 
+      - Overview: gmp-overview.md
+      - Experiment: gmp-experiment.md
+      - Live Update: gmp-liveupdate.md
+      - LIMS Import: gmp-limsimport.md
+      - Editing: gmp-editing.md
+      - Analysis: gmp-analysis.md
+      - Report: gmp-report.md
+
+
+extra_css:
+   - css/extra.css
+   - docs/stylesheets/extra.css
+   - admonition-text.css
+
+theme:
+   navigation_depth: 20
+   name: lux
+   highlightjs: true
+   locale: en
+   features:
+     - header.autohide
+
+extra:
+   logo: 'docs/img/auc-university.svg'
+
+markdown_extensions:
+   - md_in_html
+   - def_list
+   - meta
+   - fontawesome_markdown
+   - admonition
+   - attr_list
+   - tables
+   - footnotes
+   - pymdownx.details
+   - pymdownx.superfences
+   - mdx_math
+   - extra
+   - fenced_code
+   - abbr
+   - pymdownx.arithmatex:
+       generic: true
+
+
+extra_javascript:
+   - javascripts/mathjax.js
+   - https://polyfill.io/v3/polyfill.min.js?features=es6
+   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

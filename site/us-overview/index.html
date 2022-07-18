@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Overview - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sednterp/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../us-edit/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/us-overview.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#edit" class="nav-link">Edit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#velocity" class="nav-link">Velocity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#utilities" class="nav-link">Utilities</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#multiwavelength" class="nav-link">MultiWavelength</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#simulation" class="nav-link">Simulation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#database" class="nav-link">Database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>One of the issues that has been raised about using UltraScan has been its user difficulty. These pages are created to help users navigate UltraScan and get the best out of this software. </p>
+<p>Each section is listed below with a quick description of what each subsection module does. The individual pages on each module are linked and provide a detailed explaination through how to use them. The most commonly used modules will be in red text.</p>
+<h2 id="edit">Edit</h2>
+<ul>
+<li>
+<p><a href="/us-edit"><span style="color:#FF0000";>Edit Data</span></a> All experimental data aquired with the AUC requires pre-processing. This module creates an edit profile of the data. A user can create multiple edit profiles, and each profile receives a unique name. UltraScan assists in the process by handling the most essential diagnosics and editing steps automatically, but the user can intervene when necessary.</p>
+</li>
+<li>
+<p><a href="/us-edit">Preferences</a> This module contains a number of parameters that can be set to customize UltraScan according to personal preferences. This include directory paths, font and colour preferences, database preferences, and master password.</p>
+</li>
+</ul>
+<h2 id="velocity">Velocity</h2>
+<ul>
+<li>
+<p><a href="/velocity-evhw"><span style="color:#FF0000";>Enhanced van Holde-Weischet</span></a> This module differentiates boundary spreading due to diffusion from the boundary spreading due to the heterogeneity in sedimentation coefficients. Use this analysis technqiue using the fit generated by the final 2DSA refinement model. Then use Combine Distributions Plots (vHW) to view the boundary fraction as a function of sedimentation coefficient.</p>
+</li>
+<li>
+<p><a href="/velocity-grid">Custom 2-D Grid Control</a> This module enables you to edit custom 2-D initialization grids for the 2DSA.</p>
+</li>
+<li>
+<p><a href="/velocity-2dsa">2-D Spectrum Analysis</a> This module enables you to perfrom a 2DSA on a chosen experimental data set. Upon completion of an analysis fit, the following avaliable plots include: experiment; simulation; overlayed experiment and simulation; residuals; time-invarient noise; radially-invariant noise; 3-D model. </p>
+</li>
+<li>
+<p><a href="/velocity-pcsa">Paramertically Constrained Spectrum Analysis</a> This module enables you to perfrom a PSCA on a chosen experimental data set. Upon completion of an analysis fit, the following avaliable plots include: experiment; simulation; overlayed experiment and simulation; residuals; time-invarient noise; radially-invariant noise; 3-D model. </p>
+</li>
+<li>
+<p><a href="/velocity-initializega"><span style="color:#FF0000";>Initialize Genetic Algorithm</span></a> This genetic algorithm program will generate solute distribution data. The output data is required in order to perform a genetic algorithm analysis on the UltraScan LIMS database.</p>
+</li>
+<li>
+<p><a href="/velocity-initializedmga">Initialize Discrete Model Genetic Algorithm</a></p>
+</li>
+<li>
+<p><a href="/velocity-2moment">Second Moment</a> This module is used to calculate the weight-average sedimentation coefficeints for each scan included in an analysis by finding the second moment point of the boundary.</p>
+</li>
+<li>
+<p><a href="/velocity-timederiv"><span style="color:#FF0000";>Time Derivative</span></a> This module allows you to determine the initial range of the sedimentation coefficient.</p>
+</li>
+<li>
+<p><a href="/velocity-femodel"><span style="color:#FF0000";>FE Model Viewer</span></a> This module is used to import, display, and export finite element solutions fitted to velocity experiments by various methods. It will import models from finite element fitting sessions, 2DSA fitts, genetic algorithm fits, or C(s) fits. It will then compare the fitted model to the experimental data, and display residual plots, sedimentation and diffusion coefficient distributions, as well as molecular weight distributions. These models can be displayed as a 3-D plot showing partial concentrations on a 2-D grid of any of the two folllowing parameters: <span class="arithmatex">\(s\)</span>, <span class="arithmatex">\(D\)</span>, <span class="arithmatex">\(f/f_{0}\)</span>, and MW. The residual plot includes deconvoluted time- and radially- invariant noise plots. All results can be saved.</p>
+</li>
+<li>
+<p><a href="/velocity-femodel">FE Model Statistics</a> This module allows you to obtain statistics for a model computed by any finite element analysis modeule in UltraScan. The following metrics are supported: three distribuion limits, $D_{i}%; span computed from the distribution limits; concentration integral between the lowest and highest distribution limit; maximum and minimum X-value of the distribution; mean, mode, and median of the distribution, and; skew and kurtosis of the distribution.</p>
+</li>
+<li>
+<p><a href="/velocity-pseudo3d">View Pseudo 3-D Distributions</a> Using this module, you may display solution distribution data in a pseudo-3-D form where the Z-axis is simulated using colors in a color  map. Data from different cells can be combined.</p>
+</li>
+<li>
+<p><a href="/velocity-speedramp">Speed Ramp Analysis</a></p>
+</li>
+</ul>
+<h2 id="utilities">Utilities</h2>
+<ul>
+<li>
+<p><a href="/utilities-data"><span style="color:#FF0000";>Data Aquisition</span></a></p>
+</li>
+<li>
+<p><a href="/utilities-import"><span style="color:#FF0000";>Import Experimental Data</span></a> Here you can import and convert experimental raw data into a set of files written in the UltraScan III OpenAUC format. This file is a binary file containing all the information from a single dataset or tripe (cell/channel/wavelength).</p>
+</li>
+<li>
+<p><a href="/utilities-export">Export openAUC Data</a></p>
+</li>
+<li>
+<p><a href="/utilities-fds">FDS File Manager</a> This module allos you to manage the scan files created by the <a href="/fluorescence">AOS Fluorescence Detector</a> data aquisitin software. </p>
+</li>
+<li>
+<p><a href="/utilities-fitm"><span style="color:#FF0000";>Fit Meniscus</span></a> This module allows you to modify an edited data set's meniscus value based on meniscus-fit models. A polynomial fit to a set of meniscus-RMSD points is plotted and its low point presented as the default new meniscus value. That value - or a manually modified one - can then replace the value in the associated Edited data set. The model with closest meniscus value in the set of fit-meniscus models that were obtained by a front-end or back-end meniscus fit 2DSA run can be preserved, while all other models in the set (and any associated noises) are removed. </p>
+</li>
+<li>
+<p><a href="/utilities-spectralanal">Spectral Analysis</a></p>
+</li>
+<li>
+<p><a href="/utilities-color">Color Gradient Generator</a></p>
+</li>
+<li>
+<p><a href="/utilities-report">Report Generator</a></p>
+</li>
+<li>
+<p><a href="/utilities-rotor">Rotor Calibration</a></p>
+</li>
+<li>
+<p><a href="/utilities-license">License Manager</a></p>
+</li>
+<li>
+<p><a href="/utilities-cddvhw"><span style="color:#FF0000";>Combine Distribution Plots (vHW)</span></a> This module combines integral van Holde-Weischet G(s) distributions from multiple datasets, allowing you to compare integral distributions from different cells to each other. It is useful when you want to analyze the same sample under different conditions (for example, different pH levels, or different concentrations). All distributions are plotted relative to the boundary fraction used in analysis.</p>
+</li>
+<li>
+<p><a href="/utilities-dd"><span style="color:#FF0000";>Combine Discrete Distributions</span></a> This module combines model distributions from multiple datasets, allowing you to compare bar plots of distributions from different cells to each other. Distribution plots present relative concentration (Y) for X, which may be the sedimentation coefficient, molecular weight, diffusion coefficient, frictional ratio, or partial specific density.</p>
+</li>
+<li>
+<p><a href="/utilities-id">Combine Integral Distributions</a></p>
+</li>
+<li>
+<p><a href="/utilities-globalmodel"><span style="color:#FF0000";>Create Global Model</span></a> This module combines models into a single global model that can be used in global fits. Most commonly, this module is used to form an input to the <a href="/velocity-initializega">Initialize Genetic Algorithm</a> program in which a global set of buckets may be created for use in a global fit Genetic Algorithm run.</p>
+</li>
+<li>
+<p><a href="/utilities-viewcfa">View Raw CFA Data</a></p>
+</li>
+<li>
+<p><a href="/utilities-veiwoptima">View Raw Optima Data</a></p>
+</li>
+<li>
+<p><a href="/utilities-viewtime">View Time State</a></p>
+</li>
+<li>
+<p><a href="/utilities-densitymatch">Density Matching</a></p>
+</li>
+<li>
+<p><a href="/utilities-pseudoabs">Pseudo-Absorbance</a></p>
+</li>
+</ul>
+<h2 id="multiwavelength">MultiWavelength</h2>
+<ul>
+<li>
+<p><a href="/mwl-view">View Multiwavelength Data</a></p>
+</li>
+<li>
+<p><a href="/mwl-spectral">View MWL Spectral</a></p>
+</li>
+<li>
+<p><a href="/mwl-species">MWL Species Fit</a></p>
+</li>
+<li>
+<p><a href="/mwl-simulation">Optima MWL Fit Simulation</a></p>
+</li>
+</ul>
+<h2 id="simulation">Simulation</h2>
+<ul>
+<li>
+<p><a href="/sim-finiteelement"><span style="color:#FF0000";>Finite Element Simulation</span></a> This module is used to simulate an exxperiment using ASTFEM or ASTFVM methods.</p>
+</li>
+<li>
+<p><a href="/sim-estequil">Estimate Equilibirum Times</a> This module is used to estimate the time it will take to reach equilibrium at a certain speed.</p>
+</li>
+<li>
+<p><a href="/sim-selfass">Self-Association Equilibirum</a></p>
+</li>
+<li>
+<p><a href="/sim-modelsdf">Model s, D, and f from MW for 4 Basic Shapes</a></p>
+</li>
+<li>
+<p><a href="/sim-predict">Predict f and Axial Ratios for 4 Basic Shapes</a></p>
+</li>
+<li>
+<p><a href="/sim-somo">SOMO Bead Modeling and Configuration</a></p>
+</li>
+</ul>
+<h2 id="database">Database</h2>
+<ul>
+<li>
+<p><a href="/database-invest">Manage Investigator Data</a> Using this window, you can update any personal information. Note that your database authorizations must allow for update privaleges for the record being changed.</p>
+</li>
+<li>
+<p><a href="/database-buffer">Manage Buffer Data</a> Using this window, you can select and manage buffers in the current database/local disk.</p>
+</li>
+<li>
+<p><a href="/database-analytes">Manage Analytes</a> Using this window, you can select and manage analyte in the current database/local disk.</p>
+</li>
+<li>
+<p><a href="/database-model">Manage Models</a> Using this wondow, you choose a model to load. You can also create or edit a model.</p>
+</li>
+<li>
+<p><a href="/database-data">Manage Data</a> This module can be used to display the four main types of data that may exist for a user in the current database/local disk.</p>
+</li>
+<li>
+<p><a href="/database-solutions">Manage Solutions</a> Using this window, you may manage the solution information on the current database/local disk. You must be identified as the investigator to delete or update a solution description.</p>
+</li>
+<li>
+<p><a href="/database-project">Manage Projects</a> Using this window, you may manage project information on the current database/local disk. You must be identified as the investigator to delete or update a project description.</p>
+</li>
+<li>
+<p><a href="/database-rotors">Manage Rotors</a> Using this wondow, you may manage rotor information on the current database/local disk.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
