@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Sed. Velocity - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sed-equil/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../model/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/sv-flow.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#1-import-experimental-data" class="nav-link"> 1. Import Experimental Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#2-edit-data" class="nav-link"> 2. Edit Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#3-time-derivative-analysis" class="nav-link"> 3. Time Derivative Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#4-2dsa-fit-time-invariant-noise" class="nav-link"> 4. 2DSA: Fit Time Invariant Noise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#5-2dsa-fit-meniscus-ti-noise-ri-noise" class="nav-link"> 5. 2DSA: Fit Meniscus, TI Noise, RI Noise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#6-2dsa-iterative" class="nav-link"> 6. 2DSA: Iterative</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#7-genetic-algorithm-analysis-optional" class="nav-link"> 7. Genetic Algorithm Analysis (optional)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#8-2dsa-monte-carlo-analysis-recommended" class="nav-link"> 8. 2DSA Monte Carlo Analysis (recommended)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#9-perform-monte-carlo-ga-analysis-optional" class="nav-link"> 9. Perform Monte Carlo GA Analysis (optional)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#10-perform-van-holde-weischet-analysis" class="nav-link"> 10. Perform van Holde-Weischet Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#11-overlay-combined-distributions" class="nav-link">11. Overlay Combined Distributions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#12-perform-parametrically-constrained-spectrum-analysis" class="nav-link"> 12. Perform Parametrically Constrained Spectrum Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><span style="font-size: 30px";>Sedimentation Velocity Analysis Flowchart</span></p>
+<h2 id="1-import-experimental-data"><span style="font-size: 26px";> 1. Import Experimental Data</span></h2>
+<h2 id="2-edit-data"><span style="font-size: 26px";> 2. Edit Data</span></h2>
+<h2 id="3-time-derivative-analysis"><span style="font-size: 26px";> 3. Time Derivative Analysis</span></h2>
+<p>This step will provide an range for the sedimentation coefficient for use in the upcoming analysis steps. </p>
+<ol>
+<li>
+<p>Open <a href="/velocity-timederiv"><span style="color:#00008B";>Velocity: Time Derivative</span></a> and select <span style="color:#00008B";> Load Experiment</span> to load the experimental data.</p>
+</li>
+<li>
+<p>Adjust analysis controls:</p>
+<p>Set <span style="color:#00008B";>Data Smoothing</span> to ~ 10.</p>
+<p>Set <span style="color:#00008B";>Boundary Pos (%)</span> to 0.</p>
+<p>Create an <span style="color:#00008B";>Exclusion Profile</span> for scans that do not exhibit a stable upper plateau.</p>
+<p>Select <span style="color:#00008B";>Average S</span> to plot the dc/dt S-value distribution (default setting).</p>
+<p>Adjust <span style="color:#00008B";>S-value cutoff</span> as needed.</p>
+</li>
+</ol>
+<p>The correct S limits to choose are the left and right limits of the S-value distribution where all signal returns to baseline. The minimum S-value allowed is 0.2 S.</p>
+<h2 id="4-2dsa-fit-time-invariant-noise"><span style="font-size: 26px";> 4. 2DSA: Fit Time Invariant Noise</span></h2>
+<p>This step can be done locally on UltraScan's 2DSA module, but the following assumes the use of the USLIMS site.</p>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup.</span> </p>
+</li>
+<li>
+<p><span style="color: #006400";>Load the Dataset.</span></p>
+</li>
+<li>
+<p>Setup 2DSA Control</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value Limits</span> from the range obtained in Step 3.</p>
+<p>b. <span style="color:#006400";>Set <span class="arithmatex">\(f/f_{0}\)</span> Limits</span> to 1-4 or adjust the upper limit based on prior knowledge of the sample.</p>
+<p>c. <span style="color: #006400";>Set the Resolution.</span> The default for both <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(f/f_{0}\)</span> is 64. The resolution is the number of points into which this variable will be discretized. For example, if the range is selected from 1-5, and the resolution is set to 40, there will be 10 grid points/<span class="arithmatex">\(s\)</span>-value, resulting in an increment of 0.1 S.</p>
+<p>d. <span style="color: #006400";>Set the Grid Resolution.</span> The default resolution of 64 will be sufficient for most situations. When you have a very poly-disperse or heterogeneous sample you may have to go higher. Larger values will increase compute time. A good strategy is to check if there are noticeable jumps in the fit. If there are, increase the resolution. If you are trying to fit a bi- or tri-modal system, you may be able to get a higher resolution by using the custom grid method, and use the appropriate resolution for each grid.</p>
+<p>e. Select <span style="color: #006400";>Fit Time Invariant Noise.</span></p>
+<p>f. Leave all other settings at default values.</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion.</p>
+</li>
+<li>
+<p>Open <a href="/velocity-femodel"><span style="color: #00008B";>Velocity: FE Model Viewer</span></a> to confirm the results. <span style="color: #00008B";>Load the Dataset</span> of the newly generated time invariant noise file. The file will be of the format "2DSA.run_name". Remember to <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<p>If random residuals are obtained, proceed with step 5, but if residuals do not look random, and a strong diagonal line in the residual bitmap is apparent, investigate range settings for S and f/f0 settings and repeat 2DSA with improved ranges.</p>
+<p>Note: Do not set the lower s-value limit too low, as this could create artificially low-s species signal if a baseline or slowly changing baseline exists. These artifacts are better handled in the time invariant noise. </p>
+<h2 id="5-2dsa-fit-meniscus-ti-noise-ri-noise"><span style="font-size: 26px";> 5. 2DSA: Fit Meniscus, TI Noise, RI Noise</span></h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset.</span> By default, it will load the dataset that was saved from the previous step.</p>
+</li>
+<li>
+<p>Setup 2DSA Control</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value and <span class="arithmatex">\(f/f_{0}\)</span> Limits.</span> Use the same range settings as in Step 4.</p>
+<p>b. <span style="color: #006400";>Set the Resolution</span> and <span style="color: #006400";>Set the Grid Resolution.</span> </p>
+<p>c. Select <span style="color: #006400";>Fit Time Invariant Noise</span> and <span style="color: #006400";>Fit Radially Invariant Noise,</span></p>
+<p>d. Select <span style="color: #006400";>Fit Meniscus</span>. The fitting should occur over 0.03 cm with 10 points.</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";><u>Check Queue Viewer</u></span> for job completion.</p>
+</li>
+<li>
+<p>Open <a href="/utilities-fit"><span style="color: #00008B";>Utilities: Fit Meniscus.</span></a> </p>
+</li>
+<li>
+<p>Click on <span style="color: #00008B";>Scan Database</span> (if using the database) and check the status line for new results. </p>
+</li>
+<li>
+<p>Go to <span style="color: #00008B";>File: Load</span> to load the desired meniscus fit.</p>
+</li>
+<li>
+<p>After updating the meniscus, <span style="color: #00008B";>confirm the deletion</span> of the scans that resulted in non-optimal RMSD values. </p>
+</li>
+<li>
+<p>Open <a href="/velocity-femodel"><span style="color: #00008B";>Velocity: FE Model Viewer</span></a> to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.FM.run_name". Remember to <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="6-2dsa-iterative"><span style="font-size: 26px";> 6. 2DSA: Iterative</span></h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset.</span> </p>
+</li>
+<li>
+<p>Setup 2DSA Control</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value and <span class="arithmatex">\(f/f_{0}\)</span> Limits.</span> Use the same range settings as in Step 5.</p>
+<p>b. <span style="color: #006400";>Set the Resolution</span> and <span style="color: #006400";>Set the Grid Resolution.</span> </p>
+<p>c. Select <span style="color: #006400";>Fit Time Invariant Noise</span> and <span style="color: #006400";>Fit Radially Invariant Noise,</span></p>
+<p>d. Select <span style="color: #006400";>Iterative Refinement</span> and <span style="color: #006400";>Set Refinement Level</span> to 10 iterations.</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion.</p>
+</li>
+<li>
+<p>Open <a href="/velocity-femodel"><span style="color: #00008B";>Velocity: FE Model Viewer</span></a>to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.IT.run_name". Remember to <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<p>All subsequent analyses methods should now be based on the model generated in this final 2DSA refinement step.</p>
+<p>At this point, multiple analysis options exist depending on the properties of the analyte distribution. If a paucidisperse solution is obtained, parsimonious regularization with the genetic algorithm method is appropriate. Otherwise, the data should be analyzed only by the 2DSA analysis in conjunction with a 50-iteration Monte Carlo analysis. Both options are explained below. </p>
+<h2 id="7-genetic-algorithm-analysis-optional"><span style="font-size: 26px";> 7. Genetic Algorithm Analysis (optional)</span></h2>
+<p>Perform this step if the refined 2DSA data is appropriate for genetic algorithm analysis.</p>
+<ol>
+<li>
+<p>Open <a href="/velocity-initializega"><span style="color: #00008B";>Velocity: Initialize Genetic Algorithm.</span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load the Model</span> from Step 6 into the initialization program.</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Assign Initialization</span> and <span style="color: #00008B";>Save Results.<span></p>
+</li>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset</span> to Genetic Algorithm analysis.</p>
+</li>
+<li>
+<p>Select and <span style="color: #006400";>Load the gadistro File</span> from the UltraScan/results/run-id directory for the correct triple.</p>
+</li>
+<li>
+<p>Open <a href="/velocity-femodel"><span style="color: #00008B";>Velocity: FE Model Viewer</span></a> to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.GA.run_name". Remember to <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="8-2dsa-monte-carlo-analysis-recommended"><span style="font-size: 26px";> 8. 2DSA Monte Carlo Analysis (recommended)</span></h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset</span>.</p>
+</li>
+<li>
+<p>Select <span style="color: #006400";>50 Monte Carlo Iterations.</span></p>
+<p>If the 2DSA distribution appears to be a sparse solute situation, and not a smooth continuous distribution of many species, you can further refine the data with a parsimonious regularization using the GA analysis.</p>
+<p>When using 2DSA Monte Carlo distributions for the GA initialization, make sure to use the manual GA initialization method in <a href="/velocity-initializega"><span style="color: #00008B";>Velocity: Initialize Genetic Algorithm.</span></a></p>
+</li>
+<li>
+<p>Select and <span style="color: #006400";>Load the gadistro File</span> from the UltraScan/results/run-id directory for the correct triple.</p>
+</li>
+<li>
+<p>Open &lt;<a href="/velocity-femodel">span style="color: #00008B";&gt;Velocity: FE Model Viewer</span></a> to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.MC.run_name". Remember to <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="9-perform-monte-carlo-ga-analysis-optional"><span style="font-size: 26px";> 9. Perform Monte Carlo GA Analysis (optional)</span></h2>
+<ol>
+<li>
+<p>Using the results from Step 7, <span style="color: #00008B";>Initialize Genetic Algorithm - Monte Carlo.</span> </p>
+</li>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";>US3 LIMS portal</span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset</span> from Step 6 (default).</p>
+</li>
+<li>
+<p>Select a multiple of 8 for the <span style="color: #006400";>Monte Carlo iterations</span> (48, 56 or 64 are good choices).</p>
+</li>
+<li>
+<p>Select <span style="color: #006400";>parallel processing with 8 program groups.</span></p>
+</li>
+<li>
+<p>Select and <span style="color: #006400";>Load the gadistro File</span> from the UltraScan/results/run-id directory for the correct triple.</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit</span> to desired cluster. </p>
+</li>
+<li>
+<p>Open <a href="/velocity-femodel"><span style="color: #00008B";>Velocity: FE Model Viewer</span></a> to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.GA.run_name" generated from the GA distribution model. Remember to <span style="color: #00008B";>Save Results.</span> </p>
+</li>
+</ol>
+<h2 id="10-perform-van-holde-weischet-analysis"><span style="font-size: 26px";> 10. Perform van Holde-Weischet Analysis</span></h2>
+<ol>
+<li>
+<p>Open <a href="/velocity-evhw"><span style="color: #00008B";>Velocity: Enhanced van Holde - Weischet</span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load</span> the desired experiment, applying the noise files from Step 6.</p>
+</li>
+<li>
+<p>Check the boxes for <span style="color: #00008B";>Plateaus from 2DSA</span> and <span style="color: #00008B";>Use Enhanced vHW</span></p>
+</li>
+<li>
+<p>Adjust analysis controls:</p>
+<p><span style="color: #00008B";>Back Diffusion Tolerance</span> to between 0.101 or 0.201</p>
+<p>Increase <span style="color: #00008B";>Divisions</span> to 150 </p>
+<p>Increase <span style="color: #00008B";>Data Smoothing</span> to 11</p>
+<p><span style="color: #00008B";>% of Boundary</span></p>
+<p><span style="color: #00008B";>Boundary Position</span></p>
+<p>If appropriate, delete early scans to improve resolution and reduce noise. Only keep 
+scans and boundary portions that contribute to well correlated line fits in the 
+linear extrapolations.</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Select Groups</span>, if appropriate, to generate weight averaged s-values for discrete 
+species</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Display Distribution Plot.</span> </p>
+<p>A mono-disperse solution is shown by a straight line on the distribution plot. Ensure that the line is smooth without any kinks or back-bends. If there are kinks or back-bends, adjust <span style="color: #00008B";>Divisions</span>, <span style="color: #00008B";>Data Smoothing</span>, and <span style="color: #00008B";>Scan Exclusion</span> profiles.</p>
+</li>
+<li>
+<p>Select <span style="color: #00008B";>Display Histogram</span> in the <span style="color: #00008B";>Distribution Plot</span> module.</p>
+<p>Adjust <span style="color: #00008B";>Histogram Sensitivity</span> to ~40</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Save Data</span> and distributions.</p>
+</li>
+</ol>
+<h2 id="11-overlay-combined-distributions"><span style="font-size: 26px";>11. Overlay Combined Distributions</span></h2>
+<p>All van Holde - Weischet distributions and finite element models can be combined into a single plot for easy comparison.</p>
+<ol>
+<li>
+<p>Open <a href=""><span style="color: #00008B";>Velocity: Combine Distribution Plots (vHW)</span></a> for van Holde - Weischet plots.</p>
+</li>
+<li>
+<p>Use <a href=""><span style="color: #00008B";>Velocity: Combine discrete Distributions</span></a> for all finite element models (2DSA, GA, Monte Carlo).</p>
+</li>
+</ol>
+<h2 id="12-perform-parametrically-constrained-spectrum-analysis"><span style="font-size: 26px";> 12. Perform Parametrically Constrained Spectrum Analysis</span></h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

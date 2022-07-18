@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Hw elecspec - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
+        <link href="../admonition-text.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">General <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../documents/" class="dropdown-item">Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biophysics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../macro/" class="dropdown-item">Macromolecular Interactions</a>
+</li>
+                                    
+<li>
+    <a href="../transport/" class="dropdown-item">Transport Processes</a>
+</li>
+                                    
+<li>
+    <a href="../hydro-parameters/" class="dropdown-item">Hydrodynamic Parameters</a>
+</li>
+                                    
+<li>
+    <a href="../non-ideal.md" class="dropdown-item">Non-Ideality</a>
+</li>
+                                    
+<li>
+    <a href="../centri/" class="dropdown-item">Centrifugation</a>
+</li>
+                                    
+<li>
+    <a href="../lamm/" class="dropdown-item">Lamm Equation</a>
+</li>
+                                    
+<li>
+    <a href="../parameters.md" class="dropdown-item">Determining Parameters</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../optics/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference.md" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence.md" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../tech-mwl.md" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Optimal Sample Preperation</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde.md" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density.md" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sed. Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../se-flow.md" class="dropdown-item">Sed. Equilibirum</a>
+</li>
+                                    
+<li>
+    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+<li>
+    <a href="../noise/" class="dropdown-item">Noise Considerations</a>
+</li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression.md" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../sedfit/" class="dropdown-item">SedFit</a>
+</li>
+                                    
+<li>
+    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
+</li>
+                                    
+<li>
+    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data.md" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import.md" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export.md" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds.md" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fitm.md" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal.md" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color.md" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report.md" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw.md" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd.md" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel.md" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch.md" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs.md" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view.md" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral.md" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species.md" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation.md" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil.md" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass.md" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict.md" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo.md" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-overview.md" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment.md" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate.md" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport.md" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing.md" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis.md" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report.md" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka/edit/master/docs/hw-elecspec.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="3"><a href="#absorbance-calculations" class="nav-link">Absorbance Calculations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="3"><a href="#raman-scattering-vs-fluoresence" class="nav-link">Raman Scattering vs. Fluoresence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="3"><a href="#fluoresnce-emission-spectrum-of-proteins" class="nav-link">Fluoresnce Emission Spectrum of Proteins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="3"><a href="#fluoresence-correlation-spectroscopy-curves" class="nav-link">Fluoresence Correlation Spectroscopy Curves</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="3"><a href="#fret-relationships" class="nav-link">Fret Relationships</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This page is still under construction and solutions have not been confirmed.</p>
+<h3 id="absorbance-calculations">Absorbance Calculations</h3>
+<p>2-Aminopurine (2AP) in a pH 7, 0.1M KCl solution has a 303 nm molar extinction coefficient
+of 6 000 M<span class="arithmatex">\(^{−1}\)</span> cm<span class="arithmatex">\(^{−1}\)</span> . What is the absorbance of 1 mM and 0.1 nM 2AP when measured in a
+cell with a 1 mm pathlength?</p>
+<div class="admonition danger">
+<p>We will be utalizing the Beer-Lambert Law, which states</p>
+<div class="arithmatex">\[
+A = \text{log}~\left( \frac{I_0}{I} \right) = \epsilon l c
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is the absorbance, <span class="arithmatex">\(I\)</span> is the intensity of light passing through the solution, <span class="arithmatex">\(\epsilon\)</span> is the molar absorption coefficient, <span class="arithmatex">\(l\)</span> is the length of the solution the light will pass through, and <span class="arithmatex">\(c\)</span> is the concentration of the solution.
+We are given the following information.</p>
+<div class="arithmatex">\[
+\epsilon_{303} = 6000~\text{L/mol cm};
+\]</div>
+<div class="arithmatex">\[
+l = 0.1 ~\text{cm};\\
+\]</div>
+<div class="arithmatex">\[
+c = 1 ~\text{mM}, 0.1 ~\text{nM}.
+\]</div>
+<p>In our first case where the 2AP has a concnetration of 1 mM:</p>
+<div class="arithmatex">\[
+A = \left(6000 ~\text{L/mol cm}\right)(0.1 ~\text{cm})\left(0.001~ \text{mol/L}\right)
+\]</div>
+<div class="arithmatex">\[
+A = 0.6
+\]</div>
+<p>For the case of 0.1 nM:</p>
+<div class="arithmatex">\[
+A = \left(6000 ~\text{L/mol cm}\right)(0.1 ~\text{cm})\left(1 \times 10^{-10} ~\text{mol/L}\right)
+\]</div>
+<div class="arithmatex">\[
+A = 6.0 \times 10^{-8}
+\]</div>
+<p>These calculations demonstrate the linear relationship of the Beer-Lambert Law; as concentration decreases, absorbance will decrease proportionally.</p>
+</div>
+<h3 id="raman-scattering-vs-fluoresence">Raman Scattering vs. Fluoresence</h3>
+<p>Describe a way (either steady-state or time-resolved) to distinguish Raman scattering from
+fluorescence.</p>
+<div class="admonition danger">
+<p><img align="right" alt="" height="300" src="/img/ground-state.png" width="250" /></p>
+<p>Using ladder and Feynman diagrams for fluorescence (F) and Raman Scattering (R).</p>
+<p>We define the ground state by <span class="arithmatex">\(\ket{1}\bra{1}\)</span>, the vibrationally excited state (VES) by <span class="arithmatex">\(\ket{2}\bra{2}\)</span>, and the electroniclly excited state (EES) by <span class="arithmatex">\(\ket{1'}\bra{1'}\)</span>.</p>
+<p>Generally, both fluorescence and Raman scattering can be explain in two interactions, as shown in the figure on the right.
+There will be some incident light, <span class="arithmatex">\(\omega_1\)</span>, which will excite an electron from the ground state to the EES. Spontaneous emission occurs in the form of <span class="arithmatex">\(\omega_2\)</span> when there is a transition from the EES to the VES. in fluorescence, <span class="arithmatex">\(\omega_2\)</span> can be refered to as the fluorescence frequency; in Raman scattering, <span class="arithmatex">\(\omega_2\)</span> is known as the scattered frequency. Note that in both fluorescence and Raman scattering, the direction of <span class="arithmatex">\(\omega_2\)</span> will be random (the phton will be emitted in all directions in space).</p>
+<p>The figures directly below is a representation of four interactions in the form of ladder diagrams and Feynman diagrams.
+To help with understanding these diagrams, reference this table:
+<img align="right" alt="" src="\img\notes-diagrams.png" width="800" /><br></p>
+<p>For Raman scattering specifically, we have intensities, <span class="arithmatex">\(\omega_1, \omega_2\)</span>, which are sometimes referred to as the 'pump' and 'probe', respectively. The order of interactions are:</p>
+<div class="arithmatex">\[
+\omega_1 \rightarrow \omega_1^* \rightarrow \omega_2 \rightarrow \omega_2^*
+\]</div>
+<p>During stimulated Raman emission, these interactions essentially amoun to losing the 'pump' photon and gaining a 'probe' photon.</p>
+<p>For fluorescence, the order of interaction is:</p>
+<div class="arithmatex">\[
+\omega_1 \rightarrow \omega_2 \rightarrow \omega_1^* \rightarrow \omega_2^*
+\]</div>
+<div class="admonition danger">
+<p><img alt="" height="350" src="/img/ladder.png" /></p>
+</div>
+<p>We know that if the energy of a photon is greater or equal to the differene between the ground state and the excited state (it is resonant with a molecular transition), the molecule can absorb that photon and undergo a transition. In this excited state, the molecule has several options:</p>
+<ul>
+<li>
+<p>it may lose some or all of its energy in an interaction with another molecules;</p>
+</li>
+<li>
+<p>it may fall apart if the extra energy is too much, or;</p>
+</li>
+<li>
+<p>it may emit the extra energy as a photon.</p>
+</li>
+</ul>
+<p>This last case is known as fluorescence and is the result of that resonant process.</p>
+<p>Raman scattering, on the other hand, is not a resonant process. Rather, the energy of the photon is not of particular importance. A molecule will recieve EM radiation and re-radiate it This will typically be at the same energy needed for Rayleigh scattergin. Sometimes some of the energy is stored as molecular vibrational energy, and if the molecule is already in an vibrationally excited state, the energy will be emitted as a photon, with the scattered light seeing a shift in the wavelength from its incident EM radiation. This is demonstrated below.</p>
+<div class="admonition danger">
+<p><img alt="" height="400" src="/img/feynman.png" width="700" /></p>
+</div>
+<p>We can therefore seee that there is incident light in the form of <span class="arithmatex">\(\omega_1\)</span> acting on the ket bind to turn the <span class="arithmatex">\(\ket{1}\)</span> coherence into the <span class="arithmatex">\(\ket{1'}\)</span> EES coherence. The imaginary component, <span class="arithmatex">\(\omega_1^*\)</span>, is emitted to turn the <span class="arithmatex">\(\ket{1'}\)</span> coherence into the VES coherence, <span class="arithmatex">\(\ket{2}\)</span>. The state at this point is now <span class="arithmatex">\(\ket{2}\bra{1}\)</span>. There is no population of the EES. Instead, there is coherence between the two VESs, <span class="arithmatex">\(\ket{1}\bra{1}\)</span> and <span class="arithmatex">\(\ket{2}\bra{2}\)</span>.</p>
+<p>Lorem Ipsum...</p>
+<p>Additionally, it may be useful to think of these situations in their density matrix representations. For fluorescence and Raman scattering, respectively, we have:</p>
+<div class="arithmatex">\[
+\hat\rho_F = \ket{1}\bra{1} \rightarrow \ket{1'}\bra{1} \rightarrow \ket{1'}\bra{1'} \rightarrow \ket{2}\bra{1'} \rightarrow \ket{1}\bra{1}
+\]</div>
+<div class="arithmatex">\[
+\hat\rho_R = \ket{1}\bra{1} \rightarrow \ket{1'}\bra{1} \rightarrow \ket{2}\bra{1} \rightarrow \ket{2}\bra{1'} \rightarrow\ket{1}\bra{1}
+\]</div>
+<p>Note that there is only one difference betweeen the F and R density matrices in the fourth matrix element. For fluorescence, this element implies no vibrational coherence with a total population of the EESs. For Raman scattering, this element implies coherence between the VESs, and no populations of the EESs.</p>
+</div>
+<h3 id="fluoresnce-emission-spectrum-of-proteins">Fluoresnce Emission Spectrum of Proteins</h3>
+<p>Using an excitation wavelength of 295 nm, you can measure the fluorescence emission spec-
+trum of a protein, which binds to DNA depending upon the concentration of the small
+nucleotide cyclic adenosine monophosphate (cAMP). The protein has a single tryptophan
+and one tyrosine and forms a dimer at saturating concentrations of cAMP.</p>
+<ol>
+<li>
+<p>Please explain the following observations:</p>
+<p>(a) In the native, ligand-free state (i.e., no cAMP and no DNA), the fluorescence
+emission has a maximum at 330 nm.</p>
+<p>(b) When cAMP is bound, the emission maximum shifts to 325 nm.</p>
+<p>(c) When the protein is folded in 8 M urea, the emission maximum shifts to 350 nm.</p>
+</li>
+<li>
+<p>Suggest one or two experiments to test your explanations.</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p>First, let us discuss tryptophan (Trp) and tyrosine (Tyr). Trp is more fluorescence
+compared to Tyr. Its fluorescence properties are solvent dependent, in that the spectrum will
+shift to shorter wavelengths, and increase in intensity, as the polarity of the solvent decreases.
+Tyr is excited at similar wavelengths as Trp, but will emit at different wavelengths. Tyr is
+also less fluorescent than Trp. At 280 nm, both Trp and Tyr will be excited; to excite Trp
+only a wavelength of 295 nm is needed. Now, in the native folded state, both Trp and Tyr will
+be generally located in the core of the protein. In the unfolded state, or partially folded state,
+Trp and Tyr will become exposed to the solvent. Therefore, we can make the assumption
+that in the native, ligand-free state the fluorescence emission has an emission peak at 330 nm
+due to the fact that Trp and Tyr are both in the hydrophobic environment of the protein. In
+this medium, the relative polarity is low. When Trp and Tyr are moved into a hydrophilic
+environment due to binding of cAMP, for example, the relative polarity shifts to medium
+or high. This shift in polarity lowers the emission wavelength. For the situation where the
+protein is folding in 8 M urea, there will be denaturing of the proteins, such that hydrophobic
+parts will become exposed. Essentially, the urea will cause the proteins to fold more loosely,
+which will effect the emission wavelength by increasing it.</p>
+<p>For experiments, I propose determining the level of polarity of each of the situations, since I
+made the assumption that the polarity was the main factor affecting the emission maximum.
+Additionally, I would suggest determining the emission spectrum at different concentrations
+of cAMP.</p>
+</div>
+<h3 id="fluoresence-correlation-spectroscopy-curves">Fluoresence Correlation Spectroscopy Curves</h3>
+<p>The cAMP-binding protein in the presence of saturating concentrations of cAMP forms a
+dimer that can bind to a specific site on a 100 base-pair DNA oligo (K d = 2 nM). You decide
+to study the protein-DNA interaction using fluorescence correlation spectroscopy (FCS). You
+can generate a single Cys mutant and label it with Alexa-488- a small fluorophore excited by
+488-nm light. Draw and label FCS curves appropriately scaled for the following situations:</p>
+<ol>
+<li>
+<p>Diffusion of 5 nM protein dimer (saturating cAMP).</p>
+</li>
+<li>
+<p>5 nM dimer + cAMP after the addition of 100 nM DNA (100 base-pair oligo with
+specific dimer site).</p>
+</li>
+<li>
+<p>Diffusion of 1 nM dimer (saturating cAMP).</p>
+</li>
+<li>
+<p>1 nM dimer + cAMP after the addition of 100 nM DNA (100 base-pair oligo with
+specific dimer binding site).</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p>In fluorescence correlation spectroscopy (FCS), changes in the fluorescence in-
+tensity reflect concentration fluctuations. The auto-correlation of a system evaluates the
+temporal progression around the system’s equilibrium, and reveals the time required for
+a molecule to diffuse through a particular volume. The amplitude of the auto-correlation
+function is influenced by the number of molecules that are detectable. The auto-correlation
+function can consist of multiple sigmoid components due to multiple signal fluctuations on
+different time scales.</p>
+<p>Slow fluctuations of fluorescence intensity demonstrate a slow diffusion over a longer time
+scale; rapid fluctuations indicate a faster diffusion over a shorter time scale for a particle with
+a large diffusion coefficient. Essentially, an increase in the diffusion coefficient will correspond
+to a decrease in the time scale for the auto-correlation function to fall by half.
+FCS can be used to monitor binding. Because there is more than one species within the
+solution, we should expect two sigmoid components, one for the free molecules, and one for the
+bounded molecules. We should also consider that since the amplitude of the auto-correlation
+function depends on the inverse of the average number of molecules. Thus, we should expect
+that a FCS curve for the situation with only protein will have a greater amplitude than the
+situation with dimer and DNA.</p>
+<div class="admonition danger">
+<p><figure markdown>
+<img alt="" src="/img/fcs-13.png" />
+<fig caption>FCS curves for situations 1 (blue) and 3 (black). Since the amplitude of <span class="arithmatex">\(G(\tau)\)</span> depends on <span class="arithmatex">\(1/N\)</span>, we should expect to see the situation with 1 nM dimer to have the greatest amplitude. 
+</fig caption>
+</figure></p>
+</div>
+<div class="admonition danger">
+<p><figure markdown>
+<img alt="" src="/img/fcs-24.png" />
+<fig caption>FCS curves for situations 2 (blue) and 4 (black). Since there are 3 species present (protein dimer, cAMP, and oligo), we should expect to see three sigmoids.
+</fig caption>
+</figure></p>
+</div>
+</div>
+<h3 id="fret-relationships">Fret Relationships</h3>
+<p><img align="right" alt="" src="/img/fret-relation.png" width="300" /></p>
+<p>Assume that a FRET donor D
+has a single exponential decay in the absence of ac-
+ceptor A and that the orientation factor is <span class="arithmatex">\(κ_2\)</span> = 2/3.
+Draw fluorescence decay curves (log of intensity vs
+time) for the following situations (label and provide
+explanations):</p>
+<ol>
+<li>
+<p>D to A distance = <span class="arithmatex">\(R_0\)</span> ; r = <span class="arithmatex">\(R_0\)</span> .</p>
+</li>
+<li>
+<p>D to A distance &gt;&gt; <span class="arithmatex">\(R_0\)</span> ; r = 1.5<span class="arithmatex">\(R_0\)</span>.</p>
+</li>
+<li>
+<p>D to A distance &lt;&lt; <span class="arithmatex">\(R_0\)</span> ; r = 0.5<span class="arithmatex">\(R_0\)</span>.</p>
+</li>
+</ol>
+<p>(Figure was taken from <a href="https://www.microscopyu.com/techniques/fluorescence/basics-of-fret-microscopy.com">"Basics of FRET Microscopy"</a>.)</p>
+<div class="admonition danger">
+<p>Fluorescence resonance energy transfer (FRET) involves a donor molecule in an excited electronic state and an acceptor molecule that can accept the transferred excitation energy from the donor, typically through dipole-dipole coupling.
+The dipole-dipole coupling can be described as an interaction dependent on the overlap of the emission spectrum of the donor molecule, and the absorption spectrum of the acceptor molecule. This overlap is represented by the figure on the right, and it dictates if there will be an energy transfer between the molecules.</p>
+<p>The energy transfer efficiency between the two molecules will decrease proportionally to the distance, <span class="arithmatex">\(r\)</span>, that is seperating them. <br />
+The rate of energy transfer is:</p>
+<div class="arithmatex">\[
+k_r = \frac{1}{\tau_D}\left(\frac{R_0}{r} \right )^6
+\]</div>
+<p>where <span class="arithmatex">\(\tau_D\)</span> is the donar lifetime in the absence of the acceptor, and <span class="arithmatex">\(R_0\)</span> is the Forster distance.</p>
+<p>FRET efficiency is:</p>
+<div class="arithmatex">\[
+E_{FRET} = \left[1 + \frac{r}{R_0}\right]^{-6}
+\]</div>
+<p>Now, the relative distances between the donors and acceptors is not uniform; rather, it follows the following distribution function:</p>
+<div class="arithmatex">\[
+E_{FRET} = \int_{0}^{\infty}{f(r)} \left[1 + \frac
+{r}{R_0}\right]^{-6} dr
+\]</div>
+<p>where <span class="arithmatex">\(f(r)\)</span> is the normalized distribution of the donor-acceptor distances.
+Finally, the intensity of the fluorescence for detected excited molecules can be expressed by:</p>
+<div class="arithmatex">\[
+I(t) = k \int_{0}^{\infty}f(r) ~\text{exp}\left[-\frac{t}{\tau} - \frac{t}{\tau}\left(\frac{R_0}{r} \right)^6 \right ]
+\]</div>
+<p>Using this equation, we can determine the fluorescence decay curves, shown below. For simplicity, we assume <span class="arithmatex">\(k=1\)</span>, and <span class="arithmatex">\(f(r) = 1\)</span>. We will also set <span class="arithmatex">\(x=t/\tau\)</span> amd <span class="arithmatex">\(d = R_0/r\)</span>, such that:</p>
+<div class="arithmatex">\[
+f(x,d) = ~\text{exp}(-x-xd^6),
+\]</div>
+<p>which can then be ploted for the varying D values.</p>
+<p>(See also: A. Grinvald, E. Haas, and I. Z. Steinberg, Proc. Nat. Acad. Sci. USA 69, 2273 (1972).)</p>
+<div class="admonition danger">
+<p><figure markdown>
+<img alt="" src="/img/decay-curve.png" />
+<fig caption>Fluorescence decay curves for varying donar-acceptor distances (<span class="arithmatex">\(d= R_0/r\)</span>). When the donor to acceptor distance <span class="arithmatex">\(r\)</span> is greater than <span class="arithmatex">\(R_0\)</span>, we find that the (blue) curve is less steep. For the distance to be less than <span class="arithmatex">\(R_0\)</span>, such that <span class="arithmatex">\(d=2\)</span>, we find that the (green) curve descends rapidly. 
+</fig caption>
+</figure></p>
+</div>
+<div class="admonition danger">
+<p><figure markdown>
+<img alt="" src="/img/semilog-decay-curve.png" />
+<fig caption>Semi-log plot of fluorescence decay curves for varying donar-acceptor distances. The intersection between <span class="arithmatex">\(1/x\)</span> and the other curves will give the characteristic lifetime.
+</fig caption>
+</figure></p>
+</div>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
