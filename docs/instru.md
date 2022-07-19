@@ -24,7 +24,7 @@ This newer AUC produced digital absorbance data, were smaller, and overall more 
 
 !!! warning "Beckman Coulter Optima AUC"
 
-    ![](/img/optima.png){width="250", align=right}
+    ![](/probable-eureka/img/optima.png){width="250", align=right}
 
     - 10 micron radial resolution
     
@@ -46,7 +46,7 @@ The advantages of the Optima AUC were listed as: convenient operation & control,
 
 An analytical ultracentrifuge has several main components:
 
-![Rotor Chamber](/img/optima-chamber.jpg){:style="float: right;margin-right: 20px;margin-top: 20px;"}
+![Rotor Chamber](/probable-eureka/img/optima-chamber.jpg){:style="float: right;margin-right: 20px;margin-top: 20px;"}
 
 **CHAMBER:** The rotor chamber is made of aluminium, coated with a chemical-resistant expoxy finish. Along with the rotor drive spindle, several sensors and ccontrol systems are contained within the chamber.
 

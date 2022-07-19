@@ -2,7 +2,7 @@
 
 The University of Lethbridge, Alberta, is located Treaty 7 territory which is the traditional land of the Blackfoot Confederacy (Kainai, Siksika, and Piikani), the Tsuu T'ina, and the Metis peoples of Southern Alberta. We strive to acknowledge their ownership of this land, and to return it back to them.
 
-![](/img/banners/sab.jpg){width="textwidth"}
+![](/probable-eureka/img/banners/sab.jpg){width="textwidth"}
 Science Commons of the Univeristy of Lethbridge, in Lethbridge, Alberta. 
 
 As biochemists and biophysicsts, we need to be able to:
