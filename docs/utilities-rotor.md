@@ -1,7 +1,19 @@
 # Rotor Calibration
 
-![](/img/nav-us/utilities-rotor.png)
+This module is used to create a rotor calibration report.
 
-![](/img/nav-us/utilities-rotor-vertical.png)
+Ignore speeds below 10,000 rpm.
 
-![](/img/nav-us/utilities-rotor-stretch.png)
+Select box for Use 7-slot Cal. Mask.
+
+!!! danger ""
+
+    ![](img/nav-us/utilities-rotor.png)
+
+!!! danger ""
+
+    ![](img/nav-us/utilities-rotor-vertical.png)
+
+!!! danger ""
+
+    ![](img/nav-us/utilities-rotor-stretch.png)

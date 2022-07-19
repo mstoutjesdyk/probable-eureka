@@ -40,7 +40,7 @@ nav:
     - Analysis Flowcharts:
       - Sed. Velocity: sv-flow.md
       - Sed. Equilibirum: se-flow.md
-      - Multi-Wavelength: mw-flow.md
+      - Multi-Wavelength: mwl-flow.md
     - Data Theory:
       - Data Modeling and Fitting: model.md
       - Noise Considerations: noise.md

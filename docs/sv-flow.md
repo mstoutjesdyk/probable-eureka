@@ -1,13 +1,14 @@
 <span style="font-size: 30px";>Sedimentation Velocity Analysis Flowchart</span>
 
 
-## <span style="font-size: 26px";> 1. Import Experimental Data</span>
 
-## <span style="font-size: 26px";> 2. Edit Data</span>
-
+##  1. Import Experimental Data
 
 
-## <span style="font-size: 26px";> 3. Time Derivative Analysis</span>
+##  2. Edit Data
+
+
+##  3. Time Derivative Analysis
 
 This step will provide an range for the sedimentation coefficient for use in the upcoming analysis steps. 
 
@@ -28,7 +29,7 @@ This step will provide an range for the sedimentation coefficient for use in the
 The correct S limits to choose are the left and right limits of the S-value distribution where all signal returns to baseline. The minimum S-value allowed is 0.2 S.
 
 
-## <span style="font-size: 26px";> 4. 2DSA: Fit Time Invariant Noise</span>
+##  4. 2DSA: Fit Time Invariant Noise
 
 This step can be done locally on UltraScan's 2DSA module, but the following assumes the use of the USLIMS site.
 
@@ -60,7 +61,7 @@ Note: Do not set the lower s-value limit too low, as this could create artificia
 
 
 
-## <span style="font-size: 26px";> 5. 2DSA: Fit Meniscus, TI Noise, RI Noise</span>
+##  5. 2DSA: Fit Meniscus, TI Noise, RI Noise
 
 1. Log into the [<span style="color: #006400";>US3 LIMS portal</span>](https://uslims.uleth.ca) and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset.</span> By default, it will load the dataset that was saved from the previous step.
 
@@ -87,7 +88,7 @@ Note: Do not set the lower s-value limit too low, as this could create artificia
 9. Open [<span style="color: #00008B";>Velocity: FE Model Viewer</span>](/velocity-femodel) to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.FM.run_name". Remember to <span style="color: #00008B";>Save Results.</span>
 
 
-## <span style="font-size: 26px";> 6. 2DSA: Iterative</span>
+##  6. 2DSA: Iterative 
 
 1. Log into the [<span style="color: #006400";>US3 LIMS portal</span>](https://uslims.uleth.ca) and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset.</span> 
 
@@ -110,7 +111,7 @@ All subsequent analyses methods should now be based on the model generated in th
 At this point, multiple analysis options exist depending on the properties of the analyte distribution. If a paucidisperse solution is obtained, parsimonious regularization with the genetic algorithm method is appropriate. Otherwise, the data should be analyzed only by the 2DSA analysis in conjunction with a 50-iteration Monte Carlo analysis. Both options are explained below. 
 
 
-## <span style="font-size: 26px";> 7. Genetic Algorithm Analysis (optional)</span>
+##  7. Genetic Algorithm Analysis (optional)
 
 Perform this step if the refined 2DSA data is appropriate for genetic algorithm analysis.
 
@@ -126,7 +127,7 @@ Perform this step if the refined 2DSA data is appropriate for genetic algorithm 
 
 6. Open [<span style="color: #00008B";>Velocity: FE Model Viewer</span>](/velocity-femodel) to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.GA.run_name". Remember to <span style="color: #00008B";>Save Results.</span>
 
-## <span style="font-size: 26px";> 8. 2DSA Monte Carlo Analysis (recommended)</span>
+##  8. 2DSA Monte Carlo Analysis (recommended)</span>
 
 1. Log into the [<span style="color: #006400";>US3 LIMS portal</span>](https://uslims.uleth.ca) and navigate to <span style="color: #006400";>Analysis: Queue Setup</span> to <span style="color: #006400";>Load the Dataset</span>.
 
@@ -140,7 +141,7 @@ Perform this step if the refined 2DSA data is appropriate for genetic algorithm 
 
 6. Open <[span style="color: #00008B";>Velocity: FE Model Viewer</span>](/velocity-femodel) to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.MC.run_name". Remember to <span style="color: #00008B";>Save Results.</span>
 
-## <span style="font-size: 26px";> 9. Perform Monte Carlo GA Analysis (optional)</span>
+##  9. Perform Monte Carlo GA Analysis (optional)</span>
 
 1. Using the results from Step 7, <span style="color: #00008B";>Initialize Genetic Algorithm - Monte Carlo.</span> 
 
@@ -157,7 +158,7 @@ Perform this step if the refined 2DSA data is appropriate for genetic algorithm 
 7. Open [<span style="color: #00008B";>Velocity: FE Model Viewer</span>](/velocity-femodel) to confirm the results. <span style="color: #00008B";>Load the Dataset</span> by selecting the file of the format "2DSA.GA.run_name" generated from the GA distribution model. Remember to <span style="color: #00008B";>Save Results.</span> 
 
 
-## <span style="font-size: 26px";> 10. Perform van Holde-Weischet Analysis</span>
+##  10. Perform van Holde-Weischet Analysis
 
 1. Open [<span style="color: #00008B";>Velocity: Enhanced van Holde - Weischet</span>](/velocity-evhw)
 
@@ -197,14 +198,14 @@ species
 
 
 
-## <span style="font-size: 26px";>11. Overlay Combined Distributions</span>
+## 11. Overlay Combined Distributions
 
 All van Holde - Weischet distributions and finite element models can be combined into a single plot for easy comparison.
 
-1. Open [<span style="color: #00008B";>Velocity: Combine Distribution Plots (vHW)</span>]() for van Holde - Weischet plots.
+1. Open [<span style="color: #00008B";>Velocity: Combine Distribution Plots (vHW)</span>](/probable-eureka/velocity-cddvhw) for van Holde - Weischet plots.
 
-2. Use [<span style="color: #00008B";>Velocity: Combine discrete Distributions</span>]() for all finite element models (2DSA, GA, Monte Carlo).
+2. Use [<span style="color: #00008B";>Velocity: Combine Discrete Distributions</span>](/probable-eureka/velocity-dd) for all finite element models (2DSA, GA, Monte Carlo).
 
 
 
-## <span style="font-size: 26px";> 12. Perform Parametrically Constrained Spectrum Analysis</span>
+##  12. Perform Parametrically Constrained Spectrum Analysis

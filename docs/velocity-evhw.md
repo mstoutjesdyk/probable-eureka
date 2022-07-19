@@ -4,7 +4,7 @@ The method of Van Holde and Weischet (vHW) is a versitile, model-indepedent appr
 
 !!! warning ""
 
-    ![](/img/nav-us/us-velocity-evhw.png)
+    ![](img/nav-us/us-velocity-evhw.png)
   
 
 $\textbf{Distribution Plot}$ Click here for a plot dialog that will show a vHW distribution plot illustrating sedimentation coefficeint power related to seperate species.
@@ -13,11 +13,11 @@ $\textbf{Distribution Plot}$ Click here for a plot dialog that will show a vHW d
 
     The following plots show the clusting of data around several sedimention coefficient points, indicating the presence of multiple species in the solution.
 
-    ![](/img/nav-us/us-velocity-vhwdp.png){width="800"} <br>
+    ![](img/nav-us/us-velocity-vhwdp.png){width="800"} <br>
     
     This is the distribution plot option. It is plotted as the boundary fraction as a function of the sedimentation coefficient. In this particular plot, we see ~15% of our species at ~2S, and ~45% at ~5.2S.
      
-    ![](/img/nav-us/us-velocity-vhwh.png){width="800"}<br>
+    ![](img/nav-us/us-velocity-vhwh.png){width="800"}<br>
     
     This is the histogram plot option. It is plotted as the relative concentration as a function of the sedimentation coefficient. Again, we see the same data as in the distribution plot. 
 
