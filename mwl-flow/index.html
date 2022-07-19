@@ -8,7 +8,7 @@
         <meta name="author" content="Marielle Stoutjesdyk">
         <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/mwl-flow/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Multiwavelength Analysis Flowchart - AUC University</title>
+        <title>Multi-Wavelength - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -173,7 +173,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -186,7 +186,7 @@
 </li>
                                     
 <li>
-    <a href="../mw-flow.md" class="dropdown-item">Multi-Wavelength</a>
+    <a href="./" class="dropdown-item active">Multi-Wavelength</a>
 </li>
                                 </ul>
                             </li>
@@ -572,6 +572,16 @@
                             </a>
                         </li>
                             <li class="nav-item">
+                                <a rel="prev" href="../se-flow/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../model/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/mwl-flow.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
@@ -592,7 +602,67 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#multiwavelength-analysis-flowchart" class="nav-link">Multiwavelength Analysis Flowchart</a>
+            <li class="nav-item" data-level="2"><a href="#1-export-data" class="nav-link">1. Export Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#2-import-experimental-data" class="nav-link">2. Import Experimental Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#3-edit-data" class="nav-link">3. Edit Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#4-2dsa-fit-time-invariant-noise" class="nav-link">4. 2DSA: Fit Time-Invariant Noise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#5-2dsa-fit-meniscus-tr-noise-ri-noise" class="nav-link">5. 2DSA: Fit Meniscus, TR Noise, RI Noise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#6-2dsa-iterative" class="nav-link">6. 2DSA: Iterative</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#7-mwl-fit-simulations" class="nav-link">7. MWL Fit Simulations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#8-import-issf-experimental-data" class="nav-link">8. Import ISSF Experimental Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#9-edit-issf-data" class="nav-link">9. Edit ISSF Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#10-mwl-species-fit" class="nav-link">10. MWL Species Fit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#11-import-ssf-issf-experimental-data" class="nav-link">11. Import SSF-ISSF Experimental Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#12-edit-ssf-issf-data" class="nav-link">12. Edit SSF-ISSF Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#13-2dsa-iterative" class="nav-link">13. 2DSA: Iterative</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -601,7 +671,231 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="multiwavelength-analysis-flowchart">Multiwavelength Analysis Flowchart</h1></div>
+<p><span style="font-size: 30px";>Multiwavelength Analysis Flowchart</span></p>
+<div class="admonition danger">
+<p>For an example of MWL analysis, see: </p>
+<p>Horne, Christopher R., et al. “Multi-Wavelength Analytical Ultracentrifugation as a Tool to Characterise Protein-DNA Interactions in Solution.” European Biophysics Journal: EBJ, vol. 49, no. 8, 2020, pp. 819–827</p>
+<p><img alt="" src="../img/horne-mwl.png" /></p>
+</div>
+<p>Import and Editing <span class="arithmatex">\(\rightarrow\)</span> 2DSA Fits <span class="arithmatex">\(\rightarrow\)</span> Time-Synchronized Simulations <span class="arithmatex">\(\rightarrow\)</span> Spectral Deconvolution <span class="arithmatex">\(\rightarrow\)</span> 2DSA Fit</p>
+<p>Initial 2DSA fits: mwl-sv datasets for each wavelength are analyzed to remove systematic noise and to determine boundary conditions.</p>
+<p>Simulation of Models: sedimentation profile is generated by iteratively refining the 2DSA models for each components</p>
+<p>Time Synchronization: 2dSA models are simulated to generate time-synchronized wavelength datasets</p>
+<p>Spectral Deconvolution: mwl data is spectraly deconvoluted using molar extinction coefficents generatting spectrally seperated hydrodynamic results for each contributing component.</p>
+<p>NNLS: Profiles are used to deconvulute multi-wavlength data in seperate datasets using an NNLS alogorithm</p>
+<p>Individual 2DSA fits: each dataset is individually analyzed using the iterative 2dSA model.</p>
+<p><span style="color:#00008B";><u>UltraScan Module</u></span> </p>
+<p><span style="color:#006400";><u>US3 LIMS</u></span></p>
+<p><span style="color:#00008B";>US Module Controls</span></p>
+<p><span style="color:#006400";>US3 LIMS Controls</span></p>
+<p>Before beginning the analysis flowchart, define the following solutions in <a href="/probable-eureka/database-solutions"><span style="color:#00008B";><u>Database: Manage Solutions</u></span></a>.</p>
+<ul>
+<li>
+<p>all components in buffer</p>
+</li>
+<li>
+<p>all components in water buffer</p>
+</li>
+<li>
+<p>each individual component in water buffer</p>
+</li>
+</ul>
+<h2 id="1-export-data">1. Export Data</h2>
+<h2 id="2-import-experimental-data">2. Import Experimental Data</h2>
+<h2 id="3-edit-data">3. Edit Data</h2>
+<h2 id="4-2dsa-fit-time-invariant-noise">4. 2DSA: Fit Time-Invariant Noise</h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";><u>US3 LIMS portal</u></span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup.</span> </p>
+</li>
+<li>
+<p><span style="color: #006400";>Load the Dataset.</span></p>
+</li>
+<li>
+<p>Setup 2DSA Control.</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value Limits.</span></p>
+<p>b. <span style="color:#006400";>Set <span class="arithmatex">\(f/f_{0}\)</span> Limits.</span></p>
+<p>c. <span style="color: #006400";>Set the Resolution.</span></p>
+<p>d. <span style="color: #006400";>Set the Grid Resolution.</span></p>
+<p>e. Select <span style="color: #006400";>Fit Time Invariant Noise.</span></p>
+<p>f. Leave all other settings at default values.</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion.</p>
+</li>
+<li>
+<p>Review Model.</p>
+<p>a. Open <a href="/probable-eureka/velocity-femodel"><span style="color: #00008B";><u>Velocity: FE Model Viewer</u></span></a> to confirm the results. </p>
+<p>b. <span style="color: #00008B";>Load the Dataset</span>. The file will be of the format "2DSA.run_name".</p>
+<p>c. <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="5-2dsa-fit-meniscus-tr-noise-ri-noise">5. 2DSA: Fit Meniscus, TR Noise, RI Noise</h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";><u>US3 LIMS portal</u></span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup.</span> </p>
+</li>
+<li>
+<p><span style="color: #006400";>Load the Dataset.</span></p>
+</li>
+<li>
+<p>Setup 2DSA Control.</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value Limits</span>, <span style="color:#006400";>Set <span class="arithmatex">\(f/f_{0}\)</span> Limits</span>, <span style="color: #006400";>Set the Resolution</span>, and <span style="color: #006400";>Set the Grid Resolution.</span></p>
+<p>b. Select <span style="color: #006400";>Fit Time-Invariant Noise and Fit Radially-Invarient Noise.</span></p>
+<p>c. Select <span style="color: #006400";>Fit Meniscus.</span>s</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion. This will take longer than the first 2DSA fit.</p>
+</li>
+<li>
+<p>Review Model.</p>
+<p>a. Open <a href="/probable-eureka/velocity-femodel"><span style="color: #00008B";><u>Velocity: FE Model Viewer</u></span></a> to confirm the results. </p>
+<p>b. <span style="color: #00008B";>Load the Dataset.</span> The file will be of the format "2DSA.FM.run_name".</p>
+<p>c. <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="6-2dsa-iterative">6. 2DSA: Iterative</h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";><u>US3 LIMS portal</u></span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup.</span> </p>
+</li>
+<li>
+<p><span style="color: #006400";>Load the Dataset.</span></p>
+</li>
+<li>
+<p>Setup 2DSA Control.</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value Limits</span>, <span style="color:#006400";>Set <span class="arithmatex">\(f/f_{0}\)</span> Limits</span>, <span style="color: #006400";>Set the Resolution</span>, and <span style="color: #006400";>Set the Grid Resolution.</span></p>
+<p>b. Select <span style="color: #006400";>Use Iterative Method.</span></p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion.</p>
+</li>
+<li>
+<p>Review Model.</p>
+<p>a. Open <a href="/probable-eureka/velocity-femodel"><span style="color: #00008B";><u>Velocity: FE Model Viewer</u></span></a> to confirm the results. </p>
+<p>b. <span style="color: #00008B";>Load the Dataset.</span> The file will be of the format "2DSA.IT.run_name".</p>
+<p>c. <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<h2 id="7-mwl-fit-simulations">7. MWL Fit Simulations</h2>
+<ol>
+<li>
+<p>Open <a href="/probable-eureka/mwl-simulation"><span style="color: #00008B";><u>Multiwavelength: Optima MWL Fit Simulation.</u></span></a></p>
+</li>
+<li>
+<p>Select <span style="color: #00008B";>Prefilter Models</span> and <span style="color: #00008B";>Load the Dataset.</span></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Select Models.</span></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Define Buffer</span> as water, with density <span class="arithmatex">\(\rho\)</span> = 0.99239 and viscosity <span class="arithmatex">\(\eta\)</span> = 1.00199.</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Select Rotor</span> to be the 'simulation rotor'.</p>
+</li>
+<li>
+<p>Select <span style="color: #00008B";>Simulation Parameters</span> to define the speed profile, length of experiment, and temperature. Set them to be equal to the actual parameters in the physical experiment. You may also load a previous profile, or create and save a new one.</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Start Simulation</span> to view the simulation movie.</p>
+</li>
+<li>
+<p><span style="color: #00008B";>Save Simulation</span> to create the intial simulated species (?) files (ISSF). The saved files are of the form "ISSF.run_name". </p>
+</li>
+</ol>
+<h2 id="8-import-issf-experimental-data">8. Import ISSF Experimental Data</h2>
+<ol>
+<li>
+<p>Open <a href="probable-eureka/utilities-import"><span style="color: #00008B";><u>Utilities: Import Experimental Data.</u></span></a></p>
+<p>a. <span style="color: #00008B";>Load the Dataset.</span></p>
+</li>
+<li>
+<p>Open <a href="/probable-eureka/us-edit"><span style="color: #00008B";><u>Edit: Edit Data.</u></span></a></p>
+<p>a. <span style="color: #00008B";>Load the Dataset.</span></p>
+</li>
+</ol>
+<p>Define the solution (same components but in a water buffer)</p>
+<p>Save.</p>
+<h2 id="9-edit-issf-data">9. Edit ISSF Data</h2>
+<ol>
+<li>
+<p>Open <a href="probable-eureka/us-edit"><span style="color: #00008B";><u>Edit: Edit Data.</u></span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load the Dataset</span> that has the file name of "ISSF.run_name".</p>
+</li>
+</ol>
+<p>load ISSF data</p>
+<p>specifiy end range and meniscus</p>
+<p>save</p>
+<h2 id="10-mwl-species-fit">10. MWL Species Fit</h2>
+<ol>
+<li>
+<p>Open <a href="/probable-eureka/mwl-species"><span style="color: #00008B";><u>Multiwavlength: MWL Species Fit.</u></span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load the Dataset</span> that has the file name of "ISSF.run_name".</p>
+</li>
+<li>
+<p>load species fit. </p>
+</li>
+<li>
+<p>load extinction profiles that were generated by <a href="/probable-eureka/utilities-spectralanal"><span style="color: #00008B";><u>Utilties: Spectral Analysis:</u> Spectrum filter</span></a></p>
+</li>
+<li>
+<p>fit data </p>
+</li>
+<li>
+<p>ssave</p>
+</li>
+</ol>
+<h2 id="11-import-ssf-issf-experimental-data">11. Import SSF-ISSF Experimental Data</h2>
+<ol>
+<li>
+<p>Open <a href="/probable-eureka/utilities-import"><span style="color: #00008B";><u>Utilities: Import Experimental Data.</u></span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load the Dataset</span> that has the file name of "SSF-ISSF.run_name".</p>
+</li>
+</ol>
+<h2 id="12-edit-ssf-issf-data">12. Edit SSF-ISSF Data</h2>
+<ol>
+<li>
+<p>Open <a href="/probable-eureka/us-edit"><span style="color: #00008B";><u>Edit: Edit Data.</u></span></a></p>
+</li>
+<li>
+<p><span style="color: #00008B";>Load the Dataset</span> that has the file name of "SSF-ISSF.run_name".</p>
+</li>
+</ol>
+<p>specify which results correspond to each component</p>
+<p>centerpiece- simulation 1 chanel standard</p>
+<p>manage solutions (solutions for individual components in wter buffer)</p>
+<p>save</p>
+<h2 id="13-2dsa-iterative">13. 2DSA: Iterative</h2>
+<ol>
+<li>
+<p>Log into the <a href="https://uslims.uleth.ca"><span style="color: #006400";><u>US3 LIMS portal</u></span></a> and navigate to <span style="color: #006400";>Analysis: Queue Setup.</span> </p>
+</li>
+<li>
+<p><span style="color: #006400";>Load the Dataset.</span> The file will be of the format "SSF-ISSF.run_name".</p>
+</li>
+<li>
+<p>Setup 2DSA Control.</p>
+<p>a. <span style="color:#006400";>Set the <span class="arithmatex">\(s\)</span>-value Limits</span>, <span style="color:#006400";>Set <span class="arithmatex">\(f/f_{0}\)</span> Limits</span>, <span style="color: #006400";>Set the Resolution</span>, and <span style="color: #006400";>Set the Grid Resolution.</span></p>
+<p>b. Select <span style="color: #006400";>Use Iterative Method.</span> Do not fit time- or radially-invariant noise (a simulatated dataset does not have noise).</p>
+</li>
+<li>
+<p><span style="color: #006400";>Submit the Job</span> to your desired cluster. <span style="color: #006400";>Check Queue Viewer</span> for job completion.</p>
+</li>
+<li>
+<p>Review Model.</p>
+<p>a. Open <a href="/probable-eureka/velocity-femodel"><span style="color: #00008B";><u>Velocity: FE Model Viewer</u></span></a> to confirm the results. </p>
+<p>b. <span style="color: #00008B";>Load the Dataset.</span> The file will be of the format "2DSA.IT.SSF-ISSF.run_name".</p>
+<p>c. <span style="color: #00008B";>Save Results.</span></p>
+</li>
+</ol>
+<p>Repeat this step for both SSF-ISSF triples.</p></div>
             </div>
         </div>
 
