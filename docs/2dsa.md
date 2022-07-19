@@ -109,7 +109,7 @@ Note that this method will not converge to exactly the same solution when time- 
 
 # Example 1
 
-$\textbf{2DSA-Monte Carlo analysis of a 2-component system with heterogeneity in mass and shape}$
+<u>2DSA-Monte Carlo analysis of a 2-component system with heterogeneity in mass and shape</u>
 
 In order to illustrate the ability of the 2DSA method to resolve a system that is heterogeneous in molecular weight and shape, the following system was used. It consisted of:
 
@@ -125,7 +125,7 @@ Time invariant noise was subtracted so that only stochatic noise would remain in
 
 !!! warning "Figure: 2DSA Monte Carlo Analysis of Velocity Data"
 
-    ![](/img/2dsa-brookesdemeler_fig2.png){width="800"}
+    ![](https://github.com/mstoutjesdyk/probable-eureka.git/img/2dsa-brookesdemeler_fig2.png){width="800"}
     
     2DSA Monte Carlo analysis of velocity data from a mixture of a 208 bp DNA fragment (black lines) and hen egg lysozyme (blue lines). Heavy lines indicate the mean, thin lines represent 95% confidence intervals for the parameter. 
     
