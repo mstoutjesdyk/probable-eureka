@@ -5,9 +5,9 @@ site_url: https://mstoutjesdyk.github.io/probable-eureka/
 
 nav:
     - Home: index.md
-    - General:
+    - Resources:
       - Literature: lit.md
-      - Documentation: documents.md
+      - Lab Documentation: resources.md
       - Networking/Contacts: contact.md
       - Appendix: appendix.md
       - Webmaster: webmaster.md
@@ -31,7 +31,6 @@ nav:
       - Cells: cells.md
       - Suitable Systems: suitable-systems.md
       - Optimal Sample Preperation: samp-prep.md
-      - Lab Resources: resources.md
     - Experimental Techniques:
       - Sedimentation Velocity: sed-veloc.md
       - Multi-Speed Sedimentation Velocity: multispeed-sedveloc.md
@@ -86,7 +85,7 @@ nav:
         - Import Experimental Data: utilities-import.md
         - Export openAUC Data: utilities-export.md
         - FDS File Manager: utilities-fds.md
-        - Fit Meniscus: utilities-fitm.md
+        - Fit Meniscus: utilities-fit.md
         - Spectral Analysis: utilities-spectralanal.md
         - Color Gradient Generator: utilities-color.md
         - Report Generator: utilities-report.md
@@ -131,7 +130,6 @@ nav:
       - Editing: gmp-editing.md
       - Analysis: gmp-analysis.md
       - Report: gmp-report.md
-
 
 extra_css:
    - css/extra.css

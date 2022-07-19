@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/abde/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/absorbance/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +52,11 @@
     </url>
     <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/chromab/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/compression/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -91,12 +101,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/density/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/documents/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/extrasedveloc/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/fluorescence/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -111,7 +131,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-analysis/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-auc/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-editing/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-experiment/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-limsimport/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-liveupdate/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-overview/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/gmp-report/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -137,6 +192,11 @@
     </url>
     <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/instru/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/interference/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -181,6 +241,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/mwl-flow/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/mwl-simulation/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/mwl-species/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/mwl-spectral/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/mwl-view/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/mwlspec/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -221,6 +306,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/se-flow/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/sed-equil/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -246,12 +336,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-estequil/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-finiteelement/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-modelsdf/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-predict/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-selfass/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/sim-somo/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -296,12 +406,82 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-cddvhw/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-color/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-data/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-dd/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-densitymatch/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-export/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-fds/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-fit/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-globalmodel/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-import/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-license/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-pseudoabs/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-report/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-rotor/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-spectralanal/</loc>
+         <lastmod>2022-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mstoutjesdyk.github.io/probable-eureka/utilities-viewoptima/</loc>
          <lastmod>2022-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
