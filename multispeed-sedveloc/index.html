@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -621,13 +621,17 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><br> 
+MS: &#10003; 22.07.22
+<br> 
+BS: &#x2717; </p>
 <h1 id="multi-speed-sedimentation-velocity">Multi-Speed Sedimentation Velocity</h1>
 <div class="admonition danger">
-<p>This page is based on the research presented in:</p>
+<p>For more information, see:</p>
 <p><div class="csl-entry">Williams, T. L., Gorbet, G. E., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity simulations with UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 815-823. https://doi.org/10.1007/s00249-018-1308-0</div></p>
 <p><div class="csl-entry">Gorbet, G. E., Mohapatra, S., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity implementation in UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 825-835. https://doi.org/10.1007/s00249-018-1297-z</div></p>
 </div>
-<p>While the AUC can be used to measure a wide range of molecular sizes (Angstroms to several hundred nanometers), these paramaters are restricted by the molecule's density, the buffer's density, and the rotor speed. Recall the <a href="/sed-veloc/#determining-optimal-speed">section on speed</a> in the page on the experimental technique of sedimentation veloctity. When observing the properties of a single molecule, judicious selection of one rotor speed optimizes the avaliale information, but accurary and precision is sacrified when one is limited to only selecting one speed for heterogenous mixtures. 
+<p>While the AUC can be used to measure a wide range of molecular sizes (Angstroms to several hundred nanometers), these paramaters are restricted by the molecule's density, the buffer's density, and the rotor speed. Recall the <a href="/probable-eureka/sed-veloc/#determining-optimal-speed">section on speed</a> in the page on the experimental technique of sedimentation veloctity. When observing the properties of a single molecule, judicious selection of one rotor speed optimizes the avaliale information, but accurary and precision is sacrified when one is limited to only selecting one speed for heterogenous mixtures. 
 Heterogeneous mixtures present complications making it that no single speed will be optimal for all species. Single speeds can also prevent the investigator from asking specific questions together.</p>
 <p>For example:</p>
 <ul>
@@ -640,7 +644,7 @@ Heterogeneous mixtures present complications making it that no single speed will
 </ul>
 <p>Therefore, the ability to perform an experiment at multiple speeds provides additional detail and resolution for mixtures of particles that are heterogenous in sedimentation coefficients. </p>
 <p>The main idea behind multi-speed SV experiments is this: for mixtures containin solutes that exhibit range in sedimentation and diffusion coefficients, experiments with speed profiles incorporating multiple speeds will better match the properites of each solute.</p>
-<h1 id="experimental-design">Experimental Design</h1>
+<h1 id="experimental-design"><span style="font-size:20px";>Experimental Design</span></h1>
 <p>Now, we will describe:</p>
 <ol>
 <li>
@@ -650,7 +654,7 @@ Heterogeneous mixtures present complications making it that no single speed will
 <p>how a suitable finite-element analysis method can exploit the sedimentation and diffusion signal avaliable from multiple speed steps.</p>
 </li>
 </ol>
-<p>For heterogeneous systems, each component will have a different sedimentation coefficient, and so the duration will be diferent for each species. As described <a href="/sed-veloc/#determining-optimal-speed">previously</a>, the equation to determine the theoretical duration of an experiment is:</p>
+<p>For heterogeneous systems, each component will have a different sedimentation coefficient, and so the duration will be diferent for each species. As described <a href="/probable-eureka/sed-veloc/#determining-optimal-speed">previously</a>, the equation to determine the theoretical duration of an experiment is:</p>
 <div class="arithmatex">\[
 t = \ln \left( \frac{r_{b}}{r_{m}}\right)\frac{1}{\omega^{2}s}
 \]</div>
@@ -660,7 +664,7 @@ t = \ln \left( \frac{r_{b}}{r_{m}}\right)\frac{1}{\omega^{2}s}
 <p>Subsequent speed steps, <span class="arithmatex">\(v_{n}\)</span>, follow the same principle with each species aquiring a new meniscus from each speed step. The change in speed for each step depends on the <span class="arithmatex">\(s\)</span> value distribution. This value can be approximated from a single-speed experiment if it is not known.</p>
 <p>Here is a program <a href="/pdf/Documentation/WilliamsGorbetDemeler-Supp1_SpeedStep.pdf">(pdf</a>, <a href="/multispeed.cpp">C++ file</a>) that takes the original meniscus, the largest <span class="arithmatex">\(s\)</span> value, and the starting and maximal rotor speed to predit the apropriate rotor speeds and speed step durations for optimal speed step configurations. </p>
 <p>Overall, variable speed profiles allow the investigator to obtain much higher precision and accurary for heterogeneous samples. This is exceptionally demonstrated in the example below. </p>
-<div class="admonition danger">
+<div class="admonition warning">
 <p class="admonition-title">Example: Experimental Design for 5-Component Simulation Model</p>
 <p>To establish the value of multi-speed SV measurents, consider the following example where a mixture of five discrete components at identical concentrations are simulated. The components span five orders of magniture in molar mass, have a five-fold change in anisotropy, and have identical partial specific volumes.</p>
 <p><span class="arithmatex">\(\textbf{Table 1}\)</span>: Simulation parameters for a five-component simulation model.</p>
@@ -692,18 +696,18 @@ f/f_{0} &amp; 1.0 &amp; 2.0 &amp; 3.0 &amp; 4.0 &amp; 5.0 \\
 \end{array}
 \]</div>
 <div class="admonition danger">
-<p><img alt="" src="/img/WilliamsGorbetDemeler-fig2a.png" />
-<img alt="" src="/img/WilliamsGorbetDemeler-fig2b.png" /></p>
+<p><img alt="" src="../img/WilliamsGorbetDemeler-fig2a.png" />
+<img alt="" src="../img/WilliamsGorbetDemeler-fig2b.png" /></p>
 <p><span class="arithmatex">\(\textbf{Figure 1}\)</span>: 2DSA-MC results for individual speed steps combined into a global model (pseudo-3D representation). At each speed, a different solute is optimally measured and incures the narrowest confidence limits (blue arrow). </p>
 <p>Lower Right: 2DSA-MC result for a result single-speed experiment at 15 kRPM for 8 hours.</p>
 </div>
 <p>The SV simulation data was analyzed using 2DSA- Monte Carlo analysis to derive fitting statistics. Importantly, the single best reproduced species is different for each speed step and when all speed steps are considered, each species can be defined with a very low error. When compared to a simulated standard single speed SV experiment, there is a 54% improvement when performing the multi-speed simulation (analyzed with 2DSA-MC). With a GA-MC analysis, this improvement jumps to 60%.</p>
 <p><div class="csl-entry"><span style="font-size: 11px";>Williams, T. L., Gorbet, G. E., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity simulations with UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 815-823. https://doi.org/10.1007/s00249-018-1308-0</span></div></p>
 </div>
-<h1 id="fitting-approaches">Fitting Approaches</h1>
+<h1 id="fitting-approaches"><span style="font-size:20px";>Fitting Approaches</span></h1>
 <p>Fitting SV experimental data acquired at multiple speeds pose a series of challenges when fitting the data. These challenges are rotor stretch, shifting radial positions at different speeds, and the lack of acceleration profiles and time-state information. Solutions for these issues have been resolved and implemented in UltraScan.</p>
 <p>UltraScan separates each speed step into seperate experimental datasets when collecting multi-speed data. Initially, each speed step must be analyzed as a separate experiment. The first step in the analysis procedure is to identify the maximum <span class="arithmatex">\(s\)</span> value. The slowest speed step contains the signal from the fastest sedimenting solutes and should therefore be used to determine the upper limit of all speed steps. To eliminate time-invariant noise by scan pair subtraction, it is best to use the time-derivative method<sup id="fnref:Stafford1992"><a class="footnote-ref" href="#fn:Stafford1992">1</a></sup> that is implemented in UltraScan. To estimate the upper limit, select a group of scans near the end of the first speed step. The point where the <span class="arithmatex">\(g^{*}(s)\)</span> distribution approaches zero on the high end of the sedimentation coefficient spectrum should represent the upper limit. For the lowest <span class="arithmatex">\(s\)</span> value, it is usually appropriate to set it to 0.5 s, unless otherwise known to be higher. Frictional ratio ranges can also be chosen based on prior knowlege of the system's species. </p>
-<p>The data analysis on UltraScan is performed on parallel architectures.<sup id="fnref:BrookesDemeler2008"><a class="footnote-ref" href="#fn:BrookesDemeler2008">2</a></sup> The steps are the same as those outlined in the <a href="/sv-flow">Sedimentation Velocity Analysis Flowchart</a>. Remember that each speed step should be treated initially as a separate analysis, allowing for the use of a different 2DSA grid for each speed step. Furthermore, each speed step requires simulation of all the prior speed steps becuase the acceleration history needs to be preserved to obtain the appropriate initial concentration distribution for each modelled solute at the beginning of each speed step.</p>
+<p>The data analysis on UltraScan is performed on parallel architectures.<sup id="fnref:BrookesDemeler2008"><a class="footnote-ref" href="#fn:BrookesDemeler2008">2</a></sup> The steps are the same as those outlined in the <a href="/robable-eureka/sv-flow">Sedimentation Velocity Analysis Flowchart</a>. Remember that each speed step should be treated initially as a separate analysis, allowing for the use of a different 2DSA grid for each speed step. Furthermore, each speed step requires simulation of all the prior speed steps becuase the acceleration history needs to be preserved to obtain the appropriate initial concentration distribution for each modelled solute at the beginning of each speed step.</p>
 <div class="footnote">
 <hr />
 <ol>

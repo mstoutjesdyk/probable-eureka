@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -606,6 +606,16 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#calibration-disk-design" class="nav-link">Calibration Disk Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#manufacturing" class="nav-link">Manufacturing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -613,13 +623,13 @@
 
 <h1 id="calibration-disk">Calibration Disk</h1>
 <div class="admonition danger">
-<p>This page is based on the reseach presented in:</p>
-<p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div></p>
+<p>For more information on this page, see:</p>
+<p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). <a href="https://doi.org/10.1007/s00249-020-01434-z">https://doi.org/10.1007/s00249-020-01434-z</a></div></p>
 </div>
-<p>To address the issues related to AUC instrument hardware, a calibration disk has been developed as well as <a href="/pdf/Documentation/RotorStretchCalibration.pdf">experimental procedures</a> and <a href="/utilities-rotor">UltraScan modules</a> to carefully measure specific hardware effects and correct them during fitting by calibrations of the chromatic aberration and rotor stretch.</p>
-<p><span style="font-size: 20px";>Calibration Disk Design</span></p>
-<p>The calibration disk has a geometry with two sector-shapped channels, each divided into seven open sectors for each channel, and six ribes. Each sector is 3.7-degrees wide, wider than a standard 2-channel epon-charcoal centerpiece, which is only 2.5-degrees wide, and is offset by 0.9-degrees from the centerline. A guide note (1.6 mm x 0.5 mm) is included to ensure proper alignment in the cell housing.</p>
-<p><img align="right" alt="" src="/img/calibration-disk.jpg" width="250" /></p>
+<p>To address the issues related to AUC instrument hardware, a calibration disk has been developed as well as <a href="/pdf/Documentation/RotorStretchCalibration.pdf">experimental procedures</a> and <a href="/probable-eureka/utilities-rotor">UltraScan modules</a> to carefully measure specific hardware effects and correct them during fitting by calibrations of the chromatic aberration and rotor stretch.</p>
+<h1 id="calibration-disk-design"><span style="font-size: 20px";>Calibration Disk Design</span></h1>
+<p>The calibration disk has a geometry with two sector-shaped channels, each divided into seven open sectors for each channel, and six ribes. Each sector is 3.7-degrees wide, wider than a standard 2-channel epon-charcoal centerpiece, which is only 2.5-degrees wide, and is offset by 0.9-degrees from the centre-line. A guide note (1.6 mm x 0.5 mm) is included to ensure proper alignment in the cell housing.</p>
+<p><img align="right" alt="" src="../img/calibration-disk.jpg" width="250" /></p>
 <p>The following requirements were considered when designing this disk.</p>
 <ol>
 <li>
@@ -644,10 +654,14 @@
 <p>Using correct spacer rings, our disk can be positioned precisely in the focus position of the light path for optimal imaging accuracy of the edge positions. Specifically, the calibration disk is installed between two windows, and positioned in at 2/3 of the optical plane of the 1.2 cm AUC cell housing.</p>
 </li>
 </ol>
-<p><span style="font-size: 20px";>Manufacturing</span></p>
-<p><img alt="" src="/img/disk-laser1.jpg" style="float: right;margin-right: 20px;margin-top: 10px;" width="450" /></p>
-<p>Laser cutting, 3D printing, and CNC machining were all tested for the manufacturing of the disk. 3D printing was considered because it was previously used for centerpieces,<sup id="fnref:Desai2016"><a class="footnote-ref" href="#fn:Desai2016">1</a></sup> but was too imprecise and lacked sufficient rigidity at 0.5 mm thickness for our needs (see figure on right). Additionally, thicker material produced measurable issues with shading on one side of the edge, suggesting that the incident beam is not perfectly perpendicular to the focus plane. </p>
-<p>In the end, we found that CNC machining produced the most reproducible and accurate results. A Sherline 3 axis Bench Top CNC Mill with a tolerance of +- 0.0005 cm, featuring a solid carbide slotting end mill, were used to produce the calibration disks from 0.5 mm brass shim stock. All disks were manufactured by Geoff Minors of Technical Services of the University of Lethbridge.The predicted positions of the edges were verfied using a flatbed scanner with 3200 DPI optical resolution (~8 um), by determining the actual edge positions using standard Euclidean geometry, while assuming the center of the disk to be located at 65 mm.</p>
+<h1 id="manufacturing"><span style="font-size: 20px";>Manufacturing</span></h1>
+<p><img alt="" src="../img/disk-laser1.jpg" style="float: right;margin-right: 20px;margin-top: 10px;" width="450" /></p>
+<p>Laser cutting, 3D printing, and CNC machining were all tested for the manufacturing of the disk. 3D printing was considered because it was previously used for centerpieces,<sup id="fnref:Desai2016"><a class="footnote-ref" href="#fn:Desai2016">1</a></sup> but was too imprecise and lacked sufficient rigidity at 0.5 mm thickness for our needs (see figure). Additionally, thicker material produced measurable issues with shading on one side of the edge, suggesting that the incident beam is not perfectly perpendicular to the focus plane. </p>
+<p>In the end, we found that CNC machining produced the most reproducible and accurate results. A Sherline 3 axis Bench Top CNC Mill with a tolerance of +- 0.0005 cm, featuring a solid carbide slotting end mill, were used to produce the calibration disks from 0.5 mm brass shim stock. All disks were manufactured by Geoff Minors of Technical Services of the University of Lethbridge.The predicted positions of the edges were verified using a flatbed scanner with 3200 DPI optical resolution (~8 um), by determining the actual edge positions using standard Euclidean geometry, while assuming the center of the disk to be located at 65 mm.</p>
+<p><br>
+<br>
+<br>
+M.S. 21.07.22</p>
 <div class="footnote">
 <hr />
 <ol>
