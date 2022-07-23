@@ -1,9 +1,12 @@
 # Oki! Welcome!
 
-The University of Lethbridge, Alberta, is located Treaty 7 territory which is the traditional land of the Blackfoot Confederacy (Kainai, Siksika, and Piikani), the Tsuu T'ina, and the Metis peoples of Southern Alberta. We strive to acknowledge their ownership of this land, and to return it back to them.
+<span style="font-size:16px";>The University of Lethbridge, Alberta, Canada is located on [Treaty 7 territory](https://www.treaty7.org/). This land is the traditional land of the [Blackfoot Confederacy](https://blackfootconfederacy.ca/) (Kainai, Siksika, and Piikani), the [Tsuu T'ina](https://tsuutina.com/), and the [Metis peoples of Southern Alberta.](https://albertametis.com/) <br><br> We strive to <u>return this [land back](https://4rsyouth.ca/land-back-what-do-we-mean/) to their care.</u></span>
 
-![](/probable-eureka/img/banners/sab.jpg){width="textwidth"}
+![](/probable-eureka/img/banners/sab.jpg){width="1000"}
+
 Science Commons of the Univeristy of Lethbridge, in Lethbridge, Alberta. 
+
+# <span style="font-size:20px";>AUC University</span>
 
 As biochemists and biophysicsts, we need to be able to:
 
@@ -25,11 +28,11 @@ As biochemists and biophysicsts, we need to be able to:
     
 9. Combine information from multiple methods, if necessary to arrive at an answer
  
-This AUC University site is created so that users can survery modern biophysical techniques that are used for the characterization of biological macromolecules in solution state. 
+Knowning this, this AUC University site was created so that users can survery modern biophysical techniques that are used for the characterization of biological macromolecules in solution state. 
 
 The structure of this site is as follows:
 
-<u>General</u>
+<u>Resources</u>
 
 * Literature:
 

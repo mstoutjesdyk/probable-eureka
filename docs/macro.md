@@ -1,3 +1,8 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # Macromolecular Interactions
 
 On this page, we will study molecular interactions that occur in cellular systems, and how they can be studied by absorbing their transport. Specifically, we will cover irreversible interactions that can lead to aggregation, and reversible interactions that are driven by mass action.

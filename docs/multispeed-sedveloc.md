@@ -1,14 +1,19 @@
+<br> 
+MS: &#10003; 22.07.22
+<br> 
+BS: &#x2717; 
+
 # Multi-Speed Sedimentation Velocity
 
 !!! danger ""
 
-    This page is based on the research presented in:
+    For more information, see:
     
     <div class="csl-entry">Williams, T. L., Gorbet, G. E., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity simulations with UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 815-823. https://doi.org/10.1007/s00249-018-1308-0</div>
     
     <div class="csl-entry">Gorbet, G. E., Mohapatra, S., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity implementation in UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 825-835. https://doi.org/10.1007/s00249-018-1297-z</div>
 
-While the AUC can be used to measure a wide range of molecular sizes (Angstroms to several hundred nanometers), these paramaters are restricted by the molecule's density, the buffer's density, and the rotor speed. Recall the [section on speed](/sed-veloc/#determining-optimal-speed) in the page on the experimental technique of sedimentation veloctity. When observing the properties of a single molecule, judicious selection of one rotor speed optimizes the avaliale information, but accurary and precision is sacrified when one is limited to only selecting one speed for heterogenous mixtures. 
+While the AUC can be used to measure a wide range of molecular sizes (Angstroms to several hundred nanometers), these paramaters are restricted by the molecule's density, the buffer's density, and the rotor speed. Recall the [section on speed](/probable-eureka/sed-veloc/#determining-optimal-speed) in the page on the experimental technique of sedimentation veloctity. When observing the properties of a single molecule, judicious selection of one rotor speed optimizes the avaliale information, but accurary and precision is sacrified when one is limited to only selecting one speed for heterogenous mixtures. 
 Heterogeneous mixtures present complications making it that no single speed will be optimal for all species. Single speeds can also prevent the investigator from asking specific questions together.
 
 For example:
@@ -21,7 +26,7 @@ Therefore, the ability to perform an experiment at multiple speeds provides addi
 
 The main idea behind multi-speed SV experiments is this: for mixtures containin solutes that exhibit range in sedimentation and diffusion coefficients, experiments with speed profiles incorporating multiple speeds will better match the properites of each solute.
 
-# Experimental Design
+# <span style="font-size:20px";>Experimental Design</span>
 
 Now, we will describe:
 
@@ -30,7 +35,7 @@ Now, we will describe:
 2. how a suitable finite-element analysis method can exploit the sedimentation and diffusion signal avaliable from multiple speed steps.
 
 
-For heterogeneous systems, each component will have a different sedimentation coefficient, and so the duration will be diferent for each species. As described [previously](/sed-veloc/#determining-optimal-speed), the equation to determine the theoretical duration of an experiment is:
+For heterogeneous systems, each component will have a different sedimentation coefficient, and so the duration will be diferent for each species. As described [previously](/probable-eureka/sed-veloc/#determining-optimal-speed), the equation to determine the theoretical duration of an experiment is:
 
 $$
 t = \ln \left( \frac{r_{b}}{r_{m}}\right)\frac{1}{\omega^{2}s}
@@ -48,7 +53,7 @@ Here is a program [(pdf](/pdf/Documentation/WilliamsGorbetDemeler-Supp1_SpeedSte
 
 Overall, variable speed profiles allow the investigator to obtain much higher precision and accurary for heterogeneous samples. This is exceptionally demonstrated in the example below. 
 
-!!! danger "Example: Experimental Design for 5-Component Simulation Model"
+!!! warning "Example: Experimental Design for 5-Component Simulation Model"
 
     To establish the value of multi-speed SV measurents, consider the following example where a mixture of five discrete components at identical concentrations are simulated. The components span five orders of magniture in molar mass, have a five-fold change in anisotropy, and have identical partial specific volumes.
 
@@ -87,8 +92,8 @@ Overall, variable speed profiles allow the investigator to obtain much higher pr
     
     !!! danger ""
     
-        ![](/img/WilliamsGorbetDemeler-fig2a.png)
-        ![](/img/WilliamsGorbetDemeler-fig2b.png)
+        ![](img/WilliamsGorbetDemeler-fig2a.png)
+        ![](img/WilliamsGorbetDemeler-fig2b.png)
         
         $\textbf{Figure 1}$: 2DSA-MC results for individual speed steps combined into a global model (pseudo-3D representation). At each speed, a different solute is optimally measured and incures the narrowest confidence limits (blue arrow). 
         
@@ -98,13 +103,13 @@ Overall, variable speed profiles allow the investigator to obtain much higher pr
     
     <div class="csl-entry"><span style="font-size: 11px";>Williams, T. L., Gorbet, G. E., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity simulations with UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 815-823. https://doi.org/10.1007/s00249-018-1308-0</span></div>
 
-# Fitting Approaches
+# <span style="font-size:20px";>Fitting Approaches</span>
 
 Fitting SV experimental data acquired at multiple speeds pose a series of challenges when fitting the data. These challenges are rotor stretch, shifting radial positions at different speeds, and the lack of acceleration profiles and time-state information. Solutions for these issues have been resolved and implemented in UltraScan.
 
 UltraScan separates each speed step into seperate experimental datasets when collecting multi-speed data. Initially, each speed step must be analyzed as a separate experiment. The first step in the analysis procedure is to identify the maximum $s$ value. The slowest speed step contains the signal from the fastest sedimenting solutes and should therefore be used to determine the upper limit of all speed steps. To eliminate time-invariant noise by scan pair subtraction, it is best to use the time-derivative method[^Stafford1992] that is implemented in UltraScan. To estimate the upper limit, select a group of scans near the end of the first speed step. The point where the $g^{*}(s)$ distribution approaches zero on the high end of the sedimentation coefficient spectrum should represent the upper limit. For the lowest $s$ value, it is usually appropriate to set it to 0.5 s, unless otherwise known to be higher. Frictional ratio ranges can also be chosen based on prior knowlege of the system's species. 
 
-The data analysis on UltraScan is performed on parallel architectures.[^BrookesDemeler2008] The steps are the same as those outlined in the [Sedimentation Velocity Analysis Flowchart](/sv-flow). Remember that each speed step should be treated initially as a separate analysis, allowing for the use of a different 2DSA grid for each speed step. Furthermore, each speed step requires simulation of all the prior speed steps becuase the acceleration history needs to be preserved to obtain the appropriate initial concentration distribution for each modelled solute at the beginning of each speed step.
+The data analysis on UltraScan is performed on parallel architectures.[^BrookesDemeler2008] The steps are the same as those outlined in the [Sedimentation Velocity Analysis Flowchart](/robable-eureka/sv-flow). Remember that each speed step should be treated initially as a separate analysis, allowing for the use of a different 2DSA grid for each speed step. Furthermore, each speed step requires simulation of all the prior speed steps becuase the acceleration history needs to be preserved to obtain the appropriate initial concentration distribution for each modelled solute at the beginning of each speed step.
 
 [^Stafford1992]: <div class="csl-entry">Stafford, W. F. (1992). Boundary analysis in sedimentation transport experiments: A procedure for obtaining sedimentation coefficient distributions using the time derivative of the concentration profile. <i>Analytical Biochemistry</i>, <i>203</i>(2), 295-301. https://doi.org/10.1016/0003-2697(92)90316-Y</div>
 

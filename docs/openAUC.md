@@ -1,8 +1,13 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # openAUC
 
 !!! danger ""
 
-    This page is based on the research presented in:
+    For more information, see:
 
     Cölfen H, Laue TM, Wohlleben W, Schilling K, Karabudak E, Langhorst BW, Brookes E, Dubbs B, Zollars D, Rocco M, Demeler B. The Open AUC Project. Eur Biophys J. 2010 Feb;39(3):347-59. doi: 10.1007/s00249-009-0438-9. Epub 2009 Mar 19. PMID: 19296095; PMCID: PMC2812709.
 
@@ -22,6 +27,4 @@ It was found that if the Beckman AUC can be used for future AUC developments, it
 
 5. Offer specialized hardware and the software drivers needed to synchronize data acquisition.
 
-## Multi-wavelength detector for the Beckman Optima XL
-
-This instrument is developed in Germany by [Helmut Coelfen at the University of Konstanz](https://www.chemie.uni-konstanz.de/coelfen/team/prof-dr-helmut-coelfen/) with support from BASF (Wendel Wohlleben). Data acquisition software was developed by [Johannes Walter at the University of Erlangen](https://www.lfg.tf.fau.de/person/walter-johannes-dr-ing/). 
+The Multi-wavelength detector for the Beckman Optima XL was developed in Germany by [Helmut Coelfen at the University of Konstanz](https://www.chemie.uni-konstanz.de/coelfen/team/prof-dr-helmut-coelfen/) with support from BASF (Wendel Wohlleben). Data acquisition software was developed by [Johannes Walter at the University of Erlangen](https://www.lfg.tf.fau.de/person/walter-johannes-dr-ing/). 

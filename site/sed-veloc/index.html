@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -604,11 +604,22 @@
             
             <li class="nav-item" data-level="1"><a href="#sedimentation-velocity" class="nav-link">Sedimentation Velocity</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#instrument-operation-and-data-collection" class="nav-link">Instrument Operation and Data Collection</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="1"><a href="#optimal-speed-and-duration" class="nav-link">Optimal Speed and Duration</a>
+            <li class="nav-item" data-level="2"><a href="#monitoring" class="nav-link">Monitoring</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis" class="nav-link">Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#optimal-speed-and-duration" class="nav-link">Optimal Speed and Duration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -617,6 +628,9 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="sedimentation-velocity">Sedimentation Velocity</h1>
+<h2 id="instrument-operation-and-data-collection">Instrument Operation and Data Collection</h2>
+<h2 id="monitoring">Monitoring</h2>
+<h2 id="analysis">Analysis</h2>
 <p><img align="right" alt="" src="/img/sedvel.png" width="300" /></p>
 <p>Sedimentation velocity (SV) experiments are performed at high speeds to overcome the effects of diffusion. In an SV experiment, the speed is set such that the back diffusion from the bottom of the cell is minimal compared to the rate of sedimentation, forming a moving boundary. The evolution of the shape of this boundary over time is representative of the composition, sedimentation, and diffusion properties of the sample. Molecular weight can also be analyzed in ideal cases. </p>
 <p>SV experiments are best for: </p>
@@ -663,7 +677,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="optimal-speed-and-duration">Optimal Speed and Duration</h1>
+<h2 id="optimal-speed-and-duration">Optimal Speed and Duration</h2>
 <div class="admonition danger">
 <p>This section is based on the research presented in:</p>
 <p><div class="csl-entry">Gorbet, G. E., Mohapatra, S., &#38; Demeler, B. (2018). Multi-speed sedimentation velocity implementation in UltraScan-III. <i>European Biophysics Journal</i>, <i>47</i>(7), 825-835. https://doi.org/10.1007/s00249-018-1297-z</div></p>
@@ -744,7 +758,7 @@ t(45~\text{kRPM}) = \ln \left( \frac{7.2~\text{cm}}{5.9~\text{cm}}\right)\frac{1
 t(60~\text{kRPM}) = \ln \left( \frac{7.2~\text{cm}}{5.9~\text{cm}}\right)\frac{1}{(6283.19~\text{rad/s})^{2}(5 \times 10^{-13}~\text{s})} = 10,087.96~\text{seconds}
 \]</div>
 <div class="admonition danger">
-<p><img alt="" src="/img/gorbet-fig1.png" width="800" /></p>
+<p><img alt="" src="../img/gorbet-fig1.png" width="800" /></p>
 <p>ASTFEM-simulated SV data at three different speeds and durations for a 5 S species with a frictional ratio of 1.28.</p>
 <p><span class="arithmatex">\(\textbf{Red}\)</span> 30 kRPM, 11 h:12 m = 40,320 s</p>
 <p><span class="arithmatex">\(\textbf{Blue}\)</span> 45 kRPM, 4 h:58 m = 17,880 s</p>

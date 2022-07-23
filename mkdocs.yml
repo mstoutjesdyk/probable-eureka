@@ -23,7 +23,7 @@ nav:
     - The AUC Lab: 
       - Instrumentation: instru.md
       - Optical Systems: 
-        - Absorbance: optics.md
+        - Absorbance: absorbance.md
         - Interference: interference.md
         - Fluorescence: fluorescence.md
         - Multiwavelength: tech-mwl.md

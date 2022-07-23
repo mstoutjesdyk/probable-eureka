@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Marielle Stoutjesdyk">
-        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/chose-optics/">
+        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/people/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Chose optics - AUC University</title>
+        <title>People - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -572,7 +572,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/chose-optics.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/people.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -592,46 +592,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#absorbance-optics" class="nav-link">Absorbance Optics</a>
+            <li class="nav-item" data-level="1"><a href="#people" class="nav-link">People</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#measuring-in-intensity-mode-vs-absorbance-mode" class="nav-link">Measuring in Intensity Mode vs. Absorbance Mode</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#advantages" class="nav-link">Advantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#disadvantages" class="nav-link">Disadvantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="2"><a href="#rayleigh-interference-optics" class="nav-link">Rayleigh Interference Optics</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#advantages_1" class="nav-link">Advantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#disadvantages_1" class="nav-link">Disadvantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="2"><a href="#fluorescence-optics-488-nm" class="nav-link">Fluorescence Optics (488 nm)</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#advantages_2" class="nav-link">Advantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#disadvantages_2" class="nav-link">Disadvantages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -639,75 +601,61 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>How do you chose what optical system to use? The logistics of each optical system has already been discussed <a href="/optics">here</a>. 
-Here, advantages and disadvantages of each system is presented, as well as some considerations to be aware of. </p>
-<p>The choice varies depending on your sample: what are the components? what is the concentration?</p>
-<h2 id="absorbance-optics">Absorbance Optics</h2>
-<p>OPTICAL DENSITY: Boasts a lower limit of ~0.1 OD due to the low signal-to-noise ratio (optimal at 230 nm).</p>
-<p>Generally should not be used for samples with an optical density above 1.0 OD. At that point, there may be non-linearity of the absorbance signal.</p>
-<p>WAVELENGTHS:</p>
-<p>Use lower wavelengths for small protein concentrations.</p>
-<p>Protein extinction is usually 3-10 fold better when using 230 nm over 280 nm. Do not measure at concentrations above 0.9-1.0 O.D. Check extinction profiles of your sample.</p>
-<p>In SV-AUC, do not change the wavelength mid-run. When measuring multiple concentrations at different wavelengths, perform multiple runs.</p>
-<p>For DNA and DNA-protein complexes: scanning at 260 nm enables much lower sample concentrations, due to the high extinction profiles of DNA.</p>
-<p>BUFFERS: </p>
-<p>Buffers should not absord, or only a very little. This requirement can mean that you must exclud strong UV-absorbing species such as DTT.</p>
-<p>Always check aborbance again a water blank to confirm the level of baseline absorbance. Most of the signal should come from the sample, not the buffer. All together, both analyte and bufffer should not exceed the dynamic range of the detector.</p>
-<p>INTENSITY VS ABSORBANCE MODE:</p>
-<h4 id="measuring-in-intensity-mode-vs-absorbance-mode">Measuring in Intensity Mode vs. Absorbance Mode</h4>
-<p>Cn be used to measure samples in the reference channel as long as the total OD is less than 0.5 OD to avoid resetting of PMT setting.</p>
-<p>In general, fill centerpiece as full as possible (~0.46 ml), but leave some room above the meniscus to provide an air region for intensity referencing.</p>
-<p>Requires time/radially invariant noise removal by fitting with <a href="/2dsa.md">2DSA</a>.</p>
-<p>Reduces stochastic noise by a factor of the square root of 2.</p>
-<p>Provides absolute intensity data to check instrument performance.</p>
-<p>When designing AUC experiments for UV optics it is highly recommended to measure in intensity rather than absorbance mode. Unlike absorbance data, intensity data is not convoluted with the random noise acquired in a reference measurement, producing better fits with lower RMSD values. In the process of collecting absorbance data in the Beckman XL-A, the reference channel data is subtracted from the sample channel data, thereby convoluting the random noise from the reference channel with the random noise from the sample channel. Whenever two noisy vectors are added or subtracted from each other, the noise level increases by the square root of 2, or a factor of ~ 1.4. The UltraScan software used in our laboratory is perfectly capable of accurately calculating the baseline levels of any experimental dataset using established algorithms, so a reference subtraction as done in absorbance experiments is no longer needed.</p>
-<p>There are other advantages: In intensity mode both channels are scanned into separate datasets, making it possible to double the capacity of the instrument by using both channels for samples. There is only one catch: The OD in the reference channel must be less than 0.5 OD (as detected in a 1.2 cm pathlength cell), regardless of wavelength, to prevent a resetting of the photomultiplier gain set. If the total OD (including baseline absorbance compared to ddH2O) is less than 0.5 OD, the gainsets will not be changed. A gainset adjustment in the XLA during the experiment has important consequences: The data will be rescaled at a different scale, the baselines will shift, and the entire experimental data can no longer be globally analyzed in a single fit. Each dataset acquired at a different gainset needs to be analyzed separately (although the individual datasets can still be combined to be analyzed in a global fit). But this is tedious and inconvenient.</p>
-<p>This limitation actually works in our favor: For many proteins it is interesting to study the protein at different concentrations. If a protein is reversibly self-associating, measuring a 0.3 and a 0.9 OD concentration under the same conditions will reveal mass action effects and tell us if the protein is self-associating. Hence, it is advisable to always measure at least two concentrations of each sample (0.3 and 0.9 OD, as measured in a standard 1.0 cm pathlength cuvette), with the 0.3 OD sample placed into the reference channel, and the 0.9 OD sample into the sample channel. </p>
-<h4 id="advantages">Advantages</h4>
-<p>Great for low concentrations of proteins or nucleic acids
-Always good to measure at lower concentrations; molecules sediment and diffuse ideally, and you avoid concentration-dependent non-ideality.</p>
-<p>Uses absorbance maximum.
-Where do you get the most signal? Pick those wavelengths.</p>
-<p>Flexible wavelength selection.</p>
-<p>Second channel can be used another sample in intensity mode.</p>
-<p>supports MWL-AUC on Optima.</p>
-<h4 id="disadvantages">Disadvantages</h4>
-<p>Slow scanning speed (worse on XL-A). slit assembly motor is much faster than servo-motor.</p>
-<p>Monochromator does not reset properly, so you can only use one wavelength (XL-A only)</p>
-<p>Intensity variation as a function of wavelength (see <a href="/maint.md">Xenon Lamp Maintenance</a>).</p>
-<p>Sensitive to refractive artifacts causing distortions in radial position. Worse for higher refractive solutions.</p>
-<p>Buffers should be non-absorbing</p>
-<h2 id="rayleigh-interference-optics">Rayleigh Interference Optics</h2>
-<p>Has a lower sample concetration limit (~0.1 mg/ml) but can allow for the use of much more concentrated samples.</p>
-<p>Will observe the signal for all buffer components; requiring the subtration of buffer components using reference samples.</p>
-<h4 id="advantages_1">Advantages</h4>
-<p>Great for samples with high refractive indices.</p>
-<p>Fast scanning speed, measuring every 5 seconds.</p>
-<p>No temporal distortion. One snapshot for each hole. Good for fast sedimenting samples.</p>
-<p>high radial resolution, low stochastic noise</p>
-<p>no buffer interference, allowing for arbitrary buffers to be use.</p>
-<h4 id="disadvantages_1">Disadvantages</h4>
-<p>Sensite to refractive index artifacts such as wiener skewing and lens effect
-Use shorter path length or have lower concentrations to avoid wiener skewing.</p>
-<p>Exact meniscus match required between buffer channel and sample channel to measure refractive index differences.</p>
-<p>Sample must be dialyzed or column purified. Buffer components may sediment and change the concentration over time of the cell, and adds a singal.</p>
-<p>Lower capacity: second channel cannot be used for a seperate sample. Only 3 cells for An-60,  7 cells for An-50. Needs counterbalance.</p>
-<h2 id="fluorescence-optics-488-nm">Fluorescence Optics (488 nm)</h2>
-<p>Generally enhances the dynamic rane by extending into the low end of sample concentration into the low nano molar, depending on labeling efficiency and fluorophore quantum yield.</p>
-<p>the minimal FDS power setting still enable the use of low-micromolar concentrations</p>
-<p>Zhao et al 2014 report that fluorescent optics can provide uable data for concentrations as low micro-molar.</p>
-<p>LABELING REQUIREMENTS: fluorphores with 488-nm exitation maxima are ideal to use, but other dyes can be used if they have higher final concentrations for producing a singal equivalent to samples with the 488-nm excitation maxima.</p>
-<p>When labing native functional groups, make sure that its behavior is equivalent to that of the unlabelled protein.</p>
-<h4 id="advantages_2">Advantages</h4>
-<p>Exquisite selectivity to measure tagged molecule and can be used against an impure background</p>
-<p>Very high sensitivity (down to pM concentrations)</p>
-<p>No refractive artifacts</p>
-<p>Fast scanning speed (all cells and channels are scanned simultaneously)</p>
-<p>No buffer interference</p>
-<p>Great for hetero-interactions, in-vivo studies, GFP fusions proteins.</p>
-<h4 id="disadvantages_2">Disadvantages</h4>
-<p>Relatively high stochastic noise</p>
-<p>Most samples must be tagged by a fluoropore.</p></div>
+<h1 id="people">People</h1>
+<p><u>Victor Bloomfield</u>  <img align="right" alt="" height="200" src="\img\banners\vbloomfield.jpg" width="400" /></p>
+<p>Association: University of Minnesota (Emeritus) <br>
+  Tel (office): (612) 625 2268 <br>
+  Email: victor@umn.edu <br></p>
+<p><u>Dr. Emre Brookes</u><br></p>
+<p>Association: University of Montana <br>
+  Tel (office): <br>
+  Email: <br></p>
+<p><u>Helmut Coelfen, FRSC</u><br></p>
+<p>An eminent scientist with a focus on AUC, contributing many works to material science and hydrodynamic properties of nano-particles. His work has influenced the development of the multi-wavelength optics for the AUC. <br> </p>
+<p>Association: University of Konstanz  <br>
+  Tel (office): +40 (0) 7531 88-4063<br>
+  Email: helmut.colfen@uni-konstanz.de<br>
+  Website: <a href="https://www.chemie.uni-konstanz.de/coelfen/">https://www.chemie.uni-konstanz.de/coelfen/</a><br></p>
+<p><u>Borries Demeler</u><br>
+  <img align="right" alt="" src="\img\banners\bdemeler.jpg" /></p>
+<p>Association: University of Lethbridge (Professor), University of Montana (Adjunct Proffesor)  <br>
+  Tel (office): +1 (403) 234 4022<br>
+  Email: demeler@gmail.com<br>
+  Website: <a href="https://demeler.uleth.ca">https://demeler.uleth.ca</a><br></p>
+<p><u>Jose Garcia de le Torre</u> <br></p>
+<p><a href="http://leonardo.inf.um.es/macromol/programs/programs.htm">Computer programs</a><br></p>
+<p>Association:  Universidad de Murcia (Retired/Emeritus)<br>
+  Tel (office): (+34) 86 888 7426<br>
+  Email: jgt@um.es <br></p>
+<p><u>John "Jack" Gamble Kirkwood (<span class="arithmatex">\(\dagger\)</span>)</u></p>
+<p>Introduced the concept of orientational correlations between neighbouring molecules and described how these correlations controled the dielectric behaviour of liquids. <br></p>
+<p><u>J. B. Alexander "Sandy" Ross</u><br>  </p>
+<p>Association: University of Montana (Retired)<br>
+  Tel (office): +1 (406) 243 45600<br>
+  Email: sandy.ross@umontana.edu <br></p>
+<p><u>Trushar R Patel, FRSC</u><br></p>
+<p>Association: University of Lethbridge (Associate Professor, Canada Reserach Chair)<br>
+  Tel (office): <br>
+  Email: trushar.patel@uleth.ca <br>
+  Website: <a href="https://trpatel.com/">https://trpatel.com/</a></p>
+<p><u>John S. Philo</u><br></p>
+<p>Provided numerous software packages (Sednter w/ Tom Laue, Svedberg, dcdt+ and kDalton). Recognized early on the potential of AUC for the analysis of cell and gene biopharmaceuticals, and promoting the comeback of AUC.<br></p>
+<p>Association: Alliance Protein Laboratories<br>
+  Tel (office): <br>
+  Email: <br></p>
+<p><u>Alexey Savelyev</u><br></p>
+<p>Association: University of Montanta <br>
+  Tel (office):<br> 
+  Email: <br></p>
+<p><u>Peter W. Schuck</u><br></p>
+<p>Association: National Institutes of Health<br>
+  Tel (office): (301) 435 1950<br> 
+  Email: shuckp@mail.nih.gov<br></p>
+<p>Website: <a href="https://sedfitsedphat.github.io">SedFit/SedPhat</a></p>
+<p><u>Walter F. Stafford</u><br></p>
+<p>Association: Bostom Biomedical Reserach Institute <br>
+  Tel (office): <br>
+  Email: <br></p></div>
             </div>
         </div>
 

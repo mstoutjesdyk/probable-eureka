@@ -1,12 +1,16 @@
+<br>
+MS: &#10003;
+<br>
+BS: &#x2717; 
+
 # AUC Standards
 
 !!! danger ""
 
-    This page is based on the research presented in:
+    For more information, see:
     
     <div class="csl-entry">Savelyev, A., Gorbet, G. E., Henrickson, A., Demeler, B. (2020). Moving analytical ultracentrifugation software to a good manufacturing practices (GMP) environment. <i>PLOS Computational Biology</i>, <i>16</i>(6), e1007942. https://doi.org/10.1371/journal.pcbi.1007942</div>
-    
-<span style="font-size: 20px";>Standard Requirements</span>
+  
 
 The requirements of a standard to be used in validating an instrument are:
 
@@ -20,11 +24,11 @@ The requirements of a standard to be used in validating an instrument are:
 
 5. The standard must be avaliable with sufficient purity, and it must be possible to manufacture with great reproducibility.
 
-<span style="font-size: 20px";>Proposal for dsDNA Standards</span>
+# <span style="font-size: 20px";>Proposal for dsDNA Standards</span>
 
 We propose using double-stranded DNA (dsDNA) for a standard for AUC instruments.
 
-!!! warning "dsDNA as an AUC Standard"
+!!! note "dsDNA as an AUC Standard"
     
     1. Stable, with long shelf life.
 

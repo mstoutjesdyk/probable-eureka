@@ -1,4 +1,9 @@
-## Suitable Biological Systems for AUC
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
+# Suitable Biological Systems for AUC
 
 !!! note "Suitable Systems"
 

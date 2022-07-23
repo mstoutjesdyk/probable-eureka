@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -604,14 +604,11 @@
             
             <li class="nav-item" data-level="1"><a href="#monte-carlo-method" class="nav-link">Monte Carlo Method</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#recipe-for-monte-carlo" class="nav-link">Recipe for Monte Carlo</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#monte-carlo-on-ultrascan-lims-iii" class="nav-link">Monte Carlo on UltraScan LIMS III</a>
+            
+            <li class="nav-item" data-level="1"><a href="#recipe-for-monte-carlo" class="nav-link">Recipe for Monte Carlo</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -619,6 +616,10 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><br> 
+MS: &#x2717; 
+<br> 
+BS: &#x2717; </p>
 <h1 id="monte-carlo-method">Monte Carlo Method</h1>
 <p>The Monte Carlo method is a stochastic approach that can be used to identify the effect noise has on the reliability of determined parameters. With the Monte Carlo approach, the statistical confidence limits of each Parameter can be determined.</p>
 <p>When running a simulation, the metrics we chose to compare to the actual data need to include the percent error observed from the means of the Monte Carlo parameter distributions:<sup id="fnref:WilliamsGorbetDemeler2018"><a class="footnote-ref" href="#fn:WilliamsGorbetDemeler2018">1</a></sup></p>
@@ -632,7 +633,7 @@
 \left(\sqrt{(X_{e} - X_{95l})^{2}}+\sqrt{(X_{e} - X_{95h})^{2}}\right)}{X_{e}}\right]
 \]</div>
 <p>where <span class="arithmatex">\(X_{95l}\)</span> is the low 95% confidence interval, and <span class="arithmatex">\(X_{95h}\)</span> is the high 95% confidence interval.</p>
-<h3 id="recipe-for-monte-carlo">Recipe for Monte Carlo</h3>
+<h1 id="recipe-for-monte-carlo"><span style="font-size:20px";>Recipe for Monte Carlo</span></h1>
 <ol>
 <li>
 <p>Obtain a best-fit solution from model function fit and confirm that the residuals are random and without systematic deviation</p>
@@ -660,7 +661,6 @@
 </li>
 </ol>
 <p>Once a Monte Carlo analysis is completed, a frequency distribution of parameter values for each parameter is obtained, and statistics for the distribution can be calculated.</p>
-<h3 id="monte-carlo-on-ultrascan-lims-iii">Monte Carlo on UltraScan LIMS III</h3>
 <div class="footnote">
 <hr />
 <ol>

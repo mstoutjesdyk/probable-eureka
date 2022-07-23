@@ -1,3 +1,8 @@
+<br> 
+MS: &#x2717; 
+<br> 
+BS: &#x2717; 
+
 # Finite Element Simulations 
 
 When simulating data, prior knowledge of simulation paramaters are necessary in order to generate the data. Thereby a good metric is obtained to judge to quality of the results by comparing the obtained values to the actual values that describe the solute under investigation.

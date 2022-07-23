@@ -1,8 +1,13 @@
+<br> 
+MS: &#10003; 
+<br> 
+BS: &#x2717; 
+
 # What is Good Manufacturing Practices?
 
 !!! danger ""
 
-    This page is mainly based on the research presented in:
+    For more information, see:
     
     <div class="csl-entry">Savelyev, A., Gorbet, G. E., Henrickson, A., &#38; Demeler, B. (2020). Moving analytical ultracentrifugation software to a good manufacturing practices (GMP) environment. <i>PLOS Computational Biology</i>, <i>16</i>(6), e1007942. https://doi.org/10.1371/journal.pcbi.1007942</div>
 
@@ -20,7 +25,7 @@ c. quality standards are observed, and;
 
 d. any risks are minimized throughout the procedure.
 
-<span style="font-size: 20px";>GMP Obstacles in AUC</span>
+# <span style="font-size: 20px";>GMP Obstacles in AUC</span>
 
 Within the AUC lab, there are several issues that can be determined which affect the authenticity of data analysis procedures.
 
@@ -52,31 +57,32 @@ and hardware parameters (rotor stretch corrections).
 That interpretation does not necessarily include standard metrics for comparison
 that can be automated and applied without user bias.
 
-<span style="font-size: 20px";>Hardware Effects</span>
+# <span style="font-size: 20px";>Hardware Effects</span>
 
 A recent multi-labratory study demonstrated the importance of accurate reference materials to provide improved validation for the AUC.[^Zhao2015] Accurate reference materials are also useful in that they will complement the resolution gains offered by modern analysis software. The following hardware components of the AUC instrument have been found to affect analysis results.
 
 [^Zhao2015]: <div class="csl-entry">Zhao, H., Ghirlando, R., Alfonso, C., Arisaka, F., Attali, I., Bain, D. L., Bakhtina, M. M., Becker, D. F., Bedwell, G. J., Bekdemir, A., Besong, T. M. D., Birck, C., Brautigam, C. A., Brennerman, W., Byron, O., Bzowska, A., Chaires, J. B., Chaton, C. T., Cölfen, H., Schuck, P. (2015). A multilaboratory comparison of calibration accuracy and the performance of external references in analytical ultracentrifugation. <i>PLoS ONE</i>. https://doi.org/10.1371/journal.pone.0126420</div>
 
-$\textbf{Rotor Speed}$
+<u>Rotor Speed</u>
 
-$\textbf{Recorded Time and Centrifugal Force Integrals}$
+<u>Record Temperature and Centrifugal Force Integrals</u>
 
-$\textbf{Radial Calibrations}$
+<u>Radial Calibrations</u>
 
-$\textbf{Temperature}$
+<u>Temperature</u>
 
-$\textbf{Optical Systems: Light Intensity, Alignment, and Focus}$
+<u>Optics: Light Intensity, Alignment, Force Integrals</u>
 
-$\textbf{Chromatic Aberration}$
+<u>Chromatic Aberration</u>
+
 
 While investigating the accuracy of radial recordings made on the Optima AUC, it was noted that there was the presence of wavelength dependence on the radial positions collected as a result of chromatic aberration, a phenomenon related to the variability of refraction at different wavelengths.
 
-$\textbf{Stretching or Contracting of the Rotor in Response to Speed Changes}$ 
+<u>Stretching or Contracting of the Rotor in Response to Speed Changes</u>
 
 What is rotor stretching and how do we know it is occuring? We noticed that the Lamm Equation was being solved with incorrect boundary conditions. Typically, we expect the bottom of the cell to be routinely held constant at the known position at rest. However, the absolute radial position of the sample cell was shifting. Finite element solutions of the Lamm Equation require accurate knowledge of the boundary consitions, which include the radial positions of the meniscus and bottom location ofthe sample cell. Any error in these boundary conditions, or the absolute radial positionscollected will affect the fitte values of the sedimentation and diffusion coefficients. This error propogates to the calculations of biomolecular attributes. Stretching or contracting of the rotor changes these boundary conditions, and thus must be known. Specifically, the titanium rotors, when spun at very high speeds, were stretching a finite amount, changing the boundary conditions of the experiment compared to those at rest or a different speed. 
 
-![Adiabatic Temperature Graph](/img/temp-adiabatic.png){:style="float: right;margin-right: 20px;margin-top: 10px;"width="450"}
+![Adiabatic Temperature Graph](img/temp-adiabatic.png){:style="float: right;margin-right: 20px;margin-top: 10px;"width="450"}
 
 Consider the figure to the right: this is a temperture-time graph for a rotor spinning from rest to 60,000 RPM, resting for 15 mins, and then decelerating back down to rest.
 Notice how there is a temperature decrease intially as the rotor accelerates; the acceleration period takes ~5 minutes. As the speed increases the rotor needs energy to stretch out and so it takes it from its environment. The chamber will notice this change and correct the temperature to the stated temperature. This correction occurs while to rotor spins at 60,000 RPM for 15 minutes. After this time has elapsed, the rotor spins down to rest and no longer needs the heat energy it took from the environment and so it releases it, causing an increases in temperature. Again, the chamber will correct for this change. The valley and peak have approximately the same area, and this change in temperature is adiabatic.

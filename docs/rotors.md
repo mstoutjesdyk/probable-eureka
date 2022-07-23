@@ -1,6 +1,9 @@
-This page is still under construction.
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
 
-## Beckman AUC  Rotor Types
+# Beckman AUC  Rotor Types
 The only rotors that can be used with the Optima AUC and the ProteomeLab XL-A/I are the An-60 Ti, and An-5- Ti rotors.
 
 The An-60 Ti and An-50 Ti  rotors are manufactured in an NSAI-registerd ISO 9001 or 9002 facility for the use 

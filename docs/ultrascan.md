@@ -1,3 +1,10 @@
+<br>
+MS: &#10003;
+<br>
+BS: &#x2717;
+
+# UltraScan Software
+
 !!! danger ""
 
     The UltraScan-III and LIMS-III software were developed by:
@@ -8,17 +15,13 @@
 
     Other individual contributors to the UltraScan project can be found [here](https://ultrascan.aucsolutions.com/contributors.php).
     
-    For more information, please visit: [http://www.ultrascan.aucsolutions.com/](http://www.ultrascan.aucsolutions.com/)
-
-## UltraScan Software
-
-!!! warning ""
-
-    ![](/img/ultrascan.png){width="800"}
-    
     The UltraScan software is copyright protected by international laws. The copyright is jointly owned by Borries Demeler, PhD (1989-present) and The University of Texas Health Science Center at San Antonio (1997-2018), AUC Solutions (2015-present), University of Montana (2018-present) and University of Lethbridge (2018-present). All rights reserved.
     
     The entire software, including documentation, source code, LIMS and grid middleware components are protected by the GNU Lesser General Public License, version 3. 
+    
+    For more information, please visit: [http://www.ultrascan.aucsolutions.com/](http://www.ultrascan.aucsolutions.com/)
+    
+    ![](img/ultrascan.png){width="800"}
     
 UltraScan is a comprehensive data analysis software package for hydrodynamic data from analytical ultracentrifugation experiments. The software features an integrated data editing and analysis environment with a portable graphical user interface. UltraScan provides the highest possible resolution for sedimentation velocity experiments using high-performance computing modules for 2-dimensional spectrum analysis, genetic algorithm, and for Monte Carlo analysis. A MySQL database backend is integrated for data management, and the UltraScan LIMS system provides web-based access to the database and supercomputing functionality. Supercomputing resources are provided through a NSF Teragrid Science Gateway. Special care has been taken in the design of the software to guarantee an optimum in flexibility, user-friendliness, stability and convenience. The software is written in C++.
 
@@ -26,7 +29,7 @@ The software features popular sedimentation velocity and equilibrium analysis me
 
 UltraScan is offered in two versions, UltraScan-II and UltraScan-III. The latter is a complete rewrite of the former, with many new features and a greatly improved interface. UltraScan-III was released in the summer of 2011 and will eventually replace the older version. We will maintain UltraScan-II to assure access to legacy data because UltraScan-III is not backward compatible with UltraScan-II. New users are encouraged to switch to UltraScan-III. In addition to numerous interface changes, the most important changes in UltraScan-III are listed below:
 
-UltraScan-III adheres to the [OpenAUC](/openAUC) standard.
+UltraScan-III adheres to the [OpenAUC](/probable-eureka/openAUC) standard.
 
 * Can be used simultaneously in a local disk-only mode without the requirement for network connectivity, or fully integrated with network capability, including a database and supercomputing backend
     
@@ -52,7 +55,7 @@ The LIMS component of UltraScan, coupled with the high-performance computing bac
 
 A quick-start manual for UltraScan can be found [here](https://ultrascan.aucsolutions.com/quickstart.php).
 
-## US-LIMS
+# <span style= "font-size:20px";>US-LIMS</span>
 
 The [US-LIMS website](https://uslims.uleth.ca/uslims3_CCH/) offers access to the UltraScan Laboratory Information Management System (USLIMS), an XSEDE Science Gateway supported by an allocation through an XSEDE community account. 
 
@@ -70,15 +73,8 @@ These services are made available through an NSF XSEDE community account. Fundin
 
 * The National Institutes of Health, Grant NCRR-R01RR022200 (to Borries Demeler)
 
-
-
-!!! warning ""
-
-    When publishing, please credit our facility as follows:
-
-    Calculations were performed on the UltraScan LIMS cluster at the Bioinformatics Core Facility at the University of Texas Health Science Center at San Antonio and multiple High Performance Computing clusters supported by NSF XSEDE Grant #MCB070038 (to Borries Demeler).
     
-## Using UltraScan with the Optima AUC
+# <span style= "font-size:20px";>Using UltraScan with the Optima AUC</span>
 
 The Optima AUC from Beckman Coulter allows for the implementation of appropriate workflow validations, instrument diagnostics, and greater automation in the data aquisition and analysis processes.
 

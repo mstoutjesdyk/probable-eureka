@@ -1,53 +1,58 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # Initialize Genetic Algorithm
 
 Solute distribution data can be used to generate data for use with Genetic Algorithm analysis programs. The output data results from choosing bins (or buckets) around solute points. These buckets can be modified for better results. Once they are as desired, data for Genetic Algorithm analysis can be generated and output. 
 
-The input data may come in one of two flavors, each of which is treated differently. The data is either SA2D type or Monte Carlo. The SA2D is relatively sparse and generally requires fashioning buckets containing a single point. 
+The input data may come in one of two flavors, each of which is treated differently. The data is either SA2D type or Monte Carlo. The 2DSA is relatively sparse and generally requires fashioning buckets containing a single point. 
 
-!!! warning "Genetic Alorigthm Initialization Control Window"
+!!! danger "Genetic Algorithm Initialization Control Window"
 
-    ![](/img/nav-us/velocity-initializega.png)
+    ![](img/nav-us/velocity-initializega.png)
     
 ***
 GENETIC ALGORITHM CONTROLS
 ***
 
-$\textbf{Number of Initial Solutes}$
+<u>Number of Initial Solutes</u>
 
-$\textbf{Weight of s Bucket}$
+<u>Weight of s Bucket</u>
 
-$\textbf{Height of f/f0 Bucket}$
+<u>Height of f/f0 Bucket</u>
 
 ***
 PSEUDO 3-D CONTROLS
 ***
 
-$\textbf{Pseudo 3-D Resolution}$
+<u>Pseudo 3-D Resolution</u>
 
-$\textbf{X/Y Resolution}$
+<u>X/Y Resolution</u>
 
-$\textbf{Z Visibility Percent}$
+<u>Z Visibility Percent</u>
 
-$\textbf{Plot Limits (Max,Min)}$
+<u>Plot Limits (Max,Min)</u>
 
-$\textbf{Plot X}$
+<u>Plot X</u>
 
-$\textbf{Plot Y}$
+<u>Plot Y</u>
 
 ***
 PLOT CONTROLS
 ***
 
-$\textbf{Select PreFilter}$
+<u>Select Pre-Filter</u>
 
-$\textbf{Load Distribution}$
+<u>Load Distribution</u>
 
-$\textbf{Load Color File}$
+<u>Load Color File</u>
 
-$\textbf{Manually Draw Bins}$
+<u>Manually Draw Bins</u>
 
-$\textbf{Autoassign Solute Bins}$
+<u>Auto-assign Solute Bins</u>
 
-$\textbf{Load Solute Bins}$
+<u>Load Solute Bins</u>
 
-$\textbf{Check for Bin Overlaps/Sort}$
+<u>Check for Bin Overlaps/Sort</u>

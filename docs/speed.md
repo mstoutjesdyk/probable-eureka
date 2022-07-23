@@ -1,7 +1,5 @@
 # Speed and Duration
 
-
-
 For a starting point, you can use either UltraScan or SEDFIT to simulate the sedimenation data for varying masses and shapes of molecules.
 
 Remember that using the fastest rotor speed possible will give the best resolution for the sedimentation coefficient, and using slower rotor speeds increases the resolution of the diffusion properties. Of course, you can conduct multiple experiments at various speeds in order to thouroughly characterize the sedimentation data. However, overall, rotor speed should be selected with the purpose of acheiving the fastest sedimentation rate while still allowing for boundary spreading.

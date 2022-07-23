@@ -1,4 +1,9 @@
-## Ensuring Optimal Sample Condition
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
+# Ensuring Optimal Sample Condition
 
 It is important that any samples set to a facility is sent in optimal condition. The following issues must be considered.
 

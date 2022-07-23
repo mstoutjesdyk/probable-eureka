@@ -1,8 +1,13 @@
+<br>
+MS: &#10003;
+<br>
+BS: &#x2717;
+
 # 2-Dimensional Spectrum Analysis
 
 !!! danger ""
 
-    This page is a summary of the research presented in:
+    For more information, see:
     
     <div class="csl-entry">Brookes, E., Cao, W., &#38; Demeler, B. (2010). A two-dimensional spectrum analysis for sedimentation velocity experiments of mixtures with heterogeneity in molecular weight and shape. <i>European Biophysics Journal</i>, <i>39</i>(3), 405-414. https://doi.org/10.1007/s00249-009-0413-5</div>
     
@@ -65,7 +70,7 @@ Overall, the 2DSA method allows for:
 
 The examples presented below will demonstrate that, for non-interacting systems, the 2DSA approach is general and model-independent, and does not depend on prior knowledge of the underlying model. For mixtures of rapidly equilibibrating solutes, this approach provides approximations for solutes distributions (although interaction coefficients like equilibiurm and rate constants cannot be obtained). This method also simultaneoulsy resolves heterogeneity in shape and in molecular weight or sedimentation coefficients at a very high resolution, while producing well defined and narrow solute boundaries.  
 
-# Description of Method
+# <span style="font-size:20px";>Description of Method</span>
 
 The 2DSA method is built on the approach of modeling experimental seimentation data by building a two-dimensional grid of frictional ratios and sedimentation coefficients. Using the van Holde-Weischet method or the $d$C$/dt$ method, one can obtain a knowledge of the fitting limits for $s$ and $f/f_{0}$, which is the only user input required by the 2DSA. the $d$C$/dt$ mwrhod is preferred for initialization when there is significant time-invariant noise, as it is superiour in its handling capabilities.
 
@@ -107,7 +112,7 @@ ITERATIVE REFINEMENT: Solving the iterative problem involving mutiple low resolu
 
 Note that this method will not converge to exactly the same solution when time- or radially- invariant noise corrections are performed simulataneously, but these difference are negliable.
 
-# Example 1
+# <span style="font-size:20px";>Example 1</span>
 
 <u>2DSA-Monte Carlo analysis of a 2-component system with heterogeneity in mass and shape</u>
 
@@ -123,9 +128,9 @@ These molecules were mixed in approximately equally absorbing amounts in 200 mM 
 
 Time invariant noise was subtracted so that only stochatic noise would remain in the data.[^SchuckDemeler1998] This data was then fitting with the 2DSA method using 50 Monte Carlo iterations, using the iterative refinement method with a maximum of 5 iterations.[^DemelerBrookes2008] 
 
-!!! warning "Figure: 2DSA Monte Carlo Analysis of Velocity Data"
+!!! danger "Figure: 2DSA Monte Carlo Analysis of Velocity Data"
 
-    ![](https://github.com/mstoutjesdyk/probable-eureka.git/img/2dsa-brookesdemeler_fig2.png){width="800"}
+    ![](img/2dsa-brookesdemeler_fig2.png){width="800"}
     
     2DSA Monte Carlo analysis of velocity data from a mixture of a 208 bp DNA fragment (black lines) and hen egg lysozyme (blue lines). Heavy lines indicate the mean, thin lines represent 95% confidence intervals for the parameter. 
     
@@ -149,9 +154,9 @@ The following observations were made:
 
 3. There is additional benefit derived when using iterative refinements.
 
-!!! warning "Figure: Pseudo-3D plots for 2DSA Monte Carlo Results"
+!!! danger "Figure 1: Pseudo-3D plots for 2DSA Monte Carlo Results"
 
-    ![](/img/2dsa-brookesdemeler_fig3.png){width="500"}
+    ![](img/2dsa-brookesdemeler_fig3.png){width="500"}
     
     Pseudo-3D plots for solute distributions from the 2DSA Monte Carlo results for the highest and lowest grid resolutions. 
     
@@ -161,9 +166,9 @@ The following observations were made:
     
     At the low resolution, the composition is porrly defined and the solute peaks are split. At higher resolutions, both species are well defined into narrow regions. Noise contributions are well seperated and idenifiable by the upper frictional ratio fitting limit ($k=f/f_{0}$=4). The color scale represents the signal of each species in optical density units.
 
-# Example 2
+# <span style="font-size:20px";>Example 2</span>
 
-$\textbf{Multi-speed 2DSA-Monte Carlo analysis of a simulated 5-component system with heterogeneity in mass and shape}$
+<u>Multi-speed 2DSA-Monte Carlo analysis of a simulated 5-component system with heterogeneity in mass and shape</u>
 
 The simulated system consisted of equal concentrations of a linearly elongated aggregate and five non-interacting components:
 
@@ -179,9 +184,9 @@ The simulated system consisted of equal concentrations of a linearly elongated a
 
 Each simulation contained 70 equally spaced  scans, resulting in experiment length of ~128 hours at 10 krpm, ~14 hours at 30 krpm, and ~3.5 hours at 60 krpm.
 
-!!! warning "Figure: Pseduo-3D plots for 2DSA Monte Carlo Results (Multi-Speed)"
+!!! danger "Figure 2: Pseduo-3D plots for 2DSA Monte Carlo Results (Multi-Speed)"
 
-    ![](/img/2dsa-brookesdemeler_fig4.png){width="800"}
+    ![](img/2dsa-brookesdemeler_fig4.png){width="800"}
     
     Pesudo-3D plots for Monte Carlo 2DSA analysis resuls for a simulated five-component system.
     

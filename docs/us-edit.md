@@ -2,69 +2,75 @@
 
 !!! warning ""
 
-    ![](/img/nav-us/us-edit.png){width="textwidth"}
+    ![](img/nav-us/us-edit.png){width="textwidth"}
 
-## Run Info
+# <span style="font-size:20px" ;>Run Info</span>
 
-$\textbf{Select Investigator}$
+<u>Select Investigator</u>
 
-$\textbf{Load Data}$
+<u>Load Data</u>
 
-$\textbf{Run Details}$
+<u>Run Details</u>
 
-$\textbf{View Report}$
+<u>View Report</u>
 
-## Scan Controls
+# <span style="font-size:20px" ;>Scan Controls</span>
 
-$\textbf{Exclusion Profile}$
+<u>Exclusion Profile</u>
 
-$\textbf{Edit Single Scan}$
+<u>Edit Single Scan</u>
 
-## Edit Controls
+# <span style="font-size:20px" ;>Edit Controls</span>
 
-$\textbf{Specify Meniscus}$
+<u>Specify Meniscus</u>
 
-$\textbf{Specify Range End}$
+<u>Specify Range End</u>
 
-$\textbf{Determine RI Noise}$
+<u>Determine RI Noise</u>
 
-$\textbf{Invert Sign}$
+<u>Invert Sign</u>
 
-$\textbf{Apply Prior Edits}$
+<u>Apply Prior Edits</u>
 
-$\textbf{Mark Data as Floating}$
+<u>Mark Data as Floating</u>
 
-$\textbf{Subtract Noise}$
+<u>Subtract Noise</u>
 
-$\textbf{Remove Spikes}$
+<u>Remove Spikes</u>
 
 # Preferences
-## UltraScan Configuration
 
-![](/img/nav-us/us-preferences.png){align=right}
+# <span style="font-size:20px" ;>UltraScan Configuration</span>
+
+![](img/nav-us/us-preferences.png){align=right}
 
 DIRECTORIES:
 
-$\textbf{WWW Browser}$
+<u>WWW Browser</u>
 
-$\textbf{Base Work Directory}$
+<u>Base Work Directory</u> Sets up where the base directory will be.
 
-$\textbf{Imports Directory}$
+<u>Imports Directory</u> Sets up where the imports directory will be.
 
-$\textbf{Temporary Directory}$
+<u>Temporary Directory</u> Sets up where the temp directory will be.
 
 MICELLANEOUS SETTINGS:
 
-$\textbf{Default Data Location}$
+<u>Default Data Location</u> Set as Database
 
-$\textbf{Color Preferences}$
+<u>Color Preferences</u>
 
-$\textbf{Font Preferences}$
+<u>Font Preferences</u>
 
-$\textbf{Database Preferences}$
+<u>Database Preferences</u> Here you will fill out the information in the database configuration panel by transferring the information from the LIMS website. 
 
-$\textbf{Master Password}$
+<u>Master Password</u> Change this to something you can remember!
 
-$\textbf{Advanced Settings}$
+<u>Advanced Settings</u> Debug Level: 0; ADvanced Level: 0; Number of Threads: 4; Noise Dialog Flag: 0.
 
-$\textbf{Instrument Preferences}$
+<u>Instrument Preferences</u> Here you change the instrument that is set as the default.
+
+<br>
+<br>
+<br>
+M.S. 21.07.22

@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -606,18 +606,37 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#calibration-results" class="nav-link">Calibration Results</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#profile-collections" class="nav-link">Profile Collections</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#analysis-of-profiles" class="nav-link">Analysis of Profiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><br>
+MS: &#10003;
+<br>
+BS: &#x2717;</p>
 <h1 id="titanium-rotor-stretch">Titanium Rotor Stretch</h1>
 <div class="admonition danger">
-<p>This page is based on the research presented in:</p>
+<p>For more information, see:</p>
 <p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div></p>
 </div>
-<p><span style="font-size: 20px";>Calibration Results</span></p>
-<p>Using the calibration disk, described <a href="/cal-hard">here</a>, highly accurate and reproducible rotor stretching profiles for Beckman's AN50Ti and AN60Ti rotors were obtained (see Table 1). The rotor stretch fits for the same rotor at 20<span class="arithmatex">\(~^{o}\)</span>C varied by less than 0.25% in the stretch numbers at 60,000 RPM. </p>
+<h1 id="calibration-results"><span style="font-size: 20px";>Calibration Results</span></h1>
+<p>Using the calibration disk, described <a href="/probable-eureka/cal-hard">here</a>, highly accurate and reproducible rotor stretching profiles for Beckman's AN50Ti and AN60Ti rotors were obtained (see Table 1). The rotor stretch fits for the same rotor at 20<span class="arithmatex">\(~^{o}\)</span>C varied by less than 0.25% in the stretch numbers at 60,000 RPM. </p>
 <p>When comparing the same rotor (Table 1: Rotor 92u341) across three different temperatures (<span class="arithmatex">\(4~^{o}\)</span>C, <span class="arithmatex">\(20~^{o}\)</span>C, and <span class="arithmatex">\(37~^{o}\)</span>C), there was a maximum of 0.88% difference. This finding is consistent with previous research on the physical properties of titanium<sup id="fnref:ChuSteeves2011"><a class="footnote-ref" href="#fn:ChuSteeves2011">1</a></sup><sup id="fnref:Steeves2009"><a class="footnote-ref" href="#fn:Steeves2009">2</a></sup> which suggest minimal changes as a function of temperature. However, the mximum stretch values at 60,000 RPM from three An60Ti rotors varied by as much as 3% when measured at the same temperature.</p>
 <p>Predicted values for the An50Ti rotor suggest that these rotors will stretch more than the An60Ti rotors by an average of 4.3%. The amount of maximum stretch was not correlated to the age of the rotor.</p>
 <div class="admonition note">
@@ -639,7 +658,7 @@
 \hline
 \end{array}\]</div>
 </div>
-<p><span style="font-size: 20px";>Collection of Rotor Stretch Profiles</span></p>
+<h1 id="profile-collections"><span style="font-size: 20px";>Profile Collections</span></h1>
 <p>Here is a method to measure the titanium rotor stretch of the 4-hole An-60 and the 8-hole An-50 rotors as a function of speed to predict the precise movement of the radial reference frame during rotor acceleration. The protocol (for both the Optima AUC and the Proteomelab instrument) is as follows.</p>
 <ol>
 <li>
@@ -664,16 +683,16 @@
 <p>This is repeated, with increments of 1,000 rpm for each step, until the maximum speed is reached. For the An-60, that is 60,000 rpm; for the An-50, it is 50,000 rpm.</p>
 </li>
 </ol>
-<div class="admonition warning">
-<p><img alt="" src="/img/intensity-rotorstretch.png" /> </p>
+<div class="admonition danger">
+<p><img alt="" src="../img/intensity-rotorstretch.png" /> </p>
 <p><span class="arithmatex">\(\textbf{Figure 1}\)</span> Intensity rotor stretch data collected from a calibration disk from an An-60 rotor, 0-60,000 rpm in 1,000 rpm steps. </p>
 <p>Insert: Zoomed region shows the quadratic change in stretch spacing dependence on rotor speed. Colour changes from 
 blue, green, yellow, to red, as the speed increases.</p>
 </div>
-<p><span style="font-size: 20px";>Analysis of Profiles</span></p>
+<h1 id="analysis-of-profiles"><span style="font-size: 20px";>Analysis of Profiles</span></h1>
 <p>The analysis procedure is in pdf form <a href="/pdf/Documentation/RotorStretchCalibration.pdf">here</a>.</p>
-<div class="admonition warning">
-<p><img alt="" src="/img/rotorstretch-profile.png" width="650" /><br>
+<div class="admonition danger">
+<p><img alt="" src="../img/rotorstretch-profile.png" width="650" /><br>
 <span class="arithmatex">\(\textbf{Figure 2}\)</span> Rotor stretching data for an AN60Ti rotor between 10,000 RPM and 60,000 RPM (blue), fitted to a second order polynomial (red). The black crosses represent the standard deviation.</p>
 </div>
 <p>The rotor calibration experiment is the first set of data all UltraScan-III users should acquire for their own rotor and instrument. Titanium rotors used in the Beckman Analytical Ultracentrifuge will stretch as a function of rotor speed, temperature, age and type of centerpieces loaded in them. </p>

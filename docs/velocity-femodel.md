@@ -1,4 +1,9 @@
-# FM Model Viewer
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
+# Finite Model Model Viewer
 
 This module is used to import, display, and export finite element solutions fitted to velocity experiments by various methods. The program can import models from finite element nonlinear fitting sessions, from 2-dimensional spectrum analysis fits, from genetic algorithm fits, and from C(s) fits. 
 
@@ -6,9 +11,9 @@ The program will then compare the fitted model to the experimental data and disp
 
 Residual plots including deconvoluted time- and radially-invariant noise plots can also be displayed. The results can be saved for inclusion into a velocity result report. 
 
-!!! warning ""
+!!! danger ""
 
-    ![](/img/nav-us/velocity-femodel.png)
+    ![](img/nav-us/velocity-femodel.png)
 
 # FE Model Statistics
 
@@ -28,9 +33,9 @@ This program allows you to obtain statistics for a model computed by any finite 
 
 7. The skew and kurtosis of the distribution 
 
-!!! warning ""
+!!! danger ""
 
-    ![](/img/nav-us/velocity-festat.png)
+    ![](img/nav-us/velocity-festat.png)
     
 The program is started by selecting a model from the database or disk. When using the database, the investigator needs to be specified, and a prefilter can be applied. Once a model has been loaded, the user can choose the distribution based on any of the hydrodynamic parameters available in the model by checking the radio button next to the parameter. By default, the sedimentation coefficient distribution will be shown. One of the parameters fitted will be fixed and not available for plotting.
 

@@ -1,3 +1,8 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # Fundamentals
 
 Understanding life on a molecular level involves understanding the arrangements of those complex molecular structures, their conforational changes, and how their interactions are regulated and controlled.

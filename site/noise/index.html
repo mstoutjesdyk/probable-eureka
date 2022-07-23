@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -602,17 +602,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#types-of-noise" class="nav-link">Types of Noise</a>
+            <li class="nav-item" data-level="1"><a href="#noise-considerations" class="nav-link">Noise Considerations</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="2"><a href="#fitting-noise" class="nav-link">Fitting Noise</a>
+            <li class="nav-item" data-level="1"><a href="#types-of-noise" class="nav-link">Types of Noise </a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="2"><a href="#ti-noise-in-ti-signals" class="nav-link">TI Noise in TI Signals</a>
+            <li class="nav-item" data-level="1"><a href="#fitting-noise" class="nav-link"> Fitting Noise </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ti-noise-in-ti-signals" class="nav-link">TI Noise in TI Signals</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -621,115 +626,114 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>Our modeled solution will be affected by random noise, time-invarient noise, the avaliable signal, and its ratio to the random noise. How then can we deal with the uncertainty of our solutions resolution?</p>
-<p>First, we can improve the signal to noise ratio. This can be done by:</p>
+<p><br> 
+MS: &#x2717; 
+<br> 
+BS: &#x2717; </p>
+<h1 id="noise-considerations">Noise Considerations</h1>
+<p>Our modeled solution will be affected by random noise, time-invariant noise, the available signal, and its ratio to the random noise. How then can we deal with the uncertainty of our solutions resolution? </p>
+<p>First, we can improve the signal to noise ratio. This can be done by: </p>
 <ol>
 <li>
-<p>Obtaining lots of high quality data</p>
+<p>Obtaining lots of high-quality data </p>
 </li>
 <li>
-<p>Exploiting the entire dynamic range of the aquisition system</p>
+<p>Exploiting the entire dynamic range of the acquisition system </p>
 </li>
 <li>
-<p>Reducing noise and only useing a well functioning instrument</p>
+<p>Reducing noise and only using a well-functioning instrument </p>
 </li>
 <li>
-<p>removing systematic noise from experimental data</p>
+<p>removing systematic noise from experimental data   </p>
 </li>
 </ol>
-<p>Additionally, we can:</p>
+<p>Additionally, we can: </p>
 <ul>
 <li>
-<p>Replace fitting parameters with experimentally determinded values from seperate experiments</p>
+<p>Replace fitting parameters with experimentally determined values from separate experiments </p>
 </li>
 <li>
-<p>Explore the parameter space with a grid method, than parsimoniously regulaize solution with GA, and use Monte Carlo to explore confidence regions</p>
+<p>Explore the parameter space with a grid method, then parsimoniously regularize solution with GA, and use Monte Carlo to explore confidence regions </p>
 </li>
 <li>
-<p>Perform global fits for multiple experimental conditions to improve singal </p>
+<p>Perform global fits for multiple experimental conditions to improve signal  </p>
 </li>
 </ul>
-<p>There are three ways to reduce or eliminate noise to reduce the number of solutions.</p>
+<p>There are three ways to reduce or eliminate noise to reduce the number of solutions. </p>
 <ol>
 <li>
-<p>Fit the noise.</p>
+<p>Fit the noise. </p>
 </li>
 <li>
-<p>Maintain an exceptionally well tuned instrument.</p>
+<p>Maintain an exceptionally well-tuned instrument. </p>
 </li>
 <li>
-<p>Design your experiment to optimize the quality of data.</p>
+<p>Design your experiment to optimize the quality of data. </p>
 </li>
 </ol>
-<h2 id="types-of-noise">Types of Noise</h2>
-<p>There are at least three types of noise to consider when perfomring SV-AUC experiments:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-<img align="right" alt="" src="\img\noise\timein-noise.png" width="300" /></p>
+<h1 id="types-of-noise"><span style="font-size:20px";>Types of Noise </span></h1>
+<p>There are at least three types of noise to consider when performing SV-AUC experiments:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> </p>
+<p><img align="right" alt="" src="img\noise\timein-noise.png" width="300" /> </p>
+<ol>
+<li><u>Time-invariant noise</u> which produces a constant offset at a fixed radial position, and is identically valued at every observation. This type of noise is caused by imperfections in the optical track; for example, a fingerprint or scratch on a sample cell window. </li>
+</ol>
+<p><img align="right" alt="" src="img\noise\radialin-noise.png" width="300" /> </p>
 <ol>
 <li>
-<p><span class="arithmatex">\(\textbf{Time-invariant noise}\)</span> which produces a constant offset at a fixed radial position, and is identically valued at every observation. This type of noise is caused by imperfections in the optical track; for example, a fingerprint or scratch on a sample cell window.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</li>
-</ol>
-<p><img align="right" alt="" src="\img\noise\radialin-noise.png" width="300" /></p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\textbf{Radially-invaraient noise}\)</span> which has a constant offset at a fixed time, and has identical calues at every radial position.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><u>Radially-invariant noise</u> which has a constant offset at a fixed time, and has identical values at every radial position. </p>
 </li>
 <li>
-<p><span class="arithmatex">\(\textbf{Normally distribued noise}\)</span> from non-linearity in the optics, intensity fluctuations of the lamp flashes, refractive artifacts, and systematic contributions of unknown sources.<img align="right" alt="" src="\img\noise\random-noise.png" width="300" /></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><u>Normally distributed noise</u> from non-linearity in the optics, intensity fluctuations of the lamp flashes, refractive artifacts, and systematic contributions of unknown sources.<img align="right" alt="" src="img\noise\random-noise.png" width="300" /> </p>
 </li>
 </ol>
-<h2 id="fitting-noise">Fitting Noise</h2>
-<p>Lorem Ipsum</p>
-<p><img alt="" src="\img\noise\quality-fit.png" /></p>
-<p><img alt="" src="\img\noise\adding-noise.png" /></p>
-<p><img alt="" src="\img\noise\subtract-noise.png" /></p>
-<p>SedFit uses an algebraic noise decomposition strategy based on direct least-squares modelling. There is no increase in the statistical noise, and you can obtain explicit estimates for the magnitude of the systematic noise components. However, there are two limitations to keep in mind when using this method of systematic noise decomposition:</p>
+<h1 id="fitting-noise"><span style="font-size:20px";> Fitting Noise </span></h1>
+<p><img alt="" src="img\noise\quality-fit.png" />   </p>
+<p><img alt="" src="img\noise\adding-noise.png" /> </p>
+<p><img alt="" src="img\noise\subtract-noise.png" /> </p>
+<p>SedFit uses an algebraic noise decomposition strategy based on direct least-squares modelling. There is no increase in the statistical noise, and you can obtain explicit estimates for the magnitude of the systematic noise components. However, there are two limitations to keep in mind when using this method of systematic noise decomposition: </p>
 <ol>
-<li>Calculated systematic noise is an estimate and model dependent. </li>
+<li>Calculated systematic noise is an estimate and model dependent.  </li>
 </ol>
-<p>we can only assume the calculated noise to reflect a true baseline signal if we have a good fit for our sedimentation data.</p>
+<p>We can only assume the calculated noise to reflect a true baseline signal if we have a good fit for our sedimentation data. </p>
 <ol>
-<li>There is no fundamental difference in the effect of systematic noise on the data analysis from a time-difference analysis.</li>
+<li>There is no fundamental difference in the effect of systematic noise on the data analysis from a time-difference analysis. </li>
 </ol>
-<p>Fortunately, for larger data sets, the baseline is usually well-determined, and so the issues described above are not largely problematic.</p>
-<h2 id="ti-noise-in-ti-signals">TI Noise in TI Signals</h2>
-<p><strong><em> Work on this matter is being done by Saeed Mortezazadeh, post-doctoral fellow at the University of Lethbridge. </em></strong></p>
-<p>When performing equilibirum experiments, it is not possible to distinguish the time-invarient noise patterns from the signals due to the balancing of the sediment flux with the diffusion flux (Fick's Laws).</p>
-<p>Solution 1: run empty cells and collect the intensity data patterns of each radial point and wavelength. The volume of the data collected must be significant (due to the presence of statistical noise in each scan) so that a time-invariant pattern can be averaged over all scans.</p>
-<p>It is important to note that while the AUC Optima claims to emit light with a one nanometer resolution over a 190 nm to 700 nm range, different patterns can be observed in both the shape and intensity of scans. This is especially prevelant at lower wavelengths and it seems that the monochromatic optical system does not completely split the light, and as a result, the light emitted at a particular wavlength can be paritally mixed with neighbouring wavelengths.</p>
-<p>The intensity of each scan is calculated by averaging the intensity of all radial points:</p>
-<div class="arithmatex">\[
-\hat I = \frac{1}{N}\sum^{N}_{i=1} I (R_{i}).
+<p>Fortunately, for larger data sets, the baseline is usually well-determined, and so the issues described above are not largely problematic. </p>
+<h1 id="ti-noise-in-ti-signals"><span style="font-size:20px";>TI Noise in TI Signals</span></h1>
+<p><strong><em> Work on this matter is being done by Saeed Mortezazadeh, post-doctoral fellow at the University of Lethbridge. </em></strong> </p>
+<p>When performing equilibrium experiments, it is not possible to distinguish the time-invariant noise patterns from the signals due to the balancing of the sediment flux with the diffusion flux (Fick's Laws). </p>
+<p>Solution 1: run empty cells and collect the intensity data patterns of each radial point and wavelength. The volume of the data collected must be significant (due to the presence of statistical noise in each scan) so that a time-invariant pattern can be averaged over all scans. </p>
+<p>It is important to note that while the AUC Optima claims to emit light with a one nanometer resolution over a 190 nm to 700 nm range, different patterns can be observed in both the shape and intensity of scans. This is especially prevalent at lower wavelengths and it seems that the monochromatic optical system does not completely split the light, and as a result, the light emitted at a particular wavelength can be partially mixed with neighboring wavelengths.   </p>
+<p>The intensity of each scan is calculated by averaging the intensity of all radial points: </p>
+<div class="arithmatex">\[ 
+\hat I = \frac{1}{N}\sum^{N}_{i=1} I (R_{i}). 
 \]</div>
-<p>The root mean square deviation (RMSD) is calculated to qantify the shape of each scan:</p>
-<div class="arithmatex">\[
-\text{RMSD} = \sqrt{\frac{1}{N} \sum^{N}_{i=1}(I(R_{i}) - \hat I)^{2}}.
+<p>The root mean square deviation (RMSD) is calculated to quantify the shape of each scan: </p>
+<div class="arithmatex">\[ 
+\text{RMSD} = \sqrt{\frac{1}{N} \sum^{N}_{i=1}(I(R_{i}) - \hat I)^{2}}. 
 \]</div>
-<p>The mean and RMSD overlapp of scans are clearly visible between neighbouring wavelengths.</p>
-<p>How do we detemine which scan belongs to which wavelength?</p>
+<p>The mean and RMSD overlap of scans are clearly visible between neighboring wavelengths. </p>
+<p>How do we determine which scan belongs to which wavelength? </p>
 <ol>
 <li>
-<p>Calculate the histogram (probability distribution function) of the RMSD values for each wavelength using the core density equilibirium method.</p>
+<p>Calculate the histogram (probability distribution function) of the RMSD values for each wavelength using the core density equilibrium method. </p>
 </li>
 <li>
-<p>Scans with similar scans are consider to be in a cluster; histograms are used to cluster scans of all wavelengths.</p>
+<p>Scans with similar scans are consider to be in a cluster; histograms are used to cluster scans of all wavelengths. </p>
 </li>
 <li>
-<p>The main scans of corresponding scans are assumed to be the scans belonging to the cluster with the highest probability distribution. </p>
+<p>The main scans of corresponding scans are assumed to be the scans belonging to the cluster with the highest probability distribution.  </p>
 </li>
 <li>
-<p>If the non-original clusters overlap with the main cluster of adjacent wavelengths, the corresponding scans are transferred to the adjacent wavelength.</p>
+<p>If the non-original clusters overlap with the main cluster of adjacent wavelengths, the corresponding scans are transferred to the adjacent wavelength. </p>
 </li>
 </ol>
-<p>The procedure for this method is imbedded in UltraScan, and the steps are outlined here.</p>
+<p>The procedure for this method is imbedded in UltraScan, and the steps are outlined here. </p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Emre H. Brookes and Borries Demeler. 2010. Performance optimization of large non-negatively constrained least squares problems with an application in biophysics. In Proceedings of the 2010 TeraGrid Conference (TG '10). Association for Computing Machinery, New York, NY, USA, Article 5, 1–9. https://doi.org/10.1145/1838574.1838579&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Emre H. Brookes and Borries Demeler. 2010. Performance optimization of large non-negatively constrained least squares problems with an application in biophysics. In Proceedings of the 2010 TeraGrid Conference (TG '10). Association for Computing Machinery, New York, NY, USA, Article 5, 1??9. https://doi.org/10.1145/1838574.1838579&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div></div>

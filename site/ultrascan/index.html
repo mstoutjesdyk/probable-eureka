@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -602,17 +602,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#ultrascan-software" class="nav-link">UltraScan Software</a>
+            <li class="nav-item" data-level="1"><a href="#ultrascan-software" class="nav-link">UltraScan Software</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="2"><a href="#us-lims" class="nav-link">US-LIMS</a>
+            <li class="nav-item" data-level="1"><a href="#us-lims" class="nav-link">US-LIMS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="2"><a href="#using-ultrascan-with-the-optima-auc" class="nav-link">Using UltraScan with the Optima AUC</a>
+            <li class="nav-item" data-level="1"><a href="#using-ultrascan-with-the-optima-auc" class="nav-link">Using UltraScan with the Optima AUC</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -621,23 +621,25 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><br>
+MS: &#10003;
+<br>
+BS: &#x2717;</p>
+<h1 id="ultrascan-software">UltraScan Software</h1>
 <div class="admonition danger">
 <p>The UltraScan-III and LIMS-III software were developed by:</p>
 <p>Emre Brookes, Weiming Cao, Bruce Dubbs, Gary Gorbet, Kip Jay, Jeremy Mann, Suresh Marru, Shabhaz Memon, Marlon Pierce, Alexey Savelyev, Raminder Singh and Dan Zollars.</p>
 <p>Project Director: Borries Demeler</p>
 <p>Other individual contributors to the UltraScan project can be found <a href="https://ultrascan.aucsolutions.com/contributors.php">here</a>.</p>
-<p>For more information, please visit: <a href="http://www.ultrascan.aucsolutions.com/">http://www.ultrascan.aucsolutions.com/</a></p>
-</div>
-<h2 id="ultrascan-software">UltraScan Software</h2>
-<div class="admonition warning">
-<p><img alt="" src="/img/ultrascan.png" width="800" /></p>
 <p>The UltraScan software is copyright protected by international laws. The copyright is jointly owned by Borries Demeler, PhD (1989-present) and The University of Texas Health Science Center at San Antonio (1997-2018), AUC Solutions (2015-present), University of Montana (2018-present) and University of Lethbridge (2018-present). All rights reserved.</p>
 <p>The entire software, including documentation, source code, LIMS and grid middleware components are protected by the GNU Lesser General Public License, version 3. </p>
+<p>For more information, please visit: <a href="http://www.ultrascan.aucsolutions.com/">http://www.ultrascan.aucsolutions.com/</a></p>
+<p><img alt="" src="../img/ultrascan.png" width="800" /></p>
 </div>
 <p>UltraScan is a comprehensive data analysis software package for hydrodynamic data from analytical ultracentrifugation experiments. The software features an integrated data editing and analysis environment with a portable graphical user interface. UltraScan provides the highest possible resolution for sedimentation velocity experiments using high-performance computing modules for 2-dimensional spectrum analysis, genetic algorithm, and for Monte Carlo analysis. A MySQL database backend is integrated for data management, and the UltraScan LIMS system provides web-based access to the database and supercomputing functionality. Supercomputing resources are provided through a NSF Teragrid Science Gateway. Special care has been taken in the design of the software to guarantee an optimum in flexibility, user-friendliness, stability and convenience. The software is written in C++.</p>
 <p>The software features popular sedimentation velocity and equilibrium analysis methods as well as simulation modules, utilities, and editing modules with support for velocity and equilibrium experiments, single and multi-channel centerpieces, absorbance and interference optics. All analysis methods generate ASCII formatted data suitable for import into third-party plotting programs, and contains a built-in postscript printer engine to generate publication - quality graphical representations of analysis data.</p>
 <p>UltraScan is offered in two versions, UltraScan-II and UltraScan-III. The latter is a complete rewrite of the former, with many new features and a greatly improved interface. UltraScan-III was released in the summer of 2011 and will eventually replace the older version. We will maintain UltraScan-II to assure access to legacy data because UltraScan-III is not backward compatible with UltraScan-II. New users are encouraged to switch to UltraScan-III. In addition to numerous interface changes, the most important changes in UltraScan-III are listed below:</p>
-<p>UltraScan-III adheres to the <a href="/openAUC">OpenAUC</a> standard.</p>
+<p>UltraScan-III adheres to the <a href="/probable-eureka/openAUC">OpenAUC</a> standard.</p>
 <ul>
 <li>
 <p>Can be used simultaneously in a local disk-only mode without the requirement for network connectivity, or fully integrated with network capability, including a database and supercomputing backend</p>
@@ -672,7 +674,7 @@
 </ul>
 <p>The LIMS component of UltraScan, coupled with the high-performance computing backend dramatically improves analysis speed and throughput and allows simultaneous analysis of a virtually unlimited number of experiments. Any institution, academic or for profit can obtain free data storage and supercomputing analysis resources through an NSF TeraGrid allocation grant issued to Borries Demeler.  </p>
 <p>A quick-start manual for UltraScan can be found <a href="https://ultrascan.aucsolutions.com/quickstart.php">here</a>.</p>
-<h2 id="us-lims">US-LIMS</h2>
+<h1 id="us-lims"><span style= "font-size:20px";>US-LIMS</span></h1>
 <p>The <a href="https://uslims.uleth.ca/uslims3_CCH/">US-LIMS website</a> offers access to the UltraScan Laboratory Information Management System (USLIMS), an XSEDE Science Gateway supported by an allocation through an XSEDE community account. </p>
 <p>This system provides web and database support for users of the UltraScan software. You can use this portal to access data associated with your sedimentation experiments, and share your data with collaborators. Authorized users can also use this site to model analytical ultracentrifugation experiments with UltraScan's high-performance analysis modules by submitting analysis jobs to computing clusters available at the University of Texas Health Science Center and XSEDE sites at the Texas Advanced Computing Center and at Indiana University. </p>
 <p>These services are made available through an NSF XSEDE community account. Funding for this facility is provided through multiple sources:</p>
@@ -693,11 +695,7 @@
 <p>The National Institutes of Health, Grant NCRR-R01RR022200 (to Borries Demeler)</p>
 </li>
 </ul>
-<div class="admonition warning">
-<p>When publishing, please credit our facility as follows:</p>
-<p>Calculations were performed on the UltraScan LIMS cluster at the Bioinformatics Core Facility at the University of Texas Health Science Center at San Antonio and multiple High Performance Computing clusters supported by NSF XSEDE Grant #MCB070038 (to Borries Demeler).</p>
-</div>
-<h2 id="using-ultrascan-with-the-optima-auc">Using UltraScan with the Optima AUC</h2>
+<h1 id="using-ultrascan-with-the-optima-auc"><span style= "font-size:20px";>Using UltraScan with the Optima AUC</span></h1>
 <p>The Optima AUC from Beckman Coulter allows for the implementation of appropriate workflow validations, instrument diagnostics, and greater automation in the data aquisition and analysis processes.</p>
 <p>Since the Optima can be networked over Ethernet, data aquisition can be accomplished by a computer that is configured with the open source Linux operating system, to utalize a PostgreSQL relational database.
 This database stores experimental data, run profiles, and system status information. Experimental data is stored in 8 byte double percision format, allowing for the full accuracy of the detector to be perserved.

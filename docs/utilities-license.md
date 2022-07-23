@@ -1,3 +1,10 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # License Manager
 
-![](/img/nav-us/utilities-license.png)
+!!! danger ""
+
+    ![](/img/nav-us/utilities-license.png)

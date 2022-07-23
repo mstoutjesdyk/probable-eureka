@@ -1,5 +1,11 @@
 # Sedimentation Velocity
 
+## Instrument Operation and Data Collection
+
+## Monitoring 
+
+## Analysis
+
 ![](/img/sedvel.png){width="300"align=right}
 
 Sedimentation velocity (SV) experiments are performed at high speeds to overcome the effects of diffusion. In an SV experiment, the speed is set such that the back diffusion from the bottom of the cell is minimal compared to the rate of sedimentation, forming a moving boundary. The evolution of the shape of this boundary over time is representative of the composition, sedimentation, and diffusion properties of the sample. Molecular weight can also be analyzed in ideal cases. 
@@ -21,7 +27,7 @@ They can additionally provide information on:
 | Anisotropy | Stoichiometry  | pH Effects |
 | Size | K$_{off}$, K$_{d}$ |  |
 
-# Optimal Speed and Duration
+## Optimal Speed and Duration
 
 !!! danger ""
 
@@ -123,7 +129,7 @@ This equation is embedded in a calculator in UltraScan that will estimate the op
 
     !!! danger ""
 
-        ![](/img/gorbet-fig1.png){width="800"}
+        ![](img/gorbet-fig1.png){width="800"}
         
         ASTFEM-simulated SV data at three different speeds and durations for a 5 S species with a frictional ratio of 1.28.
         

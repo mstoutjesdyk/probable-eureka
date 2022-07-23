@@ -1,6 +1,13 @@
-# Load Experimental Data
+<br>
+MS: &#x2717;
+<br>
+BD: &#x2717;
 
-# Load Model
+# Common Dialouges
 
-# Plot Controls
+# <span style="font-size:20px";>Load Experimental Data</span>
+
+# <span style="font-size:20px";>Load Model</span>
+
+# <span style="font-size:20px";>Plot Controls</span>
 

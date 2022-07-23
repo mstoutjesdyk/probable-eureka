@@ -1,3 +1,8 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
 # Sednterp
 
 The SEDNTERP program is a general purpose tool for the interpretation of sedimentation equilibrium, sedimentation velocity, and diffusion experiments. It collects many diverse functions into a single program. SEDNTERP is useful both for computing molecular structural estimates from experimental data and for calculation of physical parameters of common buffers used in sedimentation experiments. 

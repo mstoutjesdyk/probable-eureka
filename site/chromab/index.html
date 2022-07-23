@@ -114,7 +114,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../optics/" class="dropdown-item">Absorbance</a>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
 </li>
             
 <li>
@@ -223,7 +223,7 @@
 </li>
                                     
 <li>
-    <a href="../mwlspec/" class="dropdown-item">MWL Spectral Deconvolution</a>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
 </li>
                                 </ul>
                             </li>
@@ -606,6 +606,16 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#causes" class="nav-link">Causes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#correction-methods" class="nav-link">Correction Methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -613,49 +623,49 @@
 
 <h1 id="chromatic-aberration">Chromatic Aberration</h1>
 <div class="admonition danger">
-<p>This page is based on the reserach presented in:</p>
-<p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div></p>
+<p>For more information on this page, see:</p>
+<p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). <a href="https://doi.org/10.1007/s00249-020-01434-z">https://doi.org/10.1007/s00249-020-01434-z</a></div></p>
 </div>
-<p>There are up to a hndred user-selectable wavelengths between 190 nm and 800 nm to use for collecting data on the Optima AUC during a single experiment. </p>
-<p>Using the calibration disk, described <a href="/cal-hard">here</a>, the chromatic aberration effects are shown since scanning the disk at different wavelengths produce different radial positions for the same physical location. Total radial deviations ranged between 40 <span class="arithmatex">\(\mu\)</span>m- 380 <span class="arithmatex">\(\mu\)</span>m. At the greatest deviation, 380 <span class="arithmatex">\(\mu\)</span>m, the error contributed to as much as 0.66% in the measure of the sedimentation coefficient. The largest errors occur near the top of the cell, decreasing twowards the bottom. This means several things: first, the absolute measurement is incorrect, and; secondly, the radial deviation contributes to an pparently non -constant <span class="arithmatex">\(s\)</span> value.</p>
-<p><span style="font-size: 20px";>Causes</span></p>
-<p>While the exact cause is not precisely known, these deviations are likely a result of imperfections in the AUC's optical system, specifically the non-vertical light beam tracing. The lack of perpendicular incident light is supported by the appearance of shadows on one side of the calibration disk's edges. As shown below in <span class="arithmatex">\(\textbf{Figure 1}\)</span>, the shadow produces a zig-zag effect on the deviatons from the predicted positions.</p>
-<p>There is additionally a wavelength-dependent variablity in the radial scaling between the top and bottom of the cell. There is a change in the absolute deviation when the inner edge deviations are compared with the outer edge deviations, with the lower wavelength producing a higher magnitude of total offset.</p>
+<p>There are up to a hundred user selectable wavelengths between 190 nm and 800 nm to use for collecting data on the Optima AUC during a single experiment. </p>
+<p>Using the calibration disk, described <a href="/probable-eureka/cal-hard">here</a>, the chromatic aberration effects are shown since scanning the disk at different wavelengths produce different radial positions for the same physical location. Total radial deviations ranged between 40 <span class="arithmatex">\(\mu\)</span>m- 380 <span class="arithmatex">\(\mu\)</span>m. At the greatest deviation, 380 <span class="arithmatex">\(\mu\)</span>m, the error contributed to as much as 0.66% in the measure of the sedimentation coefficient. The largest errors occur near the top of the cell, decreasing towards the bottom. This means several things: first, the absolute measurement is incorrect, and; secondly, the radial deviation contributes to an apparently non-constant <span class="arithmatex">\(s\)</span> value.</p>
+<h1 id="causes"><span style="font-size: 20px";>Causes</span></h1>
+<p>While the exact cause is not precisely known, these deviations are likely a result of imperfections in the AUC's optical system, specifically the non-vertical light beam tracing. The lack of perpendicular incident light is supported by the appearance of shadows on one side of the calibration disk's edges. As shown below in <span class="arithmatex">\(\textbf{Figure 1}\)</span>, the shadow produces a zig-zag effect on the deviations from the predicted positions.</p>
+<p>There is additionally a wavelength-dependent variability in the radial scaling between the top and bottom of the cell. There is a change in the absolute deviation when the inner edge deviations are compared with the outer edge deviations, with the lower wavelength producing a higher magnitude of total offset.</p>
 <div class="admonition danger">
-<p><img alt="" src="/img/wavelength-edges.png" /></p>
-<p><span class="arithmatex">\(\textbf{Figure 1}\)</span> Edge position deviaitions from predicted positions for observations made at: 200 nm (black), 230 nm (red), 300 nm (green), 460 nm (blue), and 750 nm (magenta).</p>
+<p><img alt="" src="../img/wavelength-edges.png" /></p>
+<p><span class="arithmatex">\(\textbf{Figure 1}\)</span> Edge position deviations from predicted positions for observations made at: 200 nm (black), 230 nm (red), 300 nm (green), 460 nm (blue), and 750 nm (magenta).</p>
 <p><span class="arithmatex">\(\textbf{Table 1}\)</span> Edge positions in cm at rest versus predicted, measured at 250 nm.</p>
 <div class="arithmatex">\[\begin{array}{llll}
 \hline
 \text{Edge} &amp; \text{Measured (cm)} &amp; \text{Predicated (cm)} &amp; \text{Difference (cm)} \\
 \hline
 1 &amp; 5.94974 &amp; 5.929 &amp; -2.07E-02 \\
-2 &amp; 6.05122 &amp; 6.025 &amp; −2.62E-02\\
-3 &amp; 6.11951 &amp; 6.097 &amp; −2.25E-02\\
-4 &amp; 6.26084 &amp; 6.237 &amp; −2.38E-02\\
-5 &amp; 6.32905 &amp; 6.308 &amp; −2.11E-02\\
-6 &amp; 6.44025 &amp; 6.425 &amp; −1.53E-02\\
-7 &amp; 6.56951 &amp; 6.550 &amp; −1.95E-02\\
-8 &amp; 6.67923 &amp; 6.658 &amp; −2.12E-02\\
-9 &amp; 6.74475 &amp; 6.728 &amp; −1.68E-02\\
-10 &amp; 6.88611 &amp; 6.868 &amp; −1.81E-02\\
-11 &amp; 6.95078 &amp; 6.939 &amp; −1.18E-02\\
-12 &amp; 7.09261 &amp; 7.077 &amp;−1.56E-02\\
-13 &amp; 7.15398 &amp; 7.146 &amp; −7.98E-03 \\
+2 &amp; 6.05122 &amp; 6.025 &amp; ??2.62E-02\\
+3 &amp; 6.11951 &amp; 6.097 &amp; ??2.25E-02\\
+4 &amp; 6.26084 &amp; 6.237 &amp; ??2.38E-02\\
+5 &amp; 6.32905 &amp; 6.308 &amp; ??2.11E-02\\
+6 &amp; 6.44025 &amp; 6.425 &amp; ??1.53E-02\\
+7 &amp; 6.56951 &amp; 6.550 &amp; ??1.95E-02\\
+8 &amp; 6.67923 &amp; 6.658 &amp; ??2.12E-02\\
+9 &amp; 6.74475 &amp; 6.728 &amp; ??1.68E-02\\
+10 &amp; 6.88611 &amp; 6.868 &amp; ??1.81E-02\\
+11 &amp; 6.95078 &amp; 6.939 &amp; ??1.18E-02\\
+12 &amp; 7.09261 &amp; 7.077 &amp;??1.56E-02\\
+13 &amp; 7.15398 &amp; 7.146 &amp; ??7.98E-03 \\
 \hline
 \end{array}\]</div>
-<p><div class="csl-entry"><span style="font-size: 11px";>Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</span></div></p>
+<p><div class="csl-entry"><span style="font-size: 11px";>Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). <a href="https://doi.org/10.1007/s00249-020-01434-z">https://doi.org/10.1007/s00249-020-01434-z</a></span></div></p>
 </div>
-<p><span style="font-size: 20px";>Correction Methods</span></p>
+<h1 id="correction-methods"><span style="font-size: 20px";>Correction Methods</span></h1>
 <p>A calibration curve based on the shift in edge position as a function of wavelength can be constructed to correct for the wavelength-dependent variations. </p>
 <p>Another correction method involves measuring the position of a meniscus over the wavelength range. In this method, the meniscus positions of 4-8 samples filled with 0.23 ml of water can be repeatedly scanned in intensity mode at 62 wavelengths, spanning 190 nm to 800 nm in 10 nm intervals. The optimal rotor speed is 14,000 rpm, since at that speed, the scanning time is minimized due to the synchronization with the flash rate of the flash lamp.</p>
-<p>The following is the recommended procedure for how to build a calibration file from using the meniscus position method. A pdf version of this protocol is avaliable <a href="/pdf/Documentation/ChromaticAberrationProfile.pdf">here</a>.</p>
+<p>The following is the recommended procedure for how to build a calibration file from using the meniscus position method. A pdf version of this protocol is available <a href="/pdf/Documentation/ChromaticAberrationProfile.pdf">here</a>.</p>
 <ol>
 <li>
-<p><span style="color:#00008B";>Import the Calibration Data</span> into UltraScan's <span style="color:#00008B";><u>Utilities: View Raw Optima Data</u></span> module.</p>
+<p><span style="color:#00008B";>Import the Calibration Data</span> into UltraScan's <a href="/probable-eureka/utilities-viewoptima"><span style="color:#00008B";><u>Utilities: View Raw Optima Data</u></span></a> module.</p>
 </li>
 <li>
-<p><span style="color:#00008B";>Zoom on the mensicus region</span> for each channel while in intensity mode. For each channel, a csv file will be generated into the UltraScan imports data folder. This dataset maps the radial position of the meniscus minima against wavelength.</p>
+<p><span style="color:#00008B";>Zoom on the meniscus region</span> for each channel while in intensity mode. For each channel, a csv file will be generated into the UltraScan imports data folder. This dataset maps the radial position of the meniscus minima against wavelength.</p>
 </li>
 <li>
 <p>Use a third party spreadsheet program to <span style="color:#00008B";>average the meniscus positions. Subtract the 250 nm value</span> from each wavelengths radial position. The 250 nm position is assumed to be correct if the instrument has been radially calibrated with the manufacturer's counterbalance at that wavelength. Assume this position to be the true offset with zero correction.</p>
@@ -664,16 +674,23 @@
 <p><span style="color:#00008B";>Fit the averaged data</span> with a parameterizing curve (with 1 nm increments).</p>
 </li>
 <li>
-<p>Upload the chromatic aberration profile into the <span style="color:#00008B";><u>Edit: Preferences: Instrument Preferences</u></span> instrument configuration.</p>
+<p>Upload the chromatic aberration profile into the <a href="/probable-eureka/us-edit"><span style="color:#00008B";><u>Edit: Preferences: Instrument Preferences</u></span></a> instrument configuration.</p>
 </li>
 </ol>
 <div class="admonition danger">
 <p class="admonition-title">Chromatic Aberration Profile Example</p>
-<p><img alt="" src="/img/chromatic-ab.png" />
-<span class="arithmatex">\(\textbf{Figure 2}\)</span> Example of the chromatic aberratio error in the Optima AUC.</p>
+<p><img alt="" src="../img/chromatic-ab.png" />
+<span class="arithmatex">\(\textbf{Figure 2}\)</span> Example of the chromatic aberration error in the Optima AUC.</p>
 <p>RED: deviation from the radial calibration at 250 nm for four averaged meniscus positions. Data is fitted to a 5-th order polynomial.</p>
 <p>BLUE: observed meniscus positions for the four input menisci after correction. All four positions now show &lt; 0.001 cm error.</p>
-</div></div>
+</div>
+<p><br>
+<br>
+<br>
+<br>
+M.S. 21.07.22
+<br>
+Note: update protocol.</p></div>
             </div>
         </div>
 

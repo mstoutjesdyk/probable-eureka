@@ -1,14 +1,19 @@
+<br>
+MS: &#10003;
+<br>
+BS: &#x2717;
+
 # Titanium Rotor Stretch
 
 !!! danger ""
 
-    This page is based on the research presented in:
+    For more information, see:
     
     <div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div>
 
-<span style="font-size: 20px";>Calibration Results</span>
+# <span style="font-size: 20px";>Calibration Results</span>
 
-Using the calibration disk, described [here](/cal-hard), highly accurate and reproducible rotor stretching profiles for Beckman's AN50Ti and AN60Ti rotors were obtained (see Table 1). The rotor stretch fits for the same rotor at 20$~^{o}$C varied by less than 0.25% in the stretch numbers at 60,000 RPM. 
+Using the calibration disk, described [here](/probable-eureka/cal-hard), highly accurate and reproducible rotor stretching profiles for Beckman's AN50Ti and AN60Ti rotors were obtained (see Table 1). The rotor stretch fits for the same rotor at 20$~^{o}$C varied by less than 0.25% in the stretch numbers at 60,000 RPM. 
 
 When comparing the same rotor (Table 1: Rotor 92u341) across three different temperatures ($4~^{o}$C, $20~^{o}$C, and $37~^{o}$C), there was a maximum of 0.88% difference. This finding is consistent with previous research on the physical properties of titanium[^ChuSteeves2011][^Steeves2009] which suggest minimal changes as a function of temperature. However, the mximum stretch values at 60,000 RPM from three An60Ti rotors varied by as much as 3% when measured at the same temperature.
 
@@ -39,7 +44,7 @@ Predicted values for the An50Ti rotor suggest that these rotors will stretch mor
     \hline
     \end{array}
     
-<span style="font-size: 20px";>Collection of Rotor Stretch Profiles</span>
+# <span style="font-size: 20px";>Profile Collections</span>
 
 Here is a method to measure the titanium rotor stretch of the 4-hole An-60 and the 8-hole An-50 rotors as a function of speed to predict the precise movement of the radial reference frame during rotor acceleration. The protocol (for both the Optima AUC and the Proteomelab instrument) is as follows.
 
@@ -57,22 +62,22 @@ Here is a method to measure the titanium rotor stretch of the 4-hole An-60 and t
 
 7. This is repeated, with increments of 1,000 rpm for each step, until the maximum speed is reached. For the An-60, that is 60,000 rpm; for the An-50, it is 50,000 rpm.
 
-!!! warning ""
+!!! danger ""
 
-    ![](/img/intensity-rotorstretch.png) 
+    ![](img/intensity-rotorstretch.png) 
     
     $\textbf{Figure 1}$ Intensity rotor stretch data collected from a calibration disk from an An-60 rotor, 0-60,000 rpm in 1,000 rpm steps. 
 
     Insert: Zoomed region shows the quadratic change in stretch spacing dependence on rotor speed. Colour changes from 
     blue, green, yellow, to red, as the speed increases.
     
-<span style="font-size: 20px";>Analysis of Profiles</span>
+# <span style="font-size: 20px";>Analysis of Profiles</span>
 
 The analysis procedure is in pdf form [here](/pdf/Documentation/RotorStretchCalibration.pdf).
 
-!!! warning ""
+!!! danger ""
     
-    ![](/img/rotorstretch-profile.png){width="650"}<br>
+    ![](img/rotorstretch-profile.png){width="650"}<br>
     $\textbf{Figure 2}$ Rotor stretching data for an AN60Ti rotor between 10,000 RPM and 60,000 RPM (blue), fitted to a second order polynomial (red). The black crosses represent the standard deviation.
     
 The rotor calibration experiment is the first set of data all UltraScan-III users should acquire for their own rotor and instrument. Titanium rotors used in the Beckman Analytical Ultracentrifuge will stretch as a function of rotor speed, temperature, age and type of centerpieces loaded in them. 

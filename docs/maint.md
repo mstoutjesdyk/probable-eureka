@@ -1,6 +1,4 @@
-This page is still under construction.
-
-##AUC Performance Checks
+# AUC Performance Checks
 
 In general, the following can be applied to both the XL-A and the Optima AUC.
 Here, we have listed some general maintenace checks, calibrations, and good practices, 
@@ -121,4 +119,14 @@ to centerpeices based on their material (epon, titanium, alunimum).
 CHEMICAL RESISTANCE: This information can be found [here](/pdffiles/ChemicalResistances.pdf).
 
 BLACK RINGS IN ROTOR CHAMBER: This information can be found [here](/pdffiles/blackrings.pdf).
+
+
+<br>
+<br>
+<br>
+Update: 
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
 

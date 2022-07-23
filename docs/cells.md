@@ -1,4 +1,10 @@
 <br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
+# Analytical Cells
+<br>
 ??? warning "VIDEO ON CELL PREPERATION"
 
     !!! warning ""
@@ -13,7 +19,7 @@
     
     2. Cells should allow for the passage of light through the cell, via quartz or sapphire windows, while the rotor is spinning.
 
-## Cell Components
+# Cell Components
 
 Each analytical cell that is used in the An-60 Ti and An-50 Ti rotors consist of a centerpiece, two 
 window assemblies, and a cell housing. For cells with a 3-mm centerpiece, two spacers are required. 
@@ -21,7 +27,7 @@ Each component is designed with a special key on the housing, and a key-way on t
 will all fit together to provide accurate alignment.
 
 #### Centerpieces
-![](/img/doublesector.png){width="400"align=right}
+![](img/doublesector.png){width="400"align=right}
 The sector-shaped sample compartments that are used are esential in velocity experiments as the sedimenting particles will move along radial lines. If the components had parallel walls, the molecules would collide with the walls as they sedimented. 
 
 DOUBLE SECTOR: the sample solution can be placed in one sector, with the second sector for reference material (this sector is filled slightly more than the sample, so that the reference meniscus does not obscure profiles).

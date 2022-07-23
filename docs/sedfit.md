@@ -1,3 +1,9 @@
+<br>
+MS: &#x2717;
+<br>
+BS: &#x2717;
+
+# SEDFIT 
 SEDFIT analyses its samples completely indepedently. It assumes the efualts for all values, unless otherwise entered. It has a calculator utility, as well as SEDNTER.
 
 Contains utility for model-independent analysis by van Holde-Weischet transformation. However, implementation is limited, as a smaller number of scans that satisfy strich requirements with low optical noise is necessary to generate distributions that are not dominated by experimental noise. This results in fewer boundary divisions, and fewer data sets for the vHW.
