@@ -13,9 +13,7 @@
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
-        <link href="../css/extra.css" rel="stylesheet">
-        <link href="../docs/stylesheets/extra.css" rel="stylesheet">
-        <link href="../admonition-text.css" rel="stylesheet">
+        <link href="../extra_css/extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
@@ -52,7 +50,11 @@
 </li>
                                     
 <li>
-    <a href="../contact/" class="dropdown-item">Networking/Contacts</a>
+    <a href="../contact/" class="dropdown-item">Organizations</a>
+</li>
+                                    
+<li>
+    <a href="../software.md" class="dropdown-item">Software</a>
 </li>
                                     
 <li>
@@ -60,7 +62,7 @@
 </li>
                                     
 <li>
-    <a href="../webmaster.md" class="dropdown-item">Webmaster</a>
+    <a href="../webmaster.md" class="dropdown-item">Contact</a>
 </li>
                                 </ul>
                             </li>
@@ -270,30 +272,13 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
     <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
 </li>
-                                    
-<li>
-    <a href="../sedfit/" class="dropdown-item">SedFit</a>
-</li>
-                                    
-<li>
-    <a href="../sedanal/" class="dropdown-item">SedAnal, DCDT</a>
-</li>
-                                    
-<li>
-    <a href="../sednterp/" class="dropdown-item">Sednterp</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
                                     
 <li>
     <a href="../us-overview/" class="dropdown-item">Overview</a>
@@ -535,6 +520,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../gmp-randd.md" class="dropdown-item">R&D Phase</a>
+</li>
+                                    
+<li>
     <a href="../gmp-overview/" class="dropdown-item">Overview</a>
 </li>
                                     
@@ -611,28 +600,30 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><br>
+MS: <span class="arithmatex">\(\checkmark\)</span> 28.07.22
+<br>
+BD: &#x2717;</p>
 <h1 id="2-d-spectrum-analysis">2-D Spectrum Analysis</h1>
 <p>This module enables you to perform 2DSA on a chosen experimental data set. Upon completion of an analysis fit, there are several plots available: experiment, simulation, overlayed experiment and simulation, residuals, time-invariant noise, radially-invariant noise, and 3-D model. </p>
-<p>The 2DSA method is used for composition analysis of sedimentation velocity experiments. It can generate sedimentation coefficient, diffusion coefficient, frictional coefficient, f/f0 ratio, and molecular weight distributions. The distributions can be plotted as 3-D plots, with the third dimension representing the concentration of the solute found in the composition analysis. The set of all such final calculated solutes for a model which are used to generate a simulation via Lamm equations. This simulation is then plotted overlaying a plot of the experimental data. </p>
+<p>The 2DSA method is used for composition analysis of sedimentation velocity experiments. It can generate sedimentation coefficient, diffusion coefficient, frictional coefficient, <span class="arithmatex">\(f/f_{0}\)</span> ratio, and molecular weight distributions. The distributions can be plotted as 3-D plots, with the third dimension representing the concentration of the solute found in the composition analysis. The set of all such final calculated solutes for a model which are used to generate a simulation via Lamm equations. This simulation is then plotted overlaying a plot of the experimental data. </p>
 <p>Each 2DSA pass can be repeated for a specified number of refinement iterations These iterations, in turn, can be repeated for a specified number of meniscus points or Monte Carlo iterations. </p>
-<p>Each refinement iteration proceeds over a defined grid of <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(f/f0\)</span> values. That grid is divided into sub-grids as defined by a number of grid refinements in each direction.</p>
+<p>Each refinement iteration proceeds over a defined grid of <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(f/f_{0}\)</span> values. That grid is divided into sub-grids as defined by a number of grid refinements in each direction.</p>
 <div class="admonition danger">
-<p><img alt="" src="../img/nav-us/us-velocity-2dsa.png" width="textwidth" /></p>
+<p><img alt="" src="../img/nav-us/us-velocity-2dsa.png" width="1000" /></p>
 </div>
-<hr />
-<p>CONTROLS</p>
-<hr />
+<p><span style = "font-size:16px";>CONTROLS</span></p>
 <p><u>3-D Plot</u> Open a control window for a 3-D dimensional plot of the final computed model. </p>
 <p><u>Residual Plot</u> Open a plot dialog for a far more detailed set of results plots. </p>
 <p><u>Status Info</u> This text window displays continually updated summaries of computational activity and results.</p>
-<p><u>Fit Control</u> See Figure: 2DSA Fit Control.</p>
+<p><u>Fit Control</u> See 2DSA Fit Control Dialogue.</p>
+<details class="danger">
+<summary><span style="color: #d9534f;">2DSA Fit Control Dialogue</span></summary>
 <div class="admonition danger">
-<p class="admonition-title">2DSA Fit Control</p>
+<p class="admonition-title"> </p>
 <p>The parameters of this dialog define and control an analysis run to find the set of solutes that best fits experimental data. </p>
-<p><img alt="" src="../img/nav-us/us-velocity-2dsafit.png" width="textwidth" /></p>
-<hr />
-<p>FITTING CONTROLS</p>
-<hr />
+<p><img alt="" src="../img/nav-us/us-velocity-2dsafit.png" width="1000" /></p>
+<p><span style = "font-size:16px";>FITTING CONTROLS</span></p>
 <p><u>Lower/Upper Limit (s)</u> Set a lower/upper limit of sedimentation coefficient values to scan.</p>
 <p><u>Number Grid Points (s)</u> Set the total grid count of sedimentation coefficient points.</p>
 <p><u>Lower/Upper Limit (f/f0)</u> Set a lower/upper limit of frictional ratio values to scan.</p>
@@ -642,9 +633,7 @@
 <p><u>Fit Radially-Invariant Noise</u> Check this box if you want to calculate radially-invariant noise.</p>
 <p><u>Automatically Plot</u> Check this box if you want plot dialogues to automatically open at the completion of all calculations.</p>
 <p><u>Vary Vbar with Constant f/f0</u> Check this box if you want to vary vbar while holding f/f0 constant.</p>
-<hr />
-<p>OPTIMIZATION METHODS</p>
-<hr />
+<p><span style = "font-size:16px";>OPTIMIZATION METHODS</span></p>
 <p><u>Uniform Grid</u> Check this box if Uniform Grid is your preferred optimization method.</p>
 <p><u>Custom Grid</u> Check this box if you wish to have a custom grid as your preferred optimization method.</p>
 <p><u>Float Meniscus/Bottom</u> Check this box if you wish to wrap the refinement iterations in outer interactions of meniscus/bottom scans. Checking this option means that Monte Carlo may not be chosen.</p>
@@ -657,23 +646,15 @@
 <p><u>Maximum Iterations</u> Select the number of maximum number of refinement iterations. This number may not be reached if subsequent iterations achieve the same set of computed solutes or if their variances differ by a very small amount.</p>
 <p><u>Plot Norm Grid</u></p>
 <p><u>Norm Tolerance</u></p>
-<hr />
-<p>STATUS INFORMATION</p>
-<hr />
+<p><span style = "font-size:16px";>STATUS INFORMATION</span></p>
 <p><u>Estimated Memory</u> Text showing a memory use estimate based on chosen parameters.</p>
 <p><u>Completed Iteration</u> Display of the last completed refinement iteration completed.</p>
 <p><u>Old Variance</u> The variance value of the previous iteration.</p>
 <p><u>New Variance</u> The variance value of the last completed iteration.</p>
 <p><u>Improvement</u> The difference between the variance value from the last iteration and the one preceeding it.</p>
 </div>
-<p><br>
-<br>
-<br>
-Updated: 21.07.22
-<br>
-MS: <span class="arithmatex">\(\checkmark\)</span>
-<br>
-BD: &#x2717;</p></div>
+</details>
+<p><br></p></div>
             </div>
         </div>
 

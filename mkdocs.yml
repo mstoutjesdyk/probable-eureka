@@ -8,9 +8,10 @@ nav:
     - Resources:
       - Literature: lit.md
       - Lab Documentation: resources.md
-      - Networking/Contacts: contact.md
+      - Organizations: contact.md
+      - Software: software.md
       - Appendix: appendix.md
-      - Webmaster: webmaster.md
+      - Contact: webmaster.md
     - Biophysics: 
       - Introduction: intro.md   
       - Macromolecular Interactions: macro.md
@@ -60,12 +61,8 @@ nav:
         - Rotor Stretch: rotorstretch.md
         - Chromatic Aberration: chromab.md
         - Solute Compression: compression.md
-    - Software:
-      - UltraScan: ultrascan.md
-      - SedFit: sedfit.md
-      - SedAnal, DCDT: sedanal.md
-      - Sednterp: sednterp.md
     - Navigating UltraScan:
+      - UltraScan: ultrascan.md
       - Overview: us-overview.md
       - Edit: us-edit.md
       - Velocity:
@@ -123,6 +120,7 @@ nav:
         - Manage Rotors: database-rotors.md
       - Common Dialogs: us-dialogs.md
     - Navigating US-GMP: 
+      - R&D Phase: gmp-randd.md
       - Overview: gmp-overview.md
       - Experiment: gmp-experiment.md
       - Live Update: gmp-liveupdate.md
@@ -131,21 +129,15 @@ nav:
       - Analysis: gmp-analysis.md
       - Report: gmp-report.md
 
-extra_css:
-   - css/extra.css
-   - docs/stylesheets/extra.css
-   - admonition-text.css
-
 theme:
-   navigation_depth: 20
-   name: lux
-   highlightjs: true
-   locale: en
-   features:
-     - header.autohide
-
-extra:
-   logo: 'docs/img/auc-university.svg'
+  navigation_depth: 20
+  name: lux
+  features:
+    - navigation.prune
+    - header.autohide
+    
+extra_css:
+    - extra_css/extra.css
 
 markdown_extensions:
    - md_in_html
@@ -164,8 +156,7 @@ markdown_extensions:
    - abbr
    - pymdownx.arithmatex:
        generic: true
-
-
+       
 extra_javascript:
    - javascripts/mathjax.js
    - https://polyfill.io/v3/polyfill.min.js?features=es6
