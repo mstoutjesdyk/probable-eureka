@@ -11,3 +11,7 @@
 #site-header.hide {
     top: -53px;
 }
+
+.md-footer__inner:not([hidden]) {
+    display: none
+}
