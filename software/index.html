@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Marielle Stoutjesdyk">
+        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/software/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Software - AUC University</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+        <link href="../docs/css/extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">AUC University</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lit/" class="dropdown-item">Literature</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Lab Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Organizations</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Software</a>
+</li>
+                                    
+<li>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
+</li>
+                                    
+<li>
+    <a href="../webmaster/" class="dropdown-item">Contact</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item">Instrumentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Optical Systems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../absorbance/" class="dropdown-item">Absorbance</a>
+</li>
+            
+<li>
+    <a href="../interference/" class="dropdown-item">Interference</a>
+</li>
+            
+<li>
+    <a href="../fluorescence/" class="dropdown-item">Fluorescence</a>
+</li>
+            
+<li>
+    <a href="../mwl-optics/" class="dropdown-item">Multiwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../rotors/" class="dropdown-item">Rotors</a>
+</li>
+                                    
+<li>
+    <a href="../cells/" class="dropdown-item">Cells</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Experiment Planning</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../suitable-systems/" class="dropdown-item">Suitable Systems</a>
+</li>
+            
+<li>
+    <a href="../experiment-questions/" class="dropdown-item">Questions to Ask</a>
+</li>
+            
+<li>
+    <a href="../experiment-flow/" class="dropdown-item">Planning Flowchart</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Experimental Techniques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sed-veloc/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../multispeed-sedveloc/" class="dropdown-item">Multi-Speed Sedimentation Velocity</a>
+</li>
+                                    
+<li>
+    <a href="../sed-equil/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../abde/" class="dropdown-item">Analytical Buoyant Density Equilibrium</a>
+</li>
+                                    
+<li>
+    <a href="../density/" class="dropdown-item">Density Matching</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Analysis Flowcharts <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">UltraScan</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sv-flow/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+            
+<li>
+    <a href="../se-flow/" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+            
+<li>
+    <a href="../mwl-flow/" class="dropdown-item">Multwavelength</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">SedFit</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sedfit-sv-flow/" class="dropdown-item">Sedimentation Velocity</a>
+</li>
+            
+<li>
+    <a href="../sedfit-se-flow.md" class="dropdown-item">Sedimentation Equilibrium</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Theory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Data Modeling and Fitting</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Noise Considerations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../noise/" class="dropdown-item">Types of Noise</a>
+</li>
+            
+<li>
+    <a href="../noise-fit-anal/" class="dropdown-item">Noise Fitting and Analysis</a>
+</li>
+            
+<li>
+    <a href="../tinoise-tisig/" class="dropdown-item">TI Noise in TI Signals</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../mwlspec.md" class="dropdown-item">MWL Spectral Deconvolution</a>
+</li>
+                                    
+<li>
+    <a href="../pcsa.md" class="dropdown-item">Parametrically Constrained Spectrum Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../vhw/" class="dropdown-item">Van Holde-Weischet</a>
+</li>
+                                    
+<li>
+    <a href="../cofs.md" class="dropdown-item">Continuous Lamm Equation Distributions, c(s)</a>
+</li>
+                                    
+<li>
+    <a href="../dcdt/" class="dropdown-item">Time Derivative, dcdt</a>
+</li>
+                                    
+<li>
+    <a href="../ga/" class="dropdown-item">Genetic Algorithms</a>
+</li>
+                                    
+<li>
+    <a href="../monte/" class="dropdown-item">Monte-Carlo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+</li>
+                                    
+<li>
+    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+</li>
+                                    
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Hardware</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Calibration Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical Systems</a>
+</li>
+            
+<li>
+    <a href="../auc-standards/" class="dropdown-item">Standards</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration</a>
+</li>
+            
+<li>
+    <a href="../compression/" class="dropdown-item">Solute Compression</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating UltraScan <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ultrascan/" class="dropdown-item">UltraScan</a>
+</li>
+                                    
+<li>
+    <a href="../us-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../us-edit/" class="dropdown-item">Edit</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Velocity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../velocity-evhw/" class="dropdown-item">Enhanced van Holde-Weischet</a>
+</li>
+            
+<li>
+    <a href="../velocity-grid/" class="dropdown-item">Custom 2-D Grid Control</a>
+</li>
+            
+<li>
+    <a href="../velocity-2dsa/" class="dropdown-item">2-D Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-pcsa/" class="dropdown-item">Paramertically Constrained Spectrum Analysis</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializega/" class="dropdown-item">Initialize Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-initializedmga/" class="dropdown-item">Initialize Discrete Model Genetic Algorithm</a>
+</li>
+            
+<li>
+    <a href="../velocity-2moment/" class="dropdown-item">Second Moment</a>
+</li>
+            
+<li>
+    <a href="../velocity-timederiv/" class="dropdown-item">Time Derivative</a>
+</li>
+            
+<li>
+    <a href="../velocity-femodel/" class="dropdown-item">FE Model Viewer and Statistics</a>
+</li>
+            
+<li>
+    <a href="../velocity-pseudo3d/" class="dropdown-item">View Pseudo 3-D Distributions</a>
+</li>
+            
+<li>
+    <a href="../velocity-speedramp/" class="dropdown-item">Speed Ramp Analysis</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Utilities</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../utilities-data/" class="dropdown-item">Data Aquisition</a>
+</li>
+            
+<li>
+    <a href="../utilities-import/" class="dropdown-item">Import Experimental Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-export/" class="dropdown-item">Export openAUC Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-fds/" class="dropdown-item">FDS File Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-fit/" class="dropdown-item">Fit Meniscus</a>
+</li>
+            
+<li>
+    <a href="../utilities-spectralanal/" class="dropdown-item">Spectral Analysis</a>
+</li>
+            
+<li>
+    <a href="../utilities-color/" class="dropdown-item">Color Gradient Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-report/" class="dropdown-item">Report Generator</a>
+</li>
+            
+<li>
+    <a href="../utilities-rotor/" class="dropdown-item">Rotor Calibration</a>
+</li>
+            
+<li>
+    <a href="../utilities-license/" class="dropdown-item">License Manager</a>
+</li>
+            
+<li>
+    <a href="../utilities-cddvhw/" class="dropdown-item">Combine Distribution Plots (vHW)</a>
+</li>
+            
+<li>
+    <a href="../utilities-dd/" class="dropdown-item">Combine Discrete Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-id.md" class="dropdown-item">Combine Integral Distributions</a>
+</li>
+            
+<li>
+    <a href="../utilities-globalmodel/" class="dropdown-item">Create Global Model</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewcfa.md" class="dropdown-item">View Raw CFA Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-veiwoptima.md" class="dropdown-item">View Raw Optima Data</a>
+</li>
+            
+<li>
+    <a href="../utilities-viewtime/" class="dropdown-item">View Time State</a>
+</li>
+            
+<li>
+    <a href="../utilities-densitymatch/" class="dropdown-item">Density Matching</a>
+</li>
+            
+<li>
+    <a href="../utilities-pseudoabs/" class="dropdown-item">Pseudo-Absorbance</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Multiwavelength</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mwl-view/" class="dropdown-item">View Multiwavelength Data</a>
+</li>
+            
+<li>
+    <a href="../mwl-spectral/" class="dropdown-item">View MWL Spectral</a>
+</li>
+            
+<li>
+    <a href="../mwl-species/" class="dropdown-item">MWL Species Fit</a>
+</li>
+            
+<li>
+    <a href="../mwl-simulation/" class="dropdown-item">Optima MWL Fit Simulation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Simulation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sim-finiteelement/" class="dropdown-item">Finite Element Simulation (ASTFEM)</a>
+</li>
+            
+<li>
+    <a href="../sim-estequil/" class="dropdown-item">Estimate Equilibirum Times</a>
+</li>
+            
+<li>
+    <a href="../sim-selfass/" class="dropdown-item">Self-Association Equilibirum</a>
+</li>
+            
+<li>
+    <a href="../sim-modelsdf/" class="dropdown-item">Model s, D, and f from MW for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-predict/" class="dropdown-item">Predict f and Axial Ratios for 4 Basic Shapes</a>
+</li>
+            
+<li>
+    <a href="../sim-somo/" class="dropdown-item">SOMO Bead Modeling and Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-invest/" class="dropdown-item">Manage Investigator Data</a>
+</li>
+            
+<li>
+    <a href="../database-buffer/" class="dropdown-item">Manage Buffer Data</a>
+</li>
+            
+<li>
+    <a href="../database-analytes.md" class="dropdown-item">Manage Analytes</a>
+</li>
+            
+<li>
+    <a href="../database-model/" class="dropdown-item">Manage Models</a>
+</li>
+            
+<li>
+    <a href="../database-data/" class="dropdown-item">Manage Data</a>
+</li>
+            
+<li>
+    <a href="../database-solutions/" class="dropdown-item">Manage Solutions</a>
+</li>
+            
+<li>
+    <a href="../database-project/" class="dropdown-item">Manage Projects</a>
+</li>
+            
+<li>
+    <a href="../database-rotors/" class="dropdown-item">Manage Rotors</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../us-dialogs/" class="dropdown-item">Common Dialogs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating US-GMP <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gmp-randd.md" class="dropdown-item">R&D Phase</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-experiment/" class="dropdown-item">Experiment</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-liveupdate/" class="dropdown-item">Live Update</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-limsimport/" class="dropdown-item">LIMS Import</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-editing/" class="dropdown-item">Editing</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-analysis/" class="dropdown-item">Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../gmp-report/" class="dropdown-item">Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Navigating SedFit <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sedfit-nav.md" class="dropdown-item">Sedfit</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../contact/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../appendix/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/software.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#dcdt" class="nav-link">DCDT+</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#kdalton" class="nav-link">kDalton</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#lamm" class="nav-link">Lamm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sedanal" class="nav-link">SedAnal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sedfit" class="nav-link">SedFit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sednterp" class="nav-link">SedNterp</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sedphat" class="nav-link">SedPhat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#svedberg" class="nav-link">Svedberg</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#ultrascan" class="nav-link">UltraScan</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#xl-graph" class="nav-link">XL Graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><span style="font-size:24px";>AUC Software Options</span></p>
+<h2 id="dcdt"><a href="http://www.jphilo.mailway.com/dcdt+.htm"><span style="font-size:20px";><u>DCDT+</u></span></a></h2>
+<p>DCDT+ is a Windows program for analysis of sedimentation velocity (SV) data and implements fitting of the derived g(s*) distributions as a mixture containing of up to 5 discrete (non-interacting) species.</p>
+<p><u>Developer(s):</u> Walter Stafford; John Philo</p>
+<p><u>System Requirements:</u> Window XP, Vista, 7,8, or 10. Requires Microsoft .NET framework.</p>
+<p><u>Registration:</u> DCDT+ is distibuted as 'freeware' and does not require registration.</p>
+<p><u>Download:</u> <a href="http://www.jphilo.mailway.com/download.htm">link</a></p>
+<p><u>User Manual:</u> <a href="https://manualzz.com/doc/6780795/dcdt--user-manual---john-philo-s-software-home-page">pdf</a></p>
+<div class="admonition quote">
+<p>Stafford, W.F., III. 1992. Boundary analysis in sedimentation transport experiments: A procedure for obtaining sedimentation coefficient distributions using the time derivative of the concentration profile. Analytical Biochemistry 203:295-301.</p>
+<p>Philo, J.S. (2000) A method for directly fitting the time derivative of sedimentation velocity data and an alternative algorithm for calculating sedimentation coefficient distribution functions. Analytical Biochemistry, 279, 151-163.</p>
+<p>Philo, J. S. (2006). Improved methods for fitting sedimentation coefficient distributions derived by time-derivative techniques. Anal. Biochem. 354, 238-246.</p>
+<p>Philo, J. S. (2011). Limiting the sedimentation coefficient range for sedimentation velocity data analysis: Partial boundary modeling and g(s*) approaches revisited. Anal. Biochem. 412, 189-202.</p>
+</div>
+<h2 id="kdalton"><a href="http://www.jphilo.mailway.com/kdalton.htm"><span style="font-size:20px";><u>kDalton</u></span></a></h2>
+<p>The kDalton program directly fits sedimentation equilibrium (SE) scans using non-linear least-squares analysis, providing global analysis of multiple loading concentrations and/or rotor speeds (up to 18 total data sets). It can analyze ideal or non-ideal self-association (with up to 2 different oligomers), and also provides 15 assembly models for mixed associations (hetero-association).</p>
+<p><u>Developer:</u> John Philo</p>
+<p><u>System Requirements:</u> Windows XP, Vista, 7, 8, or 10.</p>
+<p><u>Download:</u> <a href="http://www.jphilo.mailway.com/download.htm">link</a></p>
+<div class="admonition quote">
+<p>Philo, J. S. (2000). Sedimentation equilibrium analysis of mixed associations using numerical constraints to impose mass or signal conservation. Methods Enzymol. 321, 100-120.</p>
+</div>
+<h2 id="lamm"><span style="font-size:20px";><u>Lamm</u></span></h2>
+<p>Discrete species: numerical lamm solution</p>
+<h2 id="sedanal"><a href="https://sedanal.org/"><span style="font-size:20px";><u>SedAnal</u></span></a></h2>
+<p>SedAnal can processs both sedimentation velocity and sedimentation equilibrium data, using the Lamm Equation Filter and Sedimentation Equilibrium Filter, resepctively. SedAnal contains several other programs, such as: <a href="/probable-eureka/software#DCDT+">DCDT</a>, Multi-Wavlength Analysis (MWL), Wide Distribution Analysis (WDA), and Biospin.</p>
+<p>Global analysis of interacting species. Molecular weight anaysis.</p>
+<p><u>Developer:</u> Walter Stafford</p>
+<p><u>System Requirements:</u></p>
+<p><u>Download:</u> <a href="https://sedanal.org/latest/">SedAnal link</a>; <a href="https://sedanal.org/sedview/">SedView link</a></p>
+<p><u>User Manual:</u> <a href="https://sedanal.org/latest/Sedanal_manual.pdf">pdf link</a></p>
+<div class="admonition quote">
+<p>Stafford, WF, (1998) "Time difference sedimentation velocity analysis of rapidly reversible interacting systems: Determination of equilibrium constants by global non-linear curve fitting procedures." Biophysical Journal,74(2),A301.</p>
+<p><u>Biospin</u></p>
+<p>Roark and Yphantis 1968</p>
+<p><u>Multi-Wavelength Analysis</u></p>
+<p>Walter et al 2015</p>
+<p><u>Wide Distribution Analysis</u></p>
+<p>Stafford, W. F. and E. H. Braswell (2004). "Sedimentation Velocity, Multi-speed Method for Analyzing Polydisperse Solutions." Biophysical Chemistry,108,273-279.</p>
+</div>
+<h2 id="sedfit"><a href="https://sedfitsedphat.github.io/"><span style="font-size:20px";><u>SedFit</u></span></a></h2>
+<p>c(s). Discret species: approximate Lamm solution. discret species: numerical lamm solution. Realtime isplay and analysis.</p>
+<p>For the analysis of sedimentation velocity, dynamic light scattering, and sedimentation equilibrium data. SEDFIT has a variety of models for the analysis with discrete species and size-distributions, including ls-g*(s), c(s), c(M), and c(s, ff0), and their specialized variants.</p>
+<p><u>Developer:</u> Peter Schuck</p>
+<p><u>System Requirements:</u> Windows NT, 95, 98, XP, 2000, Vista, 7, 8</p>
+<p><u>Download:</u> <a href="https://sedfitsedphat.github.io/download.htm">link</a> or <a href="https://sedfitsedphat.nibib.nih.gov/software/default.aspx">NIH link</a></p>
+<h2 id="sednterp"><a href="http://www.jphilo.mailway.com/sednterp.htm"><span style="font-size:20px";><u>SedNterp</u></span></a></h2>
+<p>The SEDNTERP program is a general purpose tool for the interpretation of sedimentation equilibrium, sedimentation velocity, and diffusion experiments.</p>
+<p><u>Developer:</u> John Philo</p>
+<p><u>Download:</u> <a href="http://www.jphilo.mailway.com/download.htm">link</a></p>
+<h2 id="sedphat"><a href="https://sedfitsedphat.github.io/sedphat/sedphat.htm"><span style="font-size:20px";><u>SedPhat</u></span></a></h2>
+<p>SEDPHAT provides global modeling capabilities for both sedimentation equilibrium and sedimentation velocity data, serving as a platform for the global analysis of a variety of iotherms from different biophysical disciplines.</p>
+<p><u>Developer:</u> Peter Schuck</p>
+<p><u>System Requirements:</u> Windows NT, 95, 98, 2000, XP, or later</p>
+<p><u>Download:</u> <a href="https://sedfitsedphat.github.io/sedphat/download.htm">link</a> </p>
+<h2 id="svedberg"><a href="http://www.jphilo.mailway.com/svedberg.htm"><span style="font-size:20px";><u>Svedberg</u></span></a></h2>
+<p>SVEDBERG is a Windows program for whole-boundary analysis of sedimentation velocity data. It fits directly to the raw scans (usually spanning the entire run) to derive the sedimentation coefficient and molar mass (or, if you prefer, sedimentation coefficient and diffusion coefficient) for up to 6 independent species (mixtures of up to 6 components). </p>
+<p><u>Developer:</u> John Philo</p>
+<p><u>System Requirements:</u> Windows XP, Vista, 7, 8, 10. Requires Microsoft .NET framework.</p>
+<p><u>Registration:</u> SVEDBERG is distributed as 'freeware' and does not require registration.</p>
+<p><u>Download:</u> <a href="http://www.jphilo.mailway.com/download.htm">link</a></p>
+<div class="admonition quote">
+<p>Philo, J. S. (1997). An improved function for fitting sedimentation velocity data for low-molecular-weight solutes. Biophys. J. 72, 435-444.</p>
+</div>
+<h2 id="ultrascan"><span style="font-size:20px";><u>UltraScan</u></span></h2>
+<p>Main Use: van Holde-Weischet. Discrete species: numerical lamm solution. nonlinear least squares. molecular weight moment analysis. data aquisition. realtime display and analysis. graphics. calculations. <br></p>
+<p><u>Developer:</u> Borries Demeler</p>
+<p><u>System Requirements:</u></p>
+<p><u>Registration:</u></p>
+<p><u>Download:</u> <a href="">link</a></p>
+<div class="admonition quote">
+<p>link</p>
+</div>
+<h2 id="xl-graph"><a href="http://www.jphilo.mailway.com/xlgraph.htm"><span style="font-size:20px";><u>XL Graph</u></span></a></h2>
+<p>XLGraph is a general purpose plotting tool for AUC scan data, a utility to transform the raw data plots to help visualize and interpret AUC experiments, and a utility for performing certain mathematical operations on raw AUC scans and then writing out the resultant data as new scan files.</p>
+<p><u>Developer:</u> John Philo</p>
+<p><u>System Requirements:</u> Windows XP, Vista, 7, 8, or 10.</p>
+<p><u>Download:</u> <a href="http://www.jphilo.mailway.com/download.htm">link</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
