@@ -62,12 +62,12 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Instrumentation</a>
+    <a href="#" class="dropdown-item">Instruments</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -77,28 +77,6 @@
 <li>
     <a href="../instru/" class="dropdown-item">Optima&#8482; AUC</a>
 </li>
-            
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">AUC Performance Checks</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="./" class="dropdown-item active">Calibration Disk</a>
-</li>
-            
-<li>
-    <a href="../maint/" class="dropdown-item">Confirm Optical System Performance</a>
-</li>
-            
-<li>
-    <a href="../rotorstretch/" class="dropdown-item">Determine Rotor Stretch</a>
-</li>
-            
-<li>
-    <a href="../chromab/" class="dropdown-item">Create Chromatic Aberration Profile</a>
-</li>
-    </ul>
-  </li>
     </ul>
   </li>
                                     
@@ -131,10 +109,6 @@
 <li>
     <a href="../cells/" class="dropdown-item">Cells & Counterbalances</a>
 </li>
-                                    
-<li>
-    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
-</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -147,6 +121,10 @@
             
 <li>
     <a href="../suitable-proteins/" class="dropdown-item">Proteins Systems</a>
+</li>
+            
+<li>
+    <a href="../suitable-protein-dna/" class="dropdown-item">Protein and DNA Systems</a>
 </li>
             
 <li>
@@ -166,6 +144,10 @@
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
+</li>
                                     
 <li>
     <a href="../experiment-flow/" class="dropdown-item">Planning Flowchart</a>
@@ -256,25 +238,56 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AUC Validation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+    <a href="../gmp-auc/" class="dropdown-item">Good Manufacturing Practices</a>
 </li>
                                     
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Instrument Validation</a>
+    <ul class="dropdown-menu">
+            
 <li>
-    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+    <a href="../accuracy/" class="dropdown-item">AUC Accuracy Protocol</a>
 </li>
-                                    
+            
 <li>
-    <a href="../auc-standards/" class="dropdown-item">Developing Standards</a>
+    <a href="../auc-standards/" class="dropdown-item">Instrument Standards</a>
 </li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Calibration Disk</a>
+</li>
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical System Performance</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch Profile</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration Profile</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../software/" class="nav-link">Software</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">USiaB <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../setup/" class="dropdown-item">Setting Up Users</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="https://mstoutjesdyk.github.io/effective-spoon" class="nav-link">Navigating UltraScan</a>
@@ -288,7 +301,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../instru/" class="nav-link">
+                                <a rel="prev" href="../auc-standards/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -323,7 +336,7 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#calibration-disk-design" class="nav-link">Calibration Disk Design</a>
+            <li class="nav-item" data-level="1"><a href="#design-features" class="nav-link">Design Features</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -337,14 +350,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="calibration-disk">Calibration Disk</h1>
+<h1 id="calibration-disk"><span style="font-size:26px";>Calibration Disk</span></h1>
 <div class="admonition danger">
 <p>For more information on this page, see:</p>
 <p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). <a href="https://doi.org/10.1007/s00249-020-01434-z">https://doi.org/10.1007/s00249-020-01434-z</a></div></p>
 </div>
-<p>To address the issues related to AUC instrument hardware, a calibration disk has been developed as well as <a href="/pdf/Documentation/RotorStretchCalibration.pdf">experimental procedures</a> and <a href="/probable-eureka/utilities-rotor">UltraScan modules</a> to carefully measure specific hardware effects and correct them during fitting by calibrations of the chromatic aberration and rotor stretch.</p>
-<h1 id="calibration-disk-design"><span style="font-size: 20px";>Calibration Disk Design</span></h1>
-<p>The calibration disk has a geometry with two sector-shaped channels, each divided into seven open sectors for each channel, and six ribes. Each sector is 3.7-degrees wide, wider than a standard 2-channel epon-charcoal centerpiece, which is only 2.5-degrees wide, and is offset by 0.9-degrees from the centre-line. A guide note (1.6 mm x 0.5 mm) is included to ensure proper alignment in the cell housing.</p>
+<p>To address the issues related to AUC instrument hardware, a calibration disk has been developed as well as experimental procedures and UltraScan modules to carefully measure specific hardware effects and correct them during fitting by calibrations of the chromatic aberration and rotor stretch.</p>
+<h1 id="design-features"><span style="font-size: 20px";>Design Features</span></h1>
+<p>The calibration disk has a geometry with two sector-shaped channels, each divided into seven open sectors for each channel, and six ribs. Each sector is 3.7-degrees wide, wider than a standard 2-channel epon-charcoal centerpiece, which is only 2.5-degrees wide, and is offset by 0.9-degrees from the centre-line. A guide note (1.6 mm x 0.5 mm) is included to ensure proper alignment in the cell housing.</p>
 <p><img align="right" alt="" src="../img/calibration-disk.jpg" width="250" /></p>
 <p>The following requirements were considered when designing this disk.</p>
 <ol>
@@ -373,11 +386,7 @@
 <h1 id="manufacturing"><span style="font-size: 20px";>Manufacturing</span></h1>
 <p><img alt="" src="../img/disk-laser1.jpg" style="float: right;margin-right: 20px;margin-top: 10px;" width="450" /></p>
 <p>Laser cutting, 3D printing, and CNC machining were all tested for the manufacturing of the disk. 3D printing was considered because it was previously used for centerpieces,<sup id="fnref:Desai2016"><a class="footnote-ref" href="#fn:Desai2016">1</a></sup> but was too imprecise and lacked sufficient rigidity at 0.5 mm thickness for our needs (see figure). Additionally, thicker material produced measurable issues with shading on one side of the edge, suggesting that the incident beam is not perfectly perpendicular to the focus plane. </p>
-<p>In the end, we found that CNC machining produced the most reproducible and accurate results. A Sherline 3 axis Bench Top CNC Mill with a tolerance of +- 0.0005 cm, featuring a solid carbide slotting end mill, were used to produce the calibration disks from 0.5 mm brass shim stock. All disks were manufactured by Geoff Minors of Technical Services of the University of Lethbridge.The predicted positions of the edges were verified using a flatbed scanner with 3200 DPI optical resolution (~8 um), by determining the actual edge positions using standard Euclidean geometry, while assuming the center of the disk to be located at 65 mm.</p>
-<p><br>
-<br>
-<br>
-M.S. 21.07.22</p>
+<p>In the end, we found that CNC machining produced the most reproducible and accurate results. A Sherline 3 axis Bench Top CNC Mill with a tolerance of +- 0.0005 cm, featuring a solid carbide slotting end mill, were used to produce the calibration disks from 0.5 mm brass shim stock. All disks were manufactured by Geoff Minors of Technical Services of the University of Lethbridge.The predicted positions of the edges were verified using a flatbed scanner with 3200 DPI optical resolution (~8 <span class="arithmatex">\(\mu\)</span>m), by determining the actual edge positions using standard Euclidean geometry, while assuming the center of the disk to be located at 65 mm.</p>
 <div class="footnote">
 <hr />
 <ol>

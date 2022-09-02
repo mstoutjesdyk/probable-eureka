@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Marielle Stoutjesdyk">
-        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/fluorescence/">
+        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/accuracy/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Fluorescence - AUC University</title>
+        <title>AUC Accuracy Protocol - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -93,7 +93,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Fluorescence</a>
+    <a href="../fluorescence/" class="dropdown-item">Fluorescence</a>
 </li>
             
 <li>
@@ -238,7 +238,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AUC Validation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -251,7 +251,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../accuracy/" class="dropdown-item">AUC Accuracy Protocol</a>
+    <a href="./" class="dropdown-item active">AUC Accuracy Protocol</a>
 </li>
             
 <li>
@@ -301,17 +301,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../interference/" class="nav-link">
+                                <a rel="prev" href="../gmp-auc/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../mwl-optics/" class="nav-link">
+                                <a rel="next" href="../auc-standards/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/fluorescence.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/accuracy.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -331,17 +331,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#fluorescence-optics-488-nm" class="nav-link">Fluorescence Optics (488 nm)</a>
+            <li class="nav-item" data-level="1"><a href="#where-can-we-improve-instrument-accuracy" class="nav-link">Where Can We Improve Instrument Accuracy?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#when-to-use" class="nav-link">When to Use</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#pros-and-cons" class="nav-link">Pros and Cons</a>
+            <li class="nav-item" data-level="1"><a href="#analysis-protocol" class="nav-link">Analysis Protocol</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -350,28 +345,69 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p><br>
-MS: &#x2717;
-<br>
-BD: &#x2717;</p>
-<h1 id="fluorescence-optics-488-nm">Fluorescence Optics (488 nm)</h1>
-<p>Generally enhances the dynamic rane by extending into the low end of sample concentration into the low nano molar, depending on labeling efficiency and fluorophore quantum yield.</p>
-<p>the minimal FDS power setting still enable the use of low-micromolar concentrations</p>
-<p>Zhao et al 2014 report that fluorescent optics can provide uable data for concentrations as low micro-molar.</p>
-<p>LABELING REQUIREMENTS: fluorphores with 488-nm exitation maxima are ideal to use, but other dyes can be used if they have higher final concentrations for producing a singal equivalent to samples with the 488-nm excitation maxima.</p>
-<p>When labing native functional groups, make sure that its behavior is equivalent to that of the unlabelled protein.</p>
-<h1 id="when-to-use"><span style="font-size:20px";>When to Use</span></h1>
-<h1 id="pros-and-cons"><span style="font-size:20px";>Pros and Cons</span></h1>
-<p><u>Advantages</u>
-Exquisite selectivity to measure tagged molecule and can be used against an impure background</p>
-<p>Very high sensitivity (down to pM concentrations)</p>
-<p>No refractive artifacts</p>
-<p>Fast scanning speed (all cells and channels are scanned simultaneously)</p>
-<p>No buffer interference</p>
-<p>Great for hetero-interactions, in-vivo studies, GFP fusions proteins.</p>
-<p><u>Disadvantages</u></p>
-<p>Relatively high stochastic noise</p>
-<p>Most samples must be tagged by a fluoropore.</p></div>
+<h1 id="where-can-we-improve-instrument-accuracy"><span style="font-size: 20px";>Where Can We Improve Instrument Accuracy?</span></h1>
+<ol>
+<li>
+<p>use alignment tool to ensure proper angle of cell sectors</p>
+</li>
+<li>
+<p>predict accuracy boundary conditions for the cell bottom by measuring rotor stretch</p>
+</li>
+<li>
+<p>correct for chromatic aberration in multi-wavlength experiments</p>
+</li>
+<li>
+<p>measure in intensity mode and use proper workflow to remove systematic noise</p>
+</li>
+<li>
+<p>utilize new timestate structure from Optima for accurate t, omega2t</p>
+</li>
+<li>
+<p>accounting for compressibility</p>
+</li>
+<li>
+<p>measure at low enough concentration to avoid non-ideality</p>
+</li>
+<li>
+<p>optimize signal to noise ratio by selecting proper optical density (different for each wavelength)</p>
+</li>
+</ol>
+<h1 id="analysis-protocol"><span style="font-size: 20px";>Analysis Protocol</span></h1>
+<ol>
+<li>
+<p>define meniscus and tolerance</p>
+</li>
+<li>
+<p>define bottom of cell data  limit</p>
+</li>
+<li>
+<p>define # of scans and time</p>
+</li>
+<li>
+<p>define loading concentration and tolerance</p>
+</li>
+<li>
+<p>define sedimentation and frictional ratio fitting limits and grid resolution</p>
+</li>
+<li>
+<p>define refinement workflow parameters</p>
+</li>
+<li>
+<p>time- and radially-invarianet noise determinations</p>
+</li>
+<li>
+<p>meniscus fits</p>
+</li>
+<li>
+<p>iterative refinement steps</p>
+</li>
+<li>
+<p>etc</p>
+</li>
+<li>
+<p>define reference database and reference parameters for hydrodynamic parameters, distribution statistics, RMSD levels, and tolerances.</p>
+</li>
+</ol></div>
             </div>
         </div>
 

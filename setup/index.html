@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Marielle Stoutjesdyk">
-        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/fluorescence/">
+        <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/setup/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Fluorescence - AUC University</title>
+        <title>Setting Up Users - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -93,7 +93,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Fluorescence</a>
+    <a href="../fluorescence/" class="dropdown-item">Fluorescence</a>
 </li>
             
 <li>
@@ -280,12 +280,12 @@
                             <li class="navitem">
                                 <a href="../software/" class="nav-link">Software</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">USiaB <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../setup/" class="dropdown-item">Setting Up Users</a>
+    <a href="./" class="dropdown-item active">Setting Up Users</a>
 </li>
                                 </ul>
                             </li>
@@ -301,17 +301,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../interference/" class="nav-link">
+                                <a rel="prev" href="../software/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../mwl-optics/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/fluorescence.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/mstoutjesdyk/probable-eureka.git/edit/master/docs/setup.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -331,17 +331,27 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#fluorescence-optics-488-nm" class="nav-link">Fluorescence Optics (488 nm)</a>
+            <li class="nav-item" data-level="1"><a href="#introduction" class="nav-link">Introduction</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#when-to-use" class="nav-link">When to Use</a>
+            <li class="nav-item" data-level="1"><a href="#ssh-keys" class="nav-link">SSH Keys</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#pros-and-cons" class="nav-link">Pros and Cons</a>
+            <li class="nav-item" data-level="1"><a href="#ultrascan-lims" class="nav-link">UltraScan LIMS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#vnc" class="nav-link">VNC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ultrascan-desktop-software" class="nav-link">UltraScan Desktop Software</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -350,28 +360,184 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p><br>
-MS: &#x2717;
-<br>
-BD: &#x2717;</p>
-<h1 id="fluorescence-optics-488-nm">Fluorescence Optics (488 nm)</h1>
-<p>Generally enhances the dynamic rane by extending into the low end of sample concentration into the low nano molar, depending on labeling efficiency and fluorophore quantum yield.</p>
-<p>the minimal FDS power setting still enable the use of low-micromolar concentrations</p>
-<p>Zhao et al 2014 report that fluorescent optics can provide uable data for concentrations as low micro-molar.</p>
-<p>LABELING REQUIREMENTS: fluorphores with 488-nm exitation maxima are ideal to use, but other dyes can be used if they have higher final concentrations for producing a singal equivalent to samples with the 488-nm excitation maxima.</p>
-<p>When labing native functional groups, make sure that its behavior is equivalent to that of the unlabelled protein.</p>
-<h1 id="when-to-use"><span style="font-size:20px";>When to Use</span></h1>
-<h1 id="pros-and-cons"><span style="font-size:20px";>Pros and Cons</span></h1>
-<p><u>Advantages</u>
-Exquisite selectivity to measure tagged molecule and can be used against an impure background</p>
-<p>Very high sensitivity (down to pM concentrations)</p>
-<p>No refractive artifacts</p>
-<p>Fast scanning speed (all cells and channels are scanned simultaneously)</p>
-<p>No buffer interference</p>
-<p>Great for hetero-interactions, in-vivo studies, GFP fusions proteins.</p>
-<p><u>Disadvantages</u></p>
-<p>Relatively high stochastic noise</p>
-<p>Most samples must be tagged by a fluoropore.</p></div>
+<p><span style="font-size: 26px";>Setting up New User on UltraScan-in-a-Box</span></p>
+<div class="admonition danger">
+<p>For video, click <a href="https://www.aucsolutions.com/addingNewUser.html">here</a>.</p>
+</div>
+<h1 id="introduction"><span style="font-size: 20px";>Introduction</span></h1>
+<p>In order to set up a new user on the USiaB server, you will need to have administrator rights on the USiaB server and on the client PC. The client PC should have either Windows 10, MacOS, or Linux. </p>
+<p>For this, we will take the user name to be 'ultrascan3' and assume the client has a Windows 10 PC.</p>
+<h1 id="ssh-keys"><span style="font-size: 20px";>SSH Keys</span></h1>
+<p><span style="font-size: 16px; color:#00008B";>Adding a user account to USiaB</span></p>
+<p>On the USiaB server, open the terminal. You must be an admin.
+The command 'sudo su' will place you into the root shell ('su' means superuser), and '-' will read the environment of the shell.
+The command 'udduser' will add a new user to the shell with the name that is provided. A password must be added for the user. The software will check for the complexity of the password; include upper case letters, lower caser letters, numbers, and special characters to increase password security. A new home directory will now be setup under the name 'ultrascan3'. </p>
+<pre><code class="language-shell">[marielle@uslims ~]$ sudo su -
+[root@uslims ~]# adduser ultrascan3
+[root@uslims ~]# passwd ultrascan3
+    Changing password for user ultrascan3
+    New password: *****
+    Retype new password: *****
+    passwd: all authentication tokens updated successfully.
+[root@uslims ~]# cd /home
+[root@uslims ~]# ls
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Adding a user to the ssh permission list</span></p>
+<p>Now we can configure a secure shell program so that the new user can login from a remote location with a secure shell protocol. The configuration for a secure shell daemon will be in a text file in the new user's home directory, which will need to be edited. The security model of USiaB means that each user must be individually exempt, as well as the IP addresses from which they will be coming from.</p>
+<p>Find the 'sshd_config' file. This file is the configuration file for the daemon that will accept incoming connections. This file must be edited. </p>
+<pre><code class="language-shell">[root@uslims home]# cd /etc
+[root@uslims etc]# cd ssh
+[root@uslims ssh]# pwd
+   /etc/ssh
+[root@uslims ssh]# ls
+   ssh_config    sshd_config
+   ...           ...
+[root@uslims ssh]# vi sshd_config
+</code></pre>
+<p>Now you will be in a server configuration file. Scroll down to end for a section of the form: </p>
+<pre><code class="language-shells">Match host 142.66.01.3/22, [ip1], [ip2]
+    AllowUsers demeler marielle [new user name = ultrascan3]
+Match all
+</code></pre>
+<p>Here, you can add specific IP addresses and user names. IP addresses are seperated by commas and user names are seperated by spaces. Click 'Esc' and type ':wq' to write and quit.</p>
+<pre><code class="language-shell">[root@uslims ssh]# systemctl restart sshd
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Setting up a VNC password</span></p>
+<p>Now, we can set up a VNC password for the new user by becoming the user using the 'sudo su' command. </p>
+<pre><code class="language-shell">[root@uslims ssh]# sudo su - ultrascan3
+[ultrascan3@uslims ~]$ vncpasswd
+    Password: ******
+    Verify: ******
+    Would you like to enter a view-only password (y/n)? {n}
+    A view-only password is not used.
+[ultrascan3@uslims ~] exit
+
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Adding a user to the VNC user list and starting up the VNC server</span></p>
+<p>Once the password has been set, we need to add the new user to the vnc user list. Every new user is assigned a private port number. </p>
+<pre><code class="language-shell">[root@uslims ssh]#  vncadmin add ultrascan3
+    Info: adding user 'ultrascan3' to group vncusers
+    Info: creating /home/ultrascan3/.vnc/config
+    Notice: user 'ultrascan3' has been assigned vnc port 26
+</code></pre>
+<p>Now that the new user has been assigned a port number, open the vnc server as the user.</p>
+<pre><code class="language-shell">[root@uslims ssh]# sudo su - ultrascan3
+[ultrascan3@uslims ~]$ sudo vncctl start
+    vnc port for user ultrascan is :26
+    for ssh tunneling use numerical port 5926
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Adding a Unix account ssh key (RSA)</span></p>
+<p>Now let us set up a RSA key for the new user. Use the command 'ssh-keygen -t rsa' t generate a RSA public/private key pair.</p>
+<pre><code class="language-shell">[ultrascan3@uslims ~]$ ssh-keygen -t rsa
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/ultrascan3/.ssh/id_rsa): {enter}
+    Created directory '/home/ultrascan3/.ssh'.
+    Enter passphrase (empty for no passphrase): {enter} 
+    Enter same passphrase again: {enter}
+    Your identification has been saved in /home/ultrascan3/.ssh/id_rsa.
+    Your public key has been saved in /home/ultrascan3/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    ...
+    The key's randomart image is:
+    ...
+</code></pre>
+<p>The file 'id_rsa' contains your personal private key. Never share this key. The file 'id_rsa.pub' is the public key for the public to see. You can share this key.</p>
+<pre><code>[ultrascan3@uslims ~]$ cd .ssh
+[ultrascan3@uslims .ssh]$ ls
+    id_rsa
+    id_rsa.pub
+</code></pre>
+<h1 id="ultrascan-lims"><span style="font-size: 20px";>UltraScan LIMS</span></h1>
+<p><span style="font-size: 16px; color:#00008B";>Registering a new LIMS account</span></p>
+<p>APPLY FOR ACCOUNT ON LIMS
+Go to uslims.uleth.ca
+Click on institution. CCH.
+Click on Login. Go to New users and sign up. Enter Captcha
+Register with personal information. first last name, organization, address, city, province, postal ode, country, phone, email.
+select create new account.
+New accoutn registration is mailed to email. follow directions within one week from cch.uleth.ca  called "Your new UltraScan3 LIMS portal Account". click on link. login with temporary password.
+Under Change my Info to change password. Click update.
+Logout.</p>
+<p><span style="font-size: 16px; color:#00008B";>Assigning LIMS permissions for the new user</span></p>
+<p>Assume role of administrator with superuser permissions who can change LIMS settings for new users so they can enter with elevated permissions.
+Go to Admin Info and Edit User Info. Find new user. Under User Level, edit to user level3 (admin). Provide access to us3lab-node0 super computer. Assign instrument permissions. Update. Logout.</p>
+<h1 id="vnc"><span style="font-size: 20px";>VNC</span></h1>
+<p><span style="font-size: 16px; color:#00008B";>Setting up a VNC ssh tunnel for the user</span></p>
+<p>On the client computer, open the command prompt.</p>
+<pre><code class="language-shell">C:\Users\ultrascan3&gt; ssh-keygen -t rsa
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (C:\Users\ultrascan3/.ssh/id_rsa):
+    Created directory 'D:\Users\ultrascan3/.ssh'.
+    Enter passphrase (empty for no passphrase): {enter}   
+    Enter same passphrase again: {enter}
+    Your identification has been saved in ...
+    Your public key has been saved in ...
+    The key fingerprint is:
+    ....
+    The key's randomart image is:
+    ...
+C:\Users\ultrascan3&gt; cd .ssh
+C:\Users\ultrascan3/.ssh&gt; dir
+        1,679 id_rsa
+          409 id_rsa.pub
+        ...
+</code></pre>
+<p>The public key, 'id_rsa.pub', needs to be installed on the remote USiaB server on the new users account. The easiest way to do this is the main the public key to the administrator.</p>
+<p><span style="font-size: 16px; color:#00008B";>Setting up authorized_keys in the Unix account of the new user</span></p>
+<p>Access the public key to download and open the file through a new terminal window.</p>
+<pre><code class="language-shell">[marielle@uslims ~]$ cd Downloads/
+[marielle@uslims Downloads]$ ls -ltra
+[marielle@uslims Downloads]$ vi id_rsa.pub
+</code></pre>
+<p>Copy key and move to the new user's terminal window.</p>
+<pre><code class="language-shell">[ultrascan3@uslims .ssh]$ vi authorized_keys
+</code></pre>
+<p>This will create a new file called 'authorized_keys'. In this file, paste the public RSA key into a single line. There should not be any line breaks. Click 'Esc' and type :wq to write and quit. </p>
+<p>We can check the permissions of the 'authorized_key' file. They will be '-rw-rw-r--'. This allows read/write powers to the owner and group, and read powers to others. </p>
+<pre><code class="language-shell">[ultrascan3@uslims .ssh]$ ls - l
+</code></pre>
+<p>We need to change it to read/write powers for the owner only.</p>
+<pre><code class="language-shell">[ultrascan3@uslims .ssh]$ chmod 600 authorized_keys
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Setting up the ssh VNC tunnel on the client computer</span></p>
+<p>Now we can check to see if the VNC is active and running. Note the vnc port and numerical port.</p>
+<pre><code class="language-shell">[ultrascan3@uslims ~]$ sudo vncctl status
+</code></pre>
+<p>On the client computer, open the command shell. Since this is the first connection, there will be warnings.</p>
+<pre><code class="language-shell">C:\Users\ultrascan3&gt; ssh ultrascan3@uslims.uleth.ca
+    The authenticity of host 'ultrascan3@uslims.uleth.ca (142.66.17.10)' can't be established.
+    ECDSA key fingerprint is SHA256:etc.
+    Are you sure you want to continue connecting (yes/no)? {yes}
+
+    Warning: Permanently adding 'uslims.uleth.ca,142.66.17.10' (ECDSA) to the list of known hosts. 
+    Activate the web console with: systemctl enable --now cockpit.socket
+    Last Login: Fri Aug 20
+
+    Activate the web console with: systemctl enable --now cockpit.socket
+    Last Login: Fri Aug 20
+</code></pre>
+<p>Now we have access to the new user's account on the USiaB server. Next, we can tunnel the VNC connection to our local host. 'NCL' will run the command in the background, compress the connection, and create a forward tunnel to the following ports, with the local port number coming first. </p>
+<pre><code class="language-shell">C:\Users\ultrascan3&gt; ssh -NCL 5901:localhost:5926 ultrascan3@uslims.uleth.ca
+</code></pre>
+<p><span style="font-size: 16px; color:#00008B";>Logging into VNC from the client computer</span></p>
+<p>Download a VNC viewer, For Windows 10, use TightVNC. Download the application to install it. Make sure to change the settings to include the viewer only; the server is not necessary. </p>
+<p>Open the viewer. The remote host will be 'localhost:1'. Enter the new user's password to enter the VNC.</p>
+<h1 id="ultrascan-desktop-software"><span style="font-size: 20px";>UltraScan Desktop Software</span></h1>
+<p><span style="font-size: 16px; color:#00008B";>Registering the UltraScan desktop software</span></p>
+<p>Register for UltraScan III Software. Email will be set to confirm your registration request.
+Once emial is confirmed, click finish registration. Close and reopen ultrascan.</p>
+<p><span style="font-size: 16px; color:#00008B";>Connecting UltraScan to the LIMS account</span></p>
+<p>Now registar info from LIMS to US.
+In US:Edit: Preferences.
+    change to database not local disk
+    set password
+    set other preferences
+    Set database preferences to add new instance
+        Database description: CCH
+Open LIMS account to copy over information from "database login info"
+Click "Test database connetivity"
+If successfuly, save. This completes configuration.</p>
+<p>In US: Database: Manage Investigator you can see if it has worked.</p></div>
             </div>
         </div>
 

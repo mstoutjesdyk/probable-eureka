@@ -8,7 +8,7 @@
         <meta name="author" content="Marielle Stoutjesdyk">
         <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/gmp-auc/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>GMP and AUC - AUC University</title>
+        <title>Good Manufacturing Practices - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -67,7 +67,7 @@
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Instrumentation</a>
+    <a href="#" class="dropdown-item">Instruments</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -77,28 +77,6 @@
 <li>
     <a href="../instru/" class="dropdown-item">Optima&#8482; AUC</a>
 </li>
-            
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">AUC Performance Checks</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../cal-hard/" class="dropdown-item">Calibration Disk</a>
-</li>
-            
-<li>
-    <a href="../maint/" class="dropdown-item">Confirm Optical System Performance</a>
-</li>
-            
-<li>
-    <a href="../rotorstretch/" class="dropdown-item">Determine Rotor Stretch</a>
-</li>
-            
-<li>
-    <a href="../chromab/" class="dropdown-item">Create Chromatic Aberration Profile</a>
-</li>
-    </ul>
-  </li>
     </ul>
   </li>
                                     
@@ -131,10 +109,6 @@
 <li>
     <a href="../cells/" class="dropdown-item">Cells & Counterbalances</a>
 </li>
-                                    
-<li>
-    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
-</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -147,6 +121,10 @@
             
 <li>
     <a href="../suitable-proteins/" class="dropdown-item">Proteins Systems</a>
+</li>
+            
+<li>
+    <a href="../suitable-protein-dna/" class="dropdown-item">Protein and DNA Systems</a>
 </li>
             
 <li>
@@ -166,6 +144,10 @@
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
+</li>
                                     
 <li>
     <a href="../experiment-flow/" class="dropdown-item">Planning Flowchart</a>
@@ -257,24 +239,55 @@
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AUC Validation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">GMP and AUC</a>
+    <a href="./" class="dropdown-item active">Good Manufacturing Practices</a>
 </li>
                                     
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Instrument Validation</a>
+    <ul class="dropdown-menu">
+            
 <li>
-    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+    <a href="../accuracy/" class="dropdown-item">AUC Accuracy Protocol</a>
 </li>
-                                    
+            
 <li>
-    <a href="../auc-standards/" class="dropdown-item">Developing Standards</a>
+    <a href="../auc-standards/" class="dropdown-item">Instrument Standards</a>
 </li>
+            
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Disk</a>
+</li>
+            
+<li>
+    <a href="../maint/" class="dropdown-item">Optical System Performance</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch Profile</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration Profile</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../software/" class="nav-link">Software</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">USiaB <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../setup/" class="dropdown-item">Setting Up Users</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="https://mstoutjesdyk.github.io/effective-spoon" class="nav-link">Navigating UltraScan</a>
@@ -293,7 +306,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../openAUC/" class="nav-link">
+                                <a rel="next" href="../accuracy/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -318,7 +331,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#what-is-good-manufacturing-practices" class="nav-link">What is Good Manufacturing Practices?</a>
+            <li class="nav-item" data-level="1"><a href="#good-manufacturing-practices" class="nav-link"> Good Manufacturing Practices</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -328,7 +341,12 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#hardware-effects" class="nav-link">Hardware Effects</a>
+            <li class="nav-item" data-level="1"><a href="#parameters-subject-to-error" class="nav-link">Parameters Subject to Error</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#controllablecheckable-parameters" class="nav-link">Controllable/Checkable Parameters</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -337,75 +355,73 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p><br> 
-MS: &#10003; 
-<br> 
-BS: &#x2717; </p>
-<h1 id="what-is-good-manufacturing-practices">What is Good Manufacturing Practices?</h1>
+<h1 id="good-manufacturing-practices"><span style="font-size: 26px";> Good Manufacturing Practices</span></h1>
 <div class="admonition danger">
 <p>For more information, see:</p>
 <p><div class="csl-entry">Savelyev, A., Gorbet, G. E., Henrickson, A., &#38; Demeler, B. (2020). Moving analytical ultracentrifugation software to a good manufacturing practices (GMP) environment. <i>PLOS Computational Biology</i>, <i>16</i>(6), e1007942. https://doi.org/10.1371/journal.pcbi.1007942</div></p>
 <p><div class="csl-entry">Stoutjesdyk, M., Henrickson, A., Minors, G., Demeler, B. (2020). A calibration disk for the correction of radial errors from chromatic aberration and rotor stretch in the Optima AUC<sup>TM</sup> analytical ultracentrifuge. <i>European Biophysics Journal</i>, <i>49</i>(8). https://doi.org/10.1007/s00249-020-01434-z</div></p>
 <p><div class="csl-entry">Zhao, H., Ghirlando, R., Alfonso, C., Arisaka, F., Attali, I., Bain, D. L., Bakhtina, M. M., Becker, D. F., Bedwell, G. J., Bekdemir, A., Besong, T. M. D., Birck, C., Brautigam, C. A., Brennerman, W., Byron, O., Bzowska, A., Chaires, J. B., Chaton, C. T., Cölfen, H., Schuck, P. (2015). A multilaboratory comparison of calibration accuracy and the performance of external references in analytical ultracentrifugation. <i>PLoS ONE</i>. https://doi.org/10.1371/journal.pone.0126420</div></p>
 </div>
-<p>Good Manufacturing Practices (GMP) are a set of operating and instrument standards which dictate a processes control requirements and documentation. GMP environments provide assurances to the consumer and any regulatory agencies that:</p>
-<p>a. best practices were followed;</p>
-<p>b. results are validated, and can be audited;</p>
-<p>c. quality standards are observed, and;</p>
-<p>d. any risks are minimized throughout the procedure.</p>
+<p><span style="font-size: 20px";>What are Good Manufacturing Practices?</span></p>
+<p>Good Manufacturing Practices (GMP) are a set of operating and instrument standards which dictate a processes control requirements and documentation. GMP environments provide assurances to the consumer and any regulatory agencies that: best practices were followed; results are validated, and can be audited; quality standards are observed, and; any risks are minimized throughout the procedure.</p>
+<p>Specifically, the criteria that must be met for GMP validation include:</p>
+<p>[&#10003;] Audit trail for any transation on data and results</p>
+<p>[&#10003;] Reproducibility needs to be assured as much as possible</p>
+<p>[&#10003;] Control as many parameters as possible</p>
+<p>[&#10003;] Restricted access to data, experimental procedures</p>
+<p>[&#10003;] Validated standards for comparison</p>
+<p>[&#10003;] Validate instrument operation and functions</p>
 <h1 id="gmp-obstacles-in-auc"><span style="font-size: 20px";>GMP Obstacles in AUC</span></h1>
 <p>Within the AUC lab, there are several issues that can be determined which affect the authenticity of data analysis procedures.</p>
 <ol>
 <li>
-<p>Human error can be found in the form of the manual process of sample handling and AUC cell loading. 
-There is a certain dexterity that is required to achieve reproducible loading volumes, as well as proper alignment of cells in the rotor.</p>
+<p><span style="color:#00008B";>Human error</span> can be found in the form of the manual process of sample handling and AUC cell loading. There is a certain dexterity that is required to achieve reproducible loading volumes, as well as proper alignment of cells in the rotor.</p>
 </li>
 <li>
-<p>While the AUC is a highly sophisticated instrument, it comes with a large number of operational variable, which would need individual validation, before their effect on results can be minimized.</p>
+<p><span style="color:#00008B";>There are a large number of operational variables</span> which would need individual validation, before their effect on results can be minimized.</p>
 </li>
 <li>
-<p>There is weakness in the chain of data custody. 
-This impairs the audit trail, and can allow for potential manipulation/falsification of primary research data. 
-For example, the traditional data acquisition software is disconnected from the analysis process,
-and thus requires manual data transfer between multiple computers.</p>
+<p><span style="color:#00008B";>There is weakness in the chain of data custody.</span> This impairs the audit trail, and can allow for potential manipulation/falsification of primary research data. For example, the traditional data acquisition software is disconnected from the analysis process, and thus requires manual data transfer between multiple computers.</p>
 </li>
 <li>
-<p>Traditional data acquisition is performed on undocumented software.
-This software is often closed-source freeware, preventing any source code auditing, 
-leaving no assurances for the users that the software follows any stringent GMP documentation requirements.</p>
+<p><span style="color:#00008B";>Traditional data acquisition is performed on undocumented software.</span> This software is often closed-source freeware, preventing any source code auditing, leaving no assurances for the users that the software follows any stringent GMP documentation requirements.</p>
 </li>
 <li>
-<p>Important parameters are not routinely checked for consistency. 
-Resolution information content is affected by: number of scans in the experiment, duration of experiment, loading volume, and column length. 
-Loading concentration can affect the mass action of reversible systems and non-ideality parameters.
-Chromatic aberration can cause incorrect radial reporting when recording wavelengths. </p>
+<p><span style="color:#00008B";>Important parameters are not routinely checked for consistency.</span> Resolution information content is affected by: number of scans in the experiment, duration of experiment, loading volume, and column length. Loading concentration can affect the mass action of reversible systems and non-ideality parameters. Chromatic aberration can cause incorrect radial reporting when recording wavelengths. </p>
 </li>
 <li>
-<p>Data quality is not checked for consistency. 
-Data editing, analysis algorithms, and analysis parameters can be left up to an user to change at will. 
-Data interpretation is affected by analysis parameters (grid size, grid resolution, edited data ranges, buffer corrections)
-and hardware parameters (rotor stretch corrections).</p>
+<p><span style="color:#00008B";>Data quality is not checked for consistency.</span> Data editing, analysis algorithms, and analysis parameters can be left up to an user to change at will. Data interpretation is affected by analysis parameters (grid size, grid resolution, edited data ranges, buffer corrections) and hardware parameters (rotor stretch corrections).</p>
 </li>
 <li>
-<p>Reporting is not an automated process. The processing of data is manual and based on a subjective interpretation of results. 
-That interpretation does not necessarily include standard metrics for comparison
-that can be automated and applied without user bias.</p>
+<p><span style="color:#00008B";>Reporting is not an automated process.</span> The processing of data is manual and based on a subjective interpretation of results. That interpretation does not necessarily include standard metrics for comparison that can be automated and applied without user bias.</p>
 </li>
 </ol>
-<h1 id="hardware-effects"><span style="font-size: 20px";>Hardware Effects</span></h1>
+<h1 id="parameters-subject-to-error"><span style="font-size: 20px";>Parameters Subject to Error</span></h1>
 <p>A recent multi-labratory study demonstrated the importance of accurate reference materials to provide improved validation for the AUC.<sup id="fnref:Zhao2015"><a class="footnote-ref" href="#fn:Zhao2015">1</a></sup> Accurate reference materials are also useful in that they will complement the resolution gains offered by modern analysis software. The following hardware components of the AUC instrument have been found to affect analysis results.</p>
-<p><u>Rotor Speed</u></p>
-<p><u>Record Temperature and Centrifugal Force Integrals</u></p>
-<p><u>Radial Calibrations</u></p>
-<p><u>Temperature</u></p>
-<p><u>Optics: Light Intensity, Alignment, Force Integrals</u></p>
-<p><u>Chromatic Aberration</u></p>
+<p><span style="color:#00008B";>Cell Component Quality</span></p>
+<p><span style="color:#00008B";>Chromatic Aberration</span></p>
 <p>While investigating the accuracy of radial recordings made on the Optima AUC, it was noted that there was the presence of wavelength dependence on the radial positions collected as a result of chromatic aberration, a phenomenon related to the variability of refraction at different wavelengths.</p>
-<p><u>Stretching or Contracting of the Rotor in Response to Speed Changes</u></p>
+<p><span style="color:#00008B";>Electric Power Supply Stability</span></p>
+<p><span style="color:#00008B";>Optics: Light Intensity, Alignment, Force Integrals</span></p>
+<p><span style="color:#00008B";>Radial Calibrations</span></p>
+<p><span style="color:#00008B";>Record Time and Centrifugal Force Integrals</span></p>
+<p><span style="color:#00008B";>Rotor Speed</span></p>
+<p><span style="color:#00008B";>Stretching or Contracting of the Rotor in Response to Speed Changes</span></p>
 <p>What is rotor stretching and how do we know it is occuring? We noticed that the Lamm Equation was being solved with incorrect boundary conditions. Typically, we expect the bottom of the cell to be routinely held constant at the known position at rest. However, the absolute radial position of the sample cell was shifting. Finite element solutions of the Lamm Equation require accurate knowledge of the boundary consitions, which include the radial positions of the meniscus and bottom location ofthe sample cell. Any error in these boundary conditions, or the absolute radial positionscollected will affect the fitte values of the sedimentation and diffusion coefficients. This error propogates to the calculations of biomolecular attributes. Stretching or contracting of the rotor changes these boundary conditions, and thus must be known. Specifically, the titanium rotors, when spun at very high speeds, were stretching a finite amount, changing the boundary conditions of the experiment compared to those at rest or a different speed. </p>
 <p><img alt="Adiabatic Temperature Graph" src="../img/temp-adiabatic.png" style="float: right;margin-right: 20px;margin-top: 10px;" width="450" /></p>
-<p>Consider the figure to the right: this is a temperture-time graph for a rotor spinning from rest to 60,000 RPM, resting for 15 mins, and then decelerating back down to rest.
+<p>Consider the figure: this is a temperture-time graph for a rotor spinning from rest to 60,000 RPM, resting for 15 mins, and then decelerating back down to rest.
 Notice how there is a temperature decrease intially as the rotor accelerates; the acceleration period takes ~5 minutes. As the speed increases the rotor needs energy to stretch out and so it takes it from its environment. The chamber will notice this change and correct the temperature to the stated temperature. This correction occurs while to rotor spins at 60,000 RPM for 15 minutes. After this time has elapsed, the rotor spins down to rest and no longer needs the heat energy it took from the environment and so it releases it, causing an increases in temperature. Again, the chamber will correct for this change. The valley and peak have approximately the same area, and this change in temperature is adiabatic.</p>
+<p><span style="color:#00008B";>Temperature</span></p>
+<h1 id="controllablecheckable-parameters"><span style="font-size: 20px";>Controllable/Checkable Parameters</span></h1>
+<p><span style="color:#00008B";>Experimental Parameters</span></p>
+<p>Rotor speed, number of scans, wavelength, optics, radial range, cell components, rotor selection.</p>
+<p><span style="color:#00008B";>Data Collection</span></p>
+<p><span style="color:#00008B";>Cell Loading Volume and Concentration</span></p>
+<p><span style="color:#00008B";>Analysis Parameters</span></p>
+<p><span style="color:#00008B";>Security (Encryption, Authentication) and Data Access</span></p>
+<p><span style="color:#00008B";>Use of Validated Standards</span></p>
+<p><span style="color:#00008B";>Use of Structured Query Language (SQL)</span></p>
+<p>SQL with relational database to store associated data and record access</p>
 <div class="footnote">
 <hr />
 <ol>

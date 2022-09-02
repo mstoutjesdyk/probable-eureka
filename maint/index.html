@@ -8,7 +8,7 @@
         <meta name="author" content="Marielle Stoutjesdyk">
         <link rel="canonical" href="https://mstoutjesdyk.github.io/probable-eureka/maint/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Confirm Optical System Performance - AUC University</title>
+        <title>Optical System Performance - AUC University</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -62,12 +62,12 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The AUC Lab <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Instrumentation</a>
+    <a href="#" class="dropdown-item">Instruments</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -77,28 +77,6 @@
 <li>
     <a href="../instru/" class="dropdown-item">Optima&#8482; AUC</a>
 </li>
-            
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">AUC Performance Checks</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../cal-hard/" class="dropdown-item">Calibration Disk</a>
-</li>
-            
-<li>
-    <a href="./" class="dropdown-item active">Confirm Optical System Performance</a>
-</li>
-            
-<li>
-    <a href="../rotorstretch/" class="dropdown-item">Determine Rotor Stretch</a>
-</li>
-            
-<li>
-    <a href="../chromab/" class="dropdown-item">Create Chromatic Aberration Profile</a>
-</li>
-    </ul>
-  </li>
     </ul>
   </li>
                                     
@@ -131,10 +109,6 @@
 <li>
     <a href="../cells/" class="dropdown-item">Cells & Counterbalances</a>
 </li>
-                                    
-<li>
-    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
-</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -147,6 +121,10 @@
             
 <li>
     <a href="../suitable-proteins/" class="dropdown-item">Proteins Systems</a>
+</li>
+            
+<li>
+    <a href="../suitable-protein-dna/" class="dropdown-item">Protein and DNA Systems</a>
 </li>
             
 <li>
@@ -166,6 +144,10 @@
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="../samp-prep/" class="dropdown-item">Preparing Samples</a>
+</li>
                                     
 <li>
     <a href="../experiment-flow/" class="dropdown-item">Planning Flowchart</a>
@@ -256,25 +238,56 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Good Manufacturing Practices <b class="caret"></b></a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AUC Validation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../gmp-auc/" class="dropdown-item">GMP and AUC</a>
+    <a href="../gmp-auc/" class="dropdown-item">Good Manufacturing Practices</a>
 </li>
                                     
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Instrument Validation</a>
+    <ul class="dropdown-menu">
+            
 <li>
-    <a href="../openAUC/" class="dropdown-item">OpenAUC Standards</a>
+    <a href="../accuracy/" class="dropdown-item">AUC Accuracy Protocol</a>
 </li>
-                                    
+            
 <li>
-    <a href="../auc-standards/" class="dropdown-item">Developing Standards</a>
+    <a href="../auc-standards/" class="dropdown-item">Instrument Standards</a>
 </li>
+            
+<li>
+    <a href="../cal-hard/" class="dropdown-item">Calibration Disk</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Optical System Performance</a>
+</li>
+            
+<li>
+    <a href="../rotorstretch/" class="dropdown-item">Rotor Stretch Profile</a>
+</li>
+            
+<li>
+    <a href="../chromab/" class="dropdown-item">Chromatic Aberration Profile</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../software/" class="nav-link">Software</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">USiaB <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../setup/" class="dropdown-item">Setting Up Users</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="https://mstoutjesdyk.github.io/effective-spoon" class="nav-link">Navigating UltraScan</a>
@@ -318,7 +331,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#auc-performance-checks" class="nav-link">AUC Performance Checks</a>
+            <li class="nav-item" data-level="1"><a href="#confirming-optical-system-performance" class="nav-link">Confirming Optical System Performance</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -327,122 +340,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="auc-performance-checks">AUC Performance Checks</h1>
-<p>In general, the following can be applied to both the XL-A and the Optima AUC.
-Here, we have listed some general maintenace checks, calibrations, and good practices, 
-as well as tests specific to the absorbance and interference optical systems.</p>
-<div class="admonition note">
-<p class="admonition-title">General AUC Maintenance Checks and Tests</p>
-<p>EVERY 3 - 6 MONTHS</p>
-<ol>
-<li>
-<p>Radial Alignment Check</p>
-</li>
-<li>
-<p>Rotor Stretch Calibration</p>
-</li>
-<li>
-<p>Counterbalance</p>
-</li>
-</ol>
-<p>EVERY EXPERIMENTAL RUN</p>
-<ol>
-<li>
-<p>Examine Cell Housings and Centerpieces</p>
-</li>
-<li>
-<p>Ensure Full Non-Leaking Channels</p>
-</li>
-</ol>
-</div>
-<p>To ensure that we are scanning at the right radii, we perform a RADIAL ALIGNMENT CHECK. 
-At 3,000 rpm, perform a radial calibration run to check the radial alighment of the instrument.</p>
-<p>The ROTOR STRETCH CALIBRATION experiment is the first set of data all UltraScan-III users should acquire for their own rotor and instrument. 
-Titanium rotors used in the Beckman Analytical Ultracentrifuge will stretch as a function of rotor speed, temperature, 
-age and type of centerpieces loaded in them. Since the stretching will translocate the position of each centerpiece and cell, 
-the forces acting on the sedimenting particles will also change as a function of stretching 
-(due to the increased radius, the force increases) and the bottom of the cell,
- which is a boundary condition of the ASTFEM Lamm equation solution, will also change. 
-To obtain optimal fitting results, it is important that the rotor stretch and centerpiece geometry is properly accounted 
-for in the analysis software. UltraScan-III contains a rotor calibration program that allows you to easily determine your rotor's 
-particular rotor stretching function, and to incorporate this information automatically in the analysis routines in UltraScan. 
-The idea is that you run a calibration experiment where the stretching of the rotor is measured on your instrument, 
-and then these data are fitted to a rotor stretching function, which is then stored in the program and used to provide, 
-in combination with the known centerpiece geometry, the correct boundary conditions for the ASTFEM solutions. 
-More information is found <a href="https://ultrascan3.aucsolutions.com/rotor-calibration.php">here</a>.</p>
-<p>Before each run, you must EXAMINE CELL HOUSINGS AND CENTERPEICES. In particular, the Epon centerpeices are not study and can break. 
-When loading, avoid touching the surfaces, or scratching the insides of the channels. 
-Spin Analytical may recondition your centerpeices, if necessary.</p>
-<p>To ENSURE FULL NON-LEAKING CHANNELS, you will need to check the raw data from the instrument. 
-We want to avoid sample leaking out, as this may lead to deformation of the septum due to differences in hydrostatic pressure.
-If any leaking is visible (the meniscus peak moving), stop the run immediately.</p>
-<div class="admonition note">
-<p class="admonition-title">Absorbance Optical System Performance Checklist</p>
-<ol>
-<li>
-<p>Xenon Flash Lamp Intenstiy Scan</p>
-</li>
-<li>
-<p>Monochromator Function</p>
-</li>
-<li>
-<p>Lamp Alignment Test</p>
-</li>
-<li>
-<p>Slit Assembly Performance Check</p>
-</li>
-<li>
-<p>Chromatic Abberation Profile </p>
-</li>
-</ol>
-</div>
+<h1 id="confirming-optical-system-performance"><span style="font-size:26px";>Confirming Optical System Performance</span></h1>
+<p><span style="font-size:20px; color:#00008B";>Xenon Flash Lamp Emission Profile</span></p>
 <p>Absorbance optics uses a Xenon flash lamp and the intensity of the lamp varies over the spectral range. See image below. 
-Xenon flash lamps are good at emitting visible light down to 190 nm, but above 500 nm, the intensity drops off rather precipiticely. 
-Around 800 nm, the intensity will be a small fraction of what can be seen around 230 nm.
-If you must measure at higher O.D. values, and you want a lot of singal, measuring at 230 nm may be a good idea.</p>
-<p><img _="," align="center" alt="" height="500" src="/img/emission-xenon.png" width="700" /></p>
-<p>To measure the XENON LAMP EMISSION PROFILE, run an intensity wavelength scan
-over the dynamic range of the instrument on an empty hole at 6.5 cm. 
-Rotor speed is irrelavent; it is commonly set to 3,000 rpm. 
-You should see a profile similar to the one above, with a peak intensity at 
-230 nm of at least 15,000 counts. If the intensity is much less than this, 
-clean the lamp, or call for Beckman Services to check the optical system, 
-mirror, PMT, and/or powersupply.
-If you want to attempt to clean the lamp yourself, and the count is still lower than 15,000 counts, the lamp may need to be aligned. 
-For the XL-A: rotate the lamp in the lamp housing and repeat the intensity scan. 
-Repeat for one full turn, identifying the position that produces the highest intensity. 
-Verify that this is reproducible across every position in the cell.</p>
+Xenon flash lamps are good at emitting visible light down to 190 nm, but above 500 nm, the intensity drops off rather precipiticely. Around 800 nm, the intensity will be a small fraction of what can be seen around 230 nm. If you must measure at higher O.D. values, and you want a lot of singal, measuring at 230 nm may be a good idea.</p>
+<div class="admonition danger">
+<p><img _="," align="center" alt="" height="500" src="../img/emission-xenon.png" width="700" /></p>
+<p>Figure: Emission profile for a Xenon flash lamp.</p>
+</div>
+<p>To measure the XENON LAMP EMISSION PROFILE, run an intensity wavelength scan over the dynamic range of the instrument on an empty hole at 6.5 cm. Rotor speed is irrelavent; it is commonly set to 3,000 rpm. You should see a profile similar to the one above, with a peak intensity at 230 nm of at least 15,000 counts. If the intensity is much less than this, clean the lamp, or call for Beckman Services to check the optical system, mirror, PMT, and/or powersupply.</p>
+<p>If you want to attempt to clean the lamp yourself, and the count is still lower than 15,000 counts, the lamp may need to be aligned. </p>
+<p>For the XL-A: rotate the lamp in the lamp housing and repeat the intensity scan. Repeat for one full turn, identifying the position that produces the highest intensity. Verify that this is reproducible across every position in the cell.</p>
+<p><span style="font-size:20px; color:#00008B";>Monochromator Function</span></p>
 <p>To measure MONOCHROMATOR FUNCTION, run an intensity wavelength scan over the dynamic range on an empty hole at 5.2 cm, 6.5 cm, and 7.1 cm. 
 If the intensity peaks shift, the monochromator may not be working properly.</p>
-<p>The LAMP ALIGHNMENT TEST allows you to measure the response of the machine as a function of radius.<br />
-Perform an intensity scan at 280 nm or 230 nm across an empty cell from 5.8 cm to 7.2 cm,
-Ensure that the intensity plot does not vary by more than 10$, and that the maximum intensity is in the center.
-The maximum intensity at the center indicates that the optical system is properly aligned. 
-Signal variation of more than 10% can indicate a failing PMT&gt;</p>
+<p><span style="font-size:20px; color:#00008B";>Slit Assembly Performance</span></p>
 <p>For SLIT ASSEMBLY PERFORMANCE testing, you will need to scan a cell with some solution (irrelavant) with 280 nm or 230 nm. 
 Check the overlaid menisci of 40-50 scans. They should form a single sharp peak. 
 If the meniscus shifts back and forth, the slit assembly may need to be serviced.</p>
 <p>The slit assembly is a gold foil with laser-etched slits that provides the radial resolution measured by the PMT. 
 This mechanical assembly in the Proteomlab is driven by a servo motor; the Optima AUC uses a digital stepping motor. 
 The stepping motor is much more radially precise at 10 micron resolution.
-If there is dirt on the slit assembly, it may cause some stepping.</p>
-<p>Knowing the CHROMATIC ABBERATION profile of your instrument is especially important for MWL-AUC experiments.
-Chromatic abberation is a result of each wavelength behaving differently due to the refractive indices of the solution.
-Once determined, the chromatic abberation profile can be imported into the US-LIMS III database. </p>
-<div class="admonition note">
-<p class="admonition-title">Interference Optics Performance Checks</p>
-<ol>
-<li>
-<p>Radial Alighment and Counterbalance Calibrations</p>
-</li>
-<li>
-<p>Laser Timing Adjustment (XL-A only)</p>
-</li>
-</ol>
-</div>
-<p>It is important to attempt to have a well-balanced contrast between both channels of a cell; this is donw by LASER TIMING ADJUSTMENT. 
-This is not necessarily possible for the user with the Optima AUC, as it would need to be programmed into the machine. 
-You can get a Beckman Service rep to ensure that the voltages are set properly, and that the illumination of the camera is well-balanced.</p></div>
+If there is dirt on the slit assembly, it may cause some stepping.</p></div>
             </div>
         </div>
 
