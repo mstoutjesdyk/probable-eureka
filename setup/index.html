@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../lit/" class="dropdown-item">Literature</a>
+    <a href="../appendix/" class="dropdown-item">Appendix</a>
 </li>
                                     
 <li>
@@ -54,11 +54,11 @@
 </li>
                                     
 <li>
-    <a href="../appendix/" class="dropdown-item">Appendix</a>
+    <a href="../lit/" class="dropdown-item">References</a>
 </li>
                                     
 <li>
-    <a href="../webmaster/" class="dropdown-item">Contact</a>
+    <a href="../software/" class="dropdown-item">Software</a>
 </li>
                                 </ul>
                             </li>
@@ -277,9 +277,6 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="navitem">
-                                <a href="../software/" class="nav-link">Software</a>
-                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">USiaB <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -295,13 +292,8 @@
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../software/" class="nav-link">
+                                <a rel="prev" href="../chromab/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -361,12 +353,36 @@
                     <div class="col-md-9" role="main">
 
 <p><span style="font-size: 26px";>Setting up New User on UltraScan-in-a-Box</span></p>
-<div class="admonition danger">
-<p>For video, click <a href="https://www.aucsolutions.com/addingNewUser.html">here</a>.</p>
-</div>
 <h1 id="introduction"><span style="font-size: 20px";>Introduction</span></h1>
 <p>In order to set up a new user on the USiaB server, you will need to have administrator rights on the USiaB server and on the client PC. The client PC should have either Windows 10, MacOS, or Linux. </p>
 <p>For this, we will take the user name to be 'ultrascan3' and assume the client has a Windows 10 PC.</p>
+<details class="danger">
+<summary><span style= "color: #00008B;">INSTRUCTIONAL VIDEO</span></summary>
+<div class="admonition danger"></div>
+<p><iframe width="900" height="450"
+src="https://www.aucsolutions.com/addingNewUser.html" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe></p>
+<p><span style="font-size:12px";>
+0:00:00 Introduction (5:31)<br>
+5:31:20 Adding a user account to USiaB (2:37)<br>
+8:09:04 Adding a user to the ssh permission list (3:53)<br>
+12:03:04 Setting up a VNC password (1:2)<br>
+13:05:07 Adding a user to the VNC user list and starting up the VNC server (1:53)<br>
+14:58:13 Adding a Unix account ssh key (RSA) (2:1)<br>
+16:59:18 Registering a new LIMS account (4:30)<br>
+21:30:06 Assigning LIMS permissions for the new user (3:15)<br>
+24:45:10 Setting up a VNC ssh tunnel for the user (2:44)<br>
+27:30:04 Setting up authorized_keys in the Unix account of the new user (3:55)<br>
+31:25:13 Setting up the ssh VNC tunnel on the client computer (4:54)<br>
+36:20:09 Logging into VNC from the client computer (1:36)<br>
+37:56:09 Registering the UltraScan desktop software (2:5)<br>
+40:02:03 Connecting UltraScan to the LIMS account (4:28)<br>
+</span></p>
+</details>
+<p><br></p>
 <h1 id="ssh-keys"><span style="font-size: 20px";>SSH Keys</span></h1>
 <p><span style="font-size: 16px; color:#00008B";>Adding a user account to USiaB</span></p>
 <p>On the USiaB server, open the terminal. You must be an admin.
@@ -552,29 +568,8 @@ If successfuly, save. This completes configuration.</p>
         <script src="../js/base.js" defer></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-        <script src="../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
